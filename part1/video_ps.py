@@ -9,7 +9,8 @@ import numpy
 import time
 import threading
 import math
-
+from pynq.overlays.base import BaseOverlay
+from pynq.lib.video import *
 
 
 # ##############################################################################
@@ -189,7 +190,7 @@ def main():
                         help='output file with processed image or video in MP4 format (default: show on screen)')
     parser.add_argument('-l', metavar='N', type=int, dest='loops', action='store', default=1,
                         help='loop input image or video N times (default: 1), 0 means forever')
-    parser.add_argument('-c', metavar='N', type=int, dest='max_frames', action='store', default=0,
+    parser.add_argument('-c', metavar='N', type=int, dest='max_frames', action='store', default=60,
                         help='stop processing prematurely after N frames (default: 0), 0 means no limit')
     parser.add_argument('-n', dest='native', action='store_true', default=False,
                         help='use Python native iteration over pixels (do not use fast numpy arrays)')        
@@ -200,16 +201,18 @@ def main():
         args.loops = 0
     if args.max_frames < 1:
         args.max_frames = -1
+    
+    base = BaseOverlay("base.bit")
 
     # Input and output preparation
     print("Preparing input and output ...")
     if args.input == None:  # input from default system camera
-        input = cv2.VideoCapture(0)
-        if not input.isOpened():
-            exit("ERROR: Unable to read input data from camera source!")
-        fps = input.get(cv2.CAP_PROP_FPS)
-        width = int(input.get(cv2.CAP_PROP_FRAME_WIDTH))
-        height = int(input.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        hdmi_in = base.video.hdmi_in
+        hdmi_in.configure()
+        hdmi_in.start()
+        width = hdmi_in.mode.width
+        height = hdmi_in.mode.height
+        fps = 60
     else:  # input from file
         input = cv2.VideoCapture(args.input)
         if not input.isOpened():
@@ -218,7 +221,9 @@ def main():
         width = int(input.get(cv2.CAP_PROP_FRAME_WIDTH))
         height = int(input.get(cv2.CAP_PROP_FRAME_HEIGHT))
     if args.output == None: # show output on screen
-        pass 
+        hdmi_out = base.video.hdmi_out
+        hdmi_out.configure(hdmi_in.mode)
+        hdmi_out.start()
     else: # output to file
         output = cv2.VideoWriter(args.output, cv2.VideoWriter_fourcc('m','p','4','v'), fps, (1280,720))
         if output is None:
@@ -238,14 +243,14 @@ def main():
         start = time.time()
         while(frames != args.max_frames):
             if args.input == None:
-                ret, frame = input.read()
+                ret, frame = True, hdmi_in.readframe()
             else:
                 ret, frame = input.read()
             if ret: # new frame
                 if use_resize:
                     frame = cv2.resize(frame, (1280,720))
                 if args.simulation != None:
-                    debug_dump(frame, sim_in);
+                    debug_dump(frame, sim_in)
                     
                 # ##############################################################
                 # Contrast enhancement specific processing
@@ -265,12 +270,13 @@ def main():
                 # ##############################################################
                 
                 if args.output == None:
-                    cv2.imshow('Contrast Enhance', frame)
-                    cv2.waitKey(1) # required to enable window content painting
+                    outframe = hdmi_out.newframe()
+                    outframe[:] = frame
+                    hdmi_out.writeframe(outframe)
                 else:
                     output.write(frame)
                 if args.simulation != None:
-                    debug_dump(frame, sim_out);
+                    debug_dump(frame, sim_out)
             else: # one input processing loop is finished
                 args.loops -= 1; 
                 if args.loops != 0:  # restart the processing
@@ -282,15 +288,17 @@ def main():
     end = time.time()
 
     # Resource cleanup
-    print("Cleaning up before end ...")
+    print("Cleaning up...")
     if HE_thread != None: # wait for the second processing thread if it is still active
         HE_thread.join()
     if args.input == None:
-        input.release()
+        print("Cleaning up input HDMI...")
+        hdmi_in.close()
     else:
         input.release()
     if args.output == None:
-        cv2.destroyAllWindows()
+        print("Cleaning up output HDMI...")
+        hdmi_out.close()
     else:
         output.release()
     if args.simulation != None:
