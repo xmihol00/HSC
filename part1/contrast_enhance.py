@@ -10,6 +10,10 @@ import time
 import threading
 import math
 
+import cProfile, pstats, io
+from pstats import SortKey
+
+prof = cProfile.Profile()
 
 
 # ##############################################################################
@@ -46,6 +50,7 @@ MATRIX_YCrCb2BGR = numpy.array([
 # Note: ignoring delta of 128 so Cr and Cb are in <-128,127> range
 def frame_convert_BGR2YCrCb(frame):
     return numpy.matmul(frame, MATRIX_BGR2YCrCb)
+
 def pixel_convert_BGR2YCrCb(B, G, R):
     Y  = MATRIX_BGR2YCrCb[0,0]*B + MATRIX_BGR2YCrCb[1,0]*G + MATRIX_BGR2YCrCb[2,0]*R
     Cr = MATRIX_BGR2YCrCb[0,1]*B + MATRIX_BGR2YCrCb[1,1]*G + MATRIX_BGR2YCrCb[2,1]*R
@@ -57,6 +62,7 @@ def pixel_convert_BGR2YCrCb(B, G, R):
 def frame_convert_YCrCb2BGR(frame):
     frame = numpy.matmul(frame, MATRIX_YCrCb2BGR) # base conversion
     return frame
+
 def pixel_convert_YCrCb2BGR(Y, Cr, Cb):
     B = MATRIX_YCrCb2BGR[0,0]*Y + MATRIX_YCrCb2BGR[1,0]*Cr + MATRIX_YCrCb2BGR[2,0]*Cb
     G = MATRIX_YCrCb2BGR[0,1]*Y + MATRIX_YCrCb2BGR[1,1]*Cr + MATRIX_YCrCb2BGR[2,1]*Cb
@@ -69,6 +75,7 @@ def frame_float2byte(frame):
     frame = numpy.where(frame>255.0, 255.0, frame)
     #return numpy.around(frame).astype(numpy.uint8) # around is painfully slow!
     return (frame+0.5).astype(numpy.uint8) # faster hack with 0.5 increment converting astype number truncating (flooring) to rounding
+
 def pixel_float2byte(B, G, R):
     B = min(max(B, 0.0), 255.0) # threshold over/under flow of <0,255> range in BGR values
     G = min(max(G, 0.0), 255.0)
@@ -123,6 +130,7 @@ class WTHE():
 
     # Compute new transformation table based on histogram values using WTHE method
     def transform_update(self, id):
+        prof.enable()
         self.transform_ready = False
         P = self.histogram / self.values # convert histogram to probability of individual items
         Pl = 0.0003      # lower threshold is a really small percentage
@@ -149,6 +157,7 @@ class WTHE():
                 "\tCumSum:", "{:.3f}".format(cumsum), "\tPu:", "{:.3f}".format(Pu*100.0)
             )
         self.restart() # clear histogram
+        prof.disable()
 
 
 # ##############################################################################
@@ -253,7 +262,9 @@ def main():
                 if args.native:
                     frame = processing_native(frame, HE[HE_active]) # frame processing pixel by pixel
                 else:
+                    prof.enable()
                     frame = processing_numpy(frame, HE[HE_active]) # vectorized frame processing
+                    prof.disable()
                 frames += 1
                 if frames % 4 == 0: # switch active HE context and update transformation table each 4 frames
                     if HE_thread != None and HE_thread.is_alive(): # wait for the last HE update if it is still running
@@ -270,7 +281,7 @@ def main():
                 else:
                     output.write(frame)
                 if args.simulation != None:
-                    debug_dump(frame, sim_out);
+                    debug_dump(frame, sim_out)
             else: # one input processing loop is finished
                 args.loops -= 1; 
                 if args.loops != 0:  # restart the processing
@@ -304,6 +315,8 @@ def main():
     print("Processing speed:", "{:.3f}".format(frames/(end-start)), "Fps")
     print("                 ", "{:.3f}".format(((frames*1280*720)/(end-start))/1000000.0), "Mpps")
     print()
+
+    prof.print_stats('tottime')
 
 # Calling main when script is executed
 if __name__ == "__main__":

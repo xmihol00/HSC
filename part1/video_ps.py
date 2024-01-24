@@ -11,6 +11,10 @@ import threading
 import math
 from pynq.overlays.base import BaseOverlay
 from pynq.lib.video import *
+import cProfile, pstats, io
+from pstats import SortKey
+
+prof = cProfile.Profile()
 
 
 # ##############################################################################
@@ -124,6 +128,7 @@ class WTHE():
 
     # Compute new transformation table based on histogram values using WTHE method
     def transform_update(self, id):
+        prof.enable()
         self.transform_ready = False
         P = self.histogram / self.values # convert histogram to probability of individual items
         Pl = 0.0003      # lower threshold is a really small percentage
@@ -150,6 +155,7 @@ class WTHE():
                 "\tCumSum:", "{:.3f}".format(cumsum), "\tPu:", "{:.3f}".format(Pu*100.0)
             )
         self.restart() # clear histogram
+        prof.disable()
 
 
 # ##############################################################################
@@ -170,10 +176,12 @@ def processing_native(frame, Yhe):
 
 # Numpy accelerated iteration over frame pixels
 def processing_numpy(frame, Yhe):
+    prof.enable()
     frame = frame_convert_BGR2YCrCb(frame)          # convert to YCrCb
     frame[:,:,0] = Yhe.process_values(frame[:,:,0]) # update Y histogram and transform/equalize Y values
     frame = frame_convert_YCrCb2BGR(frame)          # convert back to BGR
     frame = frame_float2byte(frame)                 # round to 8-bit color values
+    prof.disable()
     return frame
 
 
@@ -312,6 +320,8 @@ def main():
     print("Processing speed:", "{:.3f}".format(frames/(end-start)), "Fps")
     print("                 ", "{:.3f}".format(((frames*1280*720)/(end-start))/1000000.0), "Mpps")
     print()
+
+    prof.print_stats('tottime')
 
 # Calling main when script is executed
 if __name__ == "__main__":
