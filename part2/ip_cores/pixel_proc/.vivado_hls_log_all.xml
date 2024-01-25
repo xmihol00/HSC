@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.688+0100"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.686+0100"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog>
+        <logs message="WARNING: assign NaN to ap integer value&#xA;Frame: 8 &#x9;Means: 51.085 51.085 &#x9;CumSum: 0.000 &#x9;Pu: 0.000&#xA;Image data mismatch on frame 8, row 0, pixel 0:&#xA;       expected value = pixel(B=131, G=149, R=151, sof=1, last=0)&#xA;    processing output = pixel(B=240, G=1, R=3, sof=1, last=0)" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.684+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.683+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.681+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.680+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.678+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.677+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.675+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.674+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.673+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.671+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.669+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.668+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.666+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.665+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.663+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.662+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.661+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.659+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.658+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.657+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.656+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.655+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.653+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.652+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.651+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.650+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.648+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.647+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.646+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.645+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.643+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.642+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.641+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.640+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.639+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.638+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.637+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.636+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.635+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.634+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.633+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.633+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.632+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.631+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.630+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.629+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.629+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.628+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.627+0100" type="Warning"/>
+        <logs message="WARNING: assign NaN to ap integer value" projectName="pixel_proc" solutionName="solution1" date="2024-01-25T16:31:36.626+0100" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

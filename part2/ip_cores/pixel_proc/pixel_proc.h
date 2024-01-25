@@ -79,15 +79,44 @@ static void simulation_PSPL_communication(
     // Accelerator specific communication called once per every block of frames
     // /////////////////////////////////////////////////////////////////////////
     word_type histogram[256], sum_histogram = 0;
+    float Pu = 0.0;
+    float cumsum = 0.0;
     for(int i=0; i<256; i++) {// array read of shared memory
-        histogram[i] = shared_memory[i];
-        sum_histogram += histogram[i]; 
+        histogram[i] = shared_memory[i] / (double)v;
+        sum_histogram += shared_memory[i];
+        if(histogram[i] > Pu)
+            Pu = histogram[i] / 2.0;
     }
     assert(v == 1280*720*4 && "Wrong pixel count for block of frames!");
     assert(v == sum_histogram && "Wrong pixel count in histogram!");
     // TODO: process shared memory data somehow?
+    float Pl = 0.0003;
+
     for(int i=0; i<256; i++) // array write of shared memory
-        shared_memory[i] = i; // TODO: actually calculate data to write somehow?
+    {
+        float Pwt = 0.0;
+        if (histogram[i] < Pl)
+        {
+            Pwt = 0.0;
+        }
+        else if (histogram[i] > Pu)
+        {
+            Pwt = Pu;
+        }
+        else
+        {
+            Pwt = sqrt((histogram[i] - Pl) / (Pu - Pl)) * Pu;
+        }
+        
+        cumsum += Pwt;
+        shared_memory[i] = cumsum * 255.0; // TODO: actually calculate data to write somehow?
+    }
+
+    for (int i = 0; i < 256; i++)
+    {
+        shared_memory[i] = shared_memory[i] / cumsum + 0.5;
+    }
+
     write_ready = 1;
     // /////////////////////////////////////////////////////////////////////////
     
@@ -95,7 +124,7 @@ static void simulation_PSPL_communication(
     std::cout << // TODO: finish the print message!
         "Frame: " << last_frames <<
         " \tMeans: " << (double)sb/(double)v << " " << (double)sa/(double)v << 
-        " \tCumSum: " << -1.0 << " \tPu: " << -1.0 << std::endl;
+        " \tCumSum: " << cumsum << " \tPu: " << Pu * 100 << std::endl;
     last_frames += 4;
 }
 

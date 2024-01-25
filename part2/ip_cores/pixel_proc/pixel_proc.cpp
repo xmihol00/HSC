@@ -5,7 +5,17 @@
 
 #include "pixel_proc.h"
 
+const double MATRIX_BGR2YCrCb[][3] = {
+    {0.114, -0.081312,  0.5}, 
+    {0.587, -0.418688, -0.331264},
+    {0.299,  0.5,      -0.168736},
+};
 
+const double MATRIX_YCrCb2BGR[][3] = {
+    {1,      1,        1}, 
+    {0,     -0.714136, 1.402},
+    {1.772, -0.344136, 0},
+};
 
 // Context information for block of frames
 class Context {
@@ -35,7 +45,7 @@ public:
         sum_before += val;
         if(_empty_data_ready) {
             // TODO: use data from shared memory?
-        	new_val = val; // TODO: edit value somehow?
+        	new_val = _empty_data[val]; // TODO: edit value somehow?
         } else {
         	new_val = val;
         }
@@ -165,28 +175,34 @@ void pixel_proc(
         frames = local_frames;
         
         // TODO: pixel data processing before context?
+        double Y = MATRIX_BGR2YCrCb[0][0]*B + MATRIX_BGR2YCrCb[1][0]*G + MATRIX_BGR2YCrCb[2][0]*R;
+        double Cr = MATRIX_BGR2YCrCb[0][1]*B + MATRIX_BGR2YCrCb[1][1]*G + MATRIX_BGR2YCrCb[2][1]*R;
+        double Cb = MATRIX_BGR2YCrCb[0][2]*B + MATRIX_BGR2YCrCb[1][2]*G + MATRIX_BGR2YCrCb[2][2]*R;
 
         // processing of frame blocks in two contexts
         static Context copy1, copy2;
-        color_type newB;
+        color_type newY;
         flag_type copy_select;
         flag_type start;
         copy_select = local_frames.range(2, 2);        // 2nd bit of frame counter flips every 4 frames
         start = sof && (local_frames.range(1,0) == 0); // block of frames start is indicated by SoF in the first frame of the block
         if(copy_select) { // based on select bit, one copy is active and the other is updating
-            copy1.active(newB, B); // TODO: maybe use something else than B here?
+            copy1.active(newY, (color_type)(Y + 0.5)); // TODO: maybe use something else than B here?
             copy2.update(start, sum_before, sum_after, values, shared_memory, read_done, write_ready);
         } else {
-            copy2.active(newB, B); // TODO: maybe use something else than B here?
+            copy2.active(newY, (color_type)(Y + 0.5)); // TODO: maybe use something else than B here?
             copy1.update(start, sum_before, sum_after, values, shared_memory, read_done, write_ready);
         }
 
         // TODO: pixel data processing after context?
+        B = MATRIX_YCrCb2BGR[0][0]*newY + MATRIX_YCrCb2BGR[1][0]*Cr + MATRIX_YCrCb2BGR[2][0]*Cb + 0.5;
+        G = MATRIX_YCrCb2BGR[0][1]*newY + MATRIX_YCrCb2BGR[1][1]*Cr + MATRIX_YCrCb2BGR[2][1]*Cb + 0.5;
+        R = MATRIX_YCrCb2BGR[0][2]*newY + MATRIX_YCrCb2BGR[1][2]*Cr + MATRIX_YCrCb2BGR[2][2]*Cb + 0.5;
 
         // pixel color channel encoding
-        video_out->data.byte0 = newB; // encoding
-        video_out->data.byte1 = G;
-        video_out->data.byte2 = R;
+        video_out->data.byte0 = (color_type)B; // encoding
+        video_out->data.byte1 = (color_type)G;
+        video_out->data.byte2 = (color_type)R;
         video_out->user = sof;
         video_out->last = eol;
         ++video_out;               // confirm axis write

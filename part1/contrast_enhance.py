@@ -254,7 +254,7 @@ def main():
                 if use_resize:
                     frame = cv2.resize(frame, (1280,720))
                 if args.simulation != None:
-                    debug_dump(frame, sim_in);
+                    debug_dump(frame, sim_in)
                     
                 # ##############################################################
                 # Contrast enhancement specific processing
