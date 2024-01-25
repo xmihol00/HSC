@@ -1,0 +1,27 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="pixel_proc"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xc7z020:-clg400:-1"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
+    </libraryList>
+    <downStreamTool>
+        <DownStreamTool name="vivado"/>
+    </downStreamTool>
+    <clockList>
+        <clock name="default" period="7" default="false"/>
+    </clockList>
+    <config>
+        <config_compile name_max_length="40"/>
+        <config_schedule effort="medium" enable_dsp_full_reg="1" relax_ii_for_timing="0" verbose="1"/>
+        <config_rtl reset="all"/>
+    </config>
+</AutoPilot:solution>
+

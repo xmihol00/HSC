@@ -1,0 +1,557 @@
+
+
+================================================================
+== Vivado HLS Report for 'pixel_pack'
+================================================================
+* Date:           Mon Mar  1 13:00:53 2021
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        pixel_pack
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 7.00 ns | 2.747 ns |   0.88 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        ?|        ?|         7|          4|          4|     ?|    yes   |
+        |- Loop 2  |        ?|        ?|         2|          1|          1|     ?|    yes   |
+        |- Loop 3  |        ?|        ?|         5|          4|          4|     ?|    yes   |
+        |- Loop 4  |        ?|        ?|         3|          2|          2|     ?|    yes   |
+        |- Loop 5  |        ?|        ?|         3|          2|          2|     ?|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 3
+  * Pipeline-1: initiation interval (II) = 2, depth = 3
+  * Pipeline-2: initiation interval (II) = 4, depth = 5
+  * Pipeline-3: initiation interval (II) = 1, depth = 2
+  * Pipeline-4: initiation interval (II) = 4, depth = 7
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 26
+* Pipeline : 5
+  Pipeline-0 : II = 2, D = 3, States = { 3 4 5 }
+  Pipeline-1 : II = 2, D = 3, States = { 7 8 9 }
+  Pipeline-2 : II = 4, D = 5, States = { 10 11 12 13 14 }
+  Pipeline-3 : II = 1, D = 2, States = { 16 17 }
+  Pipeline-4 : II = 4, D = 7, States = { 19 20 21 22 23 24 25 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 6 3 7 10 16 19 
+3 --> 4 
+4 --> 5 
+5 --> 6 3 
+6 --> 
+7 --> 8 
+8 --> 9 
+9 --> 6 7 
+10 --> 15 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 10 
+15 --> 6 
+16 --> 17 
+17 --> 18 16 
+18 --> 6 
+19 --> 26 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 19 
+26 --> 6 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 27 [2/2] (1.00ns)   --->   "%alpha_V_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %alpha_V)"   --->   Operation 27 'read' 'alpha_V_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 28 [2/2] (1.00ns)   --->   "%mode_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %mode)"   --->   Operation 28 'read' 'mode_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+State 2 <SV = 1> <Delay = 2.30>
+ST_2 : Operation 29 [1/2] (1.00ns)   --->   "%alpha_V_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %alpha_V)"   --->   Operation 29 'read' 'alpha_V_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 30 [1/2] (1.00ns)   --->   "%mode_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %mode)"   --->   Operation 30 'read' 'mode_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %stream_in_24_data_V), !map !81"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %stream_in_24_user_V), !map !87"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %stream_in_24_last_V), !map !91"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %stream_out_32_data_V), !map !95"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %stream_out_32_user_V), !map !99"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %stream_out_32_last_V), !map !103"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %mode), !map !107"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %alpha_V), !map !113"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @pixel_pack_str) nounwind"   --->   Operation 39 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:30]   --->   Operation 40 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecClockDomain([8 x i8]* @p_str2, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:32]   --->   Operation 41 'specclockdomain' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %mode, [10 x i8]* @p_str3, i32 1, i32 1, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [8 x i8]* @p_str4, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:33]   --->   Operation 42 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8 %alpha_V, [10 x i8]* @p_str3, i32 1, i32 1, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [8 x i8]* @p_str4, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:34]   --->   Operation 43 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 24, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:35]   --->   Operation 44 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 24, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:36]   --->   Operation 45 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (1.30ns)   --->   "switch i32 %mode_read, label %.loopexit [
+    i32 0, label %.preheader843.preheader
+    i32 1, label %hls_label_1.preheader
+    i32 2, label %.preheader837.preheader
+    i32 3, label %hls_label_3.preheader
+    i32 4, label %hls_label_4.preheader
+  ]" [pixel_pack/pixel_pack.cpp:40]   --->   Operation 46 'switch' <Predicate = true> <Delay = 1.30>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "br label %hls_label_4" [pixel_pack/pixel_pack.cpp:121]   --->   Operation 47 'br' <Predicate = (mode_read == 4)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "br label %hls_label_3" [pixel_pack/pixel_pack.cpp:104]   --->   Operation 48 'br' <Predicate = (mode_read == 3)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (1.76ns)   --->   "br label %.preheader837" [pixel_pack/pixel_pack.cpp:82]   --->   Operation 49 'br' <Predicate = (mode_read == 2)> <Delay = 1.76>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "br label %hls_label_1" [pixel_pack/pixel_pack.cpp:68]   --->   Operation 50 'br' <Predicate = (mode_read == 1)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (1.76ns)   --->   "br label %.preheader843" [pixel_pack/pixel_pack.cpp:42]   --->   Operation 51 'br' <Predicate = (mode_read == 0)> <Delay = 1.76>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%empty_28 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 52 'read' 'empty_28' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_11 = extractvalue { i24, i1, i1 } %empty_28, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 53 'extractvalue' 'stream_in_24_data_V_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%p_Result_s_30 = call i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24 %stream_in_24_data_V_11, i32 8, i32 15)" [pixel_pack/pixel_pack.cpp:132]   --->   Operation 54 'partselect' 'p_Result_s_30' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%p_Result_3 = call i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24 %stream_in_24_data_V_11, i32 16, i32 23)" [pixel_pack/pixel_pack.cpp:134]   --->   Operation 55 'partselect' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%trunc_ln647 = trunc i24 %stream_in_24_data_V_11 to i8" [pixel_pack/pixel_pack.cpp:136]   --->   Operation 56 'trunc' 'trunc_ln647' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.91>
+ST_4 : Operation 57 [1/1] (0.00ns) (grouped into LUT with out node or_ln126)   --->   "%stream_in_24_user_V_11 = extractvalue { i24, i1, i1 } %empty_28, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 57 'extractvalue' 'stream_in_24_user_V_11' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%empty_29 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 58 'read' 'empty_29' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_12 = extractvalue { i24, i1, i1 } %empty_29, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 59 'extractvalue' 'stream_in_24_data_V_12' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.00ns) (grouped into LUT with out node or_ln126)   --->   "%stream_in_24_user_V_12 = extractvalue { i24, i1, i1 } %empty_29, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 60 'extractvalue' 'stream_in_24_user_V_12' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_10 = extractvalue { i24, i1, i1 } %empty_29, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 61 'extractvalue' 'stream_in_24_last_V_10' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln126 = or i1 %stream_in_24_user_V_11, %stream_in_24_user_V_12" [pixel_pack/pixel_pack.cpp:126]   --->   Operation 62 'or' 'or_ln126' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%zext_ln364 = zext i8 %p_Result_s_30 to i9" [pixel_pack/pixel_pack.cpp:132]   --->   Operation 63 'zext' 'zext_ln364' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%p_Result_1 = call i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24 %stream_in_24_data_V_12, i32 8, i32 15)" [pixel_pack/pixel_pack.cpp:132]   --->   Operation 64 'partselect' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%zext_ln364_1 = zext i8 %p_Result_1 to i9" [pixel_pack/pixel_pack.cpp:132]   --->   Operation 65 'zext' 'zext_ln364_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (1.91ns)   --->   "%out_c1_V = add i9 %zext_ln364, %zext_ln364_1" [pixel_pack/pixel_pack.cpp:132]   --->   Operation 66 'add' 'out_c1_V' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%zext_ln364_2 = zext i8 %p_Result_3 to i9" [pixel_pack/pixel_pack.cpp:134]   --->   Operation 67 'zext' 'zext_ln364_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%p_Result_4 = call i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24 %stream_in_24_data_V_12, i32 16, i32 23)" [pixel_pack/pixel_pack.cpp:134]   --->   Operation 68 'partselect' 'p_Result_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%zext_ln364_3 = zext i8 %p_Result_4 to i9" [pixel_pack/pixel_pack.cpp:134]   --->   Operation 69 'zext' 'zext_ln364_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (1.91ns)   --->   "%out_c2_V = add i9 %zext_ln364_2, %zext_ln364_3" [pixel_pack/pixel_pack.cpp:134]   --->   Operation 70 'add' 'out_c2_V' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%p_Result_6 = call i8 @_ssdm_op_PartSelect.i8.i9.i32.i32(i9 %out_c1_V, i32 1, i32 8)" [pixel_pack/pixel_pack.cpp:137]   --->   Operation 71 'partselect' 'p_Result_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%trunc_ln647_1 = trunc i24 %stream_in_24_data_V_12 to i8" [pixel_pack/pixel_pack.cpp:138]   --->   Operation 72 'trunc' 'trunc_ln647_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%p_Result_8 = call i8 @_ssdm_op_PartSelect.i8.i9.i32.i32(i9 %out_c2_V, i32 1, i32 8)" [pixel_pack/pixel_pack.cpp:139]   --->   Operation 73 'partselect' 'p_Result_8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%p_Result_14 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %p_Result_8, i8 %trunc_ln647_1, i8 %p_Result_6, i8 %trunc_ln647)" [pixel_pack/pixel_pack.cpp:139]   --->   Operation 74 'bitconcatenate' 'p_Result_14' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 75 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_Result_14, i1 %or_ln126, i1 %stream_in_24_last_V_10)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 75 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "br i1 %stream_in_24_last_V_10, label %.loopexit.loopexit, label %hls_label_4" [pixel_pack/pixel_pack.cpp:121]   --->   Operation 76 'br' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 77 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str11)" [pixel_pack/pixel_pack.cpp:121]   --->   Operation 77 'specregionbegin' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 2, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:122]   --->   Operation 78 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 79 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_Result_14, i1 %or_ln126, i1 %stream_in_24_last_V_10)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 79 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%empty_31 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str11, i32 %tmp_4)" [pixel_pack/pixel_pack.cpp:144]   --->   Operation 80 'specregionend' 'empty_31' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 81 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 81 'br' <Predicate = (mode_read == 4)> <Delay = 0.00>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 82 'br' <Predicate = (mode_read == 3)> <Delay = 0.00>
+ST_6 : Operation 83 [1/1] (0.00ns)   --->   "ret void" [pixel_pack/pixel_pack.cpp:147]   --->   Operation 83 'ret' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 2> <Delay = 0.00>
+ST_7 : Operation 84 [1/1] (0.00ns)   --->   "%empty_25 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 84 'read' 'empty_25' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_7 : Operation 85 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_9 = extractvalue { i24, i1, i1 } %empty_25, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 85 'extractvalue' 'stream_in_24_data_V_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 86 [1/1] (0.00ns)   --->   "%trunc_ln215 = trunc i24 %stream_in_24_data_V_9 to i16" [pixel_pack/pixel_pack.cpp:111]   --->   Operation 86 'trunc' 'trunc_ln215' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 3> <Delay = 0.97>
+ST_8 : Operation 87 [1/1] (0.00ns) (grouped into LUT with out node or_ln109)   --->   "%stream_in_24_user_V_9 = extractvalue { i24, i1, i1 } %empty_25, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 87 'extractvalue' 'stream_in_24_user_V_9' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%empty_26 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 88 'read' 'empty_26' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_10 = extractvalue { i24, i1, i1 } %empty_26, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 89 'extractvalue' 'stream_in_24_data_V_10' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node or_ln109)   --->   "%stream_in_24_user_V_10 = extractvalue { i24, i1, i1 } %empty_26, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 90 'extractvalue' 'stream_in_24_user_V_10' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 91 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_9 = extractvalue { i24, i1, i1 } %empty_26, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 91 'extractvalue' 'stream_in_24_last_V_9' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 92 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln109 = or i1 %stream_in_24_user_V_9, %stream_in_24_user_V_10" [pixel_pack/pixel_pack.cpp:109]   --->   Operation 92 'or' 'or_ln109' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 93 [1/1] (0.00ns)   --->   "%trunc_ln215_1 = trunc i24 %stream_in_24_data_V_10 to i16" [pixel_pack/pixel_pack.cpp:111]   --->   Operation 93 'trunc' 'trunc_ln215_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 94 [1/1] (0.00ns)   --->   "%p_Result_35_1 = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 %trunc_ln215_1, i16 %trunc_ln215)" [pixel_pack/pixel_pack.cpp:111]   --->   Operation 94 'bitconcatenate' 'p_Result_35_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 95 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_Result_35_1, i1 %or_ln109, i1 %stream_in_24_last_V_9)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 95 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_8 : Operation 96 [1/1] (0.00ns)   --->   "br i1 %stream_in_24_last_V_9, label %.loopexit.loopexit69, label %hls_label_3" [pixel_pack/pixel_pack.cpp:104]   --->   Operation 96 'br' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 4> <Delay = 0.00>
+ST_9 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str10)" [pixel_pack/pixel_pack.cpp:104]   --->   Operation 97 'specregionbegin' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 98 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 2, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:105]   --->   Operation 98 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 99 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_Result_35_1, i1 %or_ln109, i1 %stream_in_24_last_V_9)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 99 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_9 : Operation 100 [1/1] (0.00ns)   --->   "%empty_27 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str10, i32 %tmp_3)" [pixel_pack/pixel_pack.cpp:118]   --->   Operation 100 'specregionend' 'empty_27' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 2> <Delay = 1.95>
+ST_10 : Operation 101 [1/1] (0.00ns)   --->   "%p_0279_0819 = phi i32 [ %p_0279_2_3, %hls_label_2_end ], [ undef, %.preheader837.preheader ]" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 101 'phi' 'p_0279_0819' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 102 [1/1] (0.00ns)   --->   "%delayed_last_2 = phi i1 [ %last_6_3, %hls_label_2_end ], [ false, %.preheader837.preheader ]" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 102 'phi' 'delayed_last_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 103 [1/1] (0.00ns)   --->   "%delayed_last_1 = phi i1 [ %delayed_last_2, %hls_label_2_end ], [ false, %.preheader837.preheader ]"   --->   Operation 103 'phi' 'delayed_last_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 104 [1/1] (0.00ns)   --->   "br i1 %delayed_last_1, label %.loopexit.loopexit70, label %hls_label_2_begin" [pixel_pack/pixel_pack.cpp:82]   --->   Operation 104 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9)" [pixel_pack/pixel_pack.cpp:82]   --->   Operation 105 'specregionbegin' 'tmp_2' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_10 : Operation 106 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 4, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:83]   --->   Operation 106 'specpipeline' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_10 : Operation 107 [1/1] (1.76ns)   --->   "br i1 %delayed_last_2, label %._crit_edge857.0, label %5" [pixel_pack/pixel_pack.cpp:88]   --->   Operation 107 'br' <Predicate = (!delayed_last_1)> <Delay = 1.76>
+ST_10 : Operation 108 [1/1] (0.00ns)   --->   "%empty_20 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 108 'read' 'empty_20' <Predicate = (!delayed_last_1 & !delayed_last_2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_10 : Operation 109 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_5 = extractvalue { i24, i1, i1 } %empty_20, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 109 'extractvalue' 'stream_in_24_data_V_5' <Predicate = (!delayed_last_1 & !delayed_last_2)> <Delay = 0.00>
+ST_10 : Operation 110 [1/1] (0.00ns)   --->   "%stream_in_24_user_V_5 = extractvalue { i24, i1, i1 } %empty_20, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 110 'extractvalue' 'stream_in_24_user_V_5' <Predicate = (!delayed_last_1 & !delayed_last_2)> <Delay = 0.00>
+ST_10 : Operation 111 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_5 = extractvalue { i24, i1, i1 } %empty_20, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 111 'extractvalue' 'stream_in_24_last_V_5' <Predicate = (!delayed_last_1 & !delayed_last_2)> <Delay = 0.00>
+ST_10 : Operation 112 [1/1] (0.00ns)   --->   "%trunc_ln647_2 = trunc i24 %stream_in_24_data_V_5 to i8" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 112 'trunc' 'trunc_ln647_2' <Predicate = (!delayed_last_1 & !delayed_last_2)> <Delay = 0.00>
+ST_10 : Operation 113 [1/1] (0.00ns)   --->   "%p_Result_12 = call i32 @llvm.part.set.i32.i8(i32 %p_0279_0819, i8 %trunc_ln647_2, i32 0, i32 7)" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 113 'partset' 'p_Result_12' <Predicate = (!delayed_last_1 & !delayed_last_2)> <Delay = 0.00>
+ST_10 : Operation 114 [1/1] (1.76ns)   --->   "br label %._crit_edge857.0" [pixel_pack/pixel_pack.cpp:93]   --->   Operation 114 'br' <Predicate = (!delayed_last_1 & !delayed_last_2)> <Delay = 1.76>
+ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%last_6_0 = phi i1 [ %stream_in_24_last_V_5, %5 ], [ %delayed_last_2, %hls_label_2_begin ]"   --->   Operation 115 'phi' 'last_6_0' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_10 : Operation 116 [1/1] (0.00ns)   --->   "%empty_24 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_2)" [pixel_pack/pixel_pack.cpp:101]   --->   Operation 116 'specregionend' 'empty_24' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_10 : Operation 117 [1/1] (0.00ns)   --->   "br label %.preheader837" [pixel_pack/pixel_pack.cpp:101]   --->   Operation 117 'br' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+
+State 11 <SV = 3> <Delay = 1.76>
+ST_11 : Operation 118 [1/1] (0.00ns)   --->   "%p_0279_2_0 = phi i32 [ %p_Result_12, %5 ], [ %p_0279_0819, %hls_label_2_begin ]" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 118 'phi' 'p_0279_2_0' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_11 : Operation 119 [1/1] (0.00ns)   --->   "%user_1_0 = phi i1 [ %stream_in_24_user_V_5, %5 ], [ false, %hls_label_2_begin ]" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 119 'phi' 'user_1_0' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_11 : Operation 120 [1/1] (1.76ns)   --->   "br i1 %last_6_0, label %._crit_edge857.1, label %6" [pixel_pack/pixel_pack.cpp:88]   --->   Operation 120 'br' <Predicate = (!delayed_last_1)> <Delay = 1.76>
+ST_11 : Operation 121 [1/1] (0.00ns)   --->   "%empty_21 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 121 'read' 'empty_21' <Predicate = (!delayed_last_1 & !last_6_0)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_11 : Operation 122 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_6 = extractvalue { i24, i1, i1 } %empty_21, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 122 'extractvalue' 'stream_in_24_data_V_6' <Predicate = (!delayed_last_1 & !last_6_0)> <Delay = 0.00>
+ST_11 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node or_ln89)   --->   "%stream_in_24_user_V_6 = extractvalue { i24, i1, i1 } %empty_21, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 123 'extractvalue' 'stream_in_24_user_V_6' <Predicate = (!delayed_last_1 & !last_6_0)> <Delay = 0.00>
+ST_11 : Operation 124 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_6 = extractvalue { i24, i1, i1 } %empty_21, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 124 'extractvalue' 'stream_in_24_last_V_6' <Predicate = (!delayed_last_1 & !last_6_0)> <Delay = 0.00>
+ST_11 : Operation 125 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln89 = or i1 %stream_in_24_user_V_6, %user_1_0" [pixel_pack/pixel_pack.cpp:89]   --->   Operation 125 'or' 'or_ln89' <Predicate = (!delayed_last_1 & !last_6_0)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 126 [1/1] (0.00ns)   --->   "%trunc_ln647_3 = trunc i24 %stream_in_24_data_V_6 to i8" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 126 'trunc' 'trunc_ln647_3' <Predicate = (!delayed_last_1 & !last_6_0)> <Delay = 0.00>
+ST_11 : Operation 127 [1/1] (0.00ns)   --->   "%p_Result_33_1 = call i32 @llvm.part.set.i32.i8(i32 %p_0279_2_0, i8 %trunc_ln647_3, i32 8, i32 15)" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 127 'partset' 'p_Result_33_1' <Predicate = (!delayed_last_1 & !last_6_0)> <Delay = 0.00>
+ST_11 : Operation 128 [1/1] (1.76ns)   --->   "br label %._crit_edge857.1" [pixel_pack/pixel_pack.cpp:93]   --->   Operation 128 'br' <Predicate = (!delayed_last_1 & !last_6_0)> <Delay = 1.76>
+ST_11 : Operation 129 [1/1] (0.00ns)   --->   "%last_6_1 = phi i1 [ %stream_in_24_last_V_6, %6 ], [ %last_6_0, %._crit_edge857.0 ]" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 129 'phi' 'last_6_1' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+
+State 12 <SV = 4> <Delay = 1.76>
+ST_12 : Operation 130 [1/1] (0.00ns)   --->   "%p_0279_2_1 = phi i32 [ %p_Result_33_1, %6 ], [ %p_0279_2_0, %._crit_edge857.0 ]" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 130 'phi' 'p_0279_2_1' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_12 : Operation 131 [1/1] (0.00ns)   --->   "%user_1_1 = phi i1 [ %or_ln89, %6 ], [ %user_1_0, %._crit_edge857.0 ]" [pixel_pack/pixel_pack.cpp:89]   --->   Operation 131 'phi' 'user_1_1' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_12 : Operation 132 [1/1] (1.76ns)   --->   "br i1 %last_6_1, label %._crit_edge857.2, label %7" [pixel_pack/pixel_pack.cpp:88]   --->   Operation 132 'br' <Predicate = (!delayed_last_1)> <Delay = 1.76>
+ST_12 : Operation 133 [1/1] (0.00ns)   --->   "%empty_22 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 133 'read' 'empty_22' <Predicate = (!delayed_last_1 & !last_6_1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_12 : Operation 134 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_7 = extractvalue { i24, i1, i1 } %empty_22, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 134 'extractvalue' 'stream_in_24_data_V_7' <Predicate = (!delayed_last_1 & !last_6_1)> <Delay = 0.00>
+ST_12 : Operation 135 [1/1] (0.00ns) (grouped into LUT with out node or_ln89_1)   --->   "%stream_in_24_user_V_7 = extractvalue { i24, i1, i1 } %empty_22, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 135 'extractvalue' 'stream_in_24_user_V_7' <Predicate = (!delayed_last_1 & !last_6_1)> <Delay = 0.00>
+ST_12 : Operation 136 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_7 = extractvalue { i24, i1, i1 } %empty_22, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 136 'extractvalue' 'stream_in_24_last_V_7' <Predicate = (!delayed_last_1 & !last_6_1)> <Delay = 0.00>
+ST_12 : Operation 137 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln89_1 = or i1 %stream_in_24_user_V_7, %user_1_1" [pixel_pack/pixel_pack.cpp:89]   --->   Operation 137 'or' 'or_ln89_1' <Predicate = (!delayed_last_1 & !last_6_1)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 138 [1/1] (0.00ns)   --->   "%trunc_ln647_4 = trunc i24 %stream_in_24_data_V_7 to i8" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 138 'trunc' 'trunc_ln647_4' <Predicate = (!delayed_last_1 & !last_6_1)> <Delay = 0.00>
+ST_12 : Operation 139 [1/1] (0.00ns)   --->   "%p_Result_33_2 = call i32 @llvm.part.set.i32.i8(i32 %p_0279_2_1, i8 %trunc_ln647_4, i32 16, i32 23)" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 139 'partset' 'p_Result_33_2' <Predicate = (!delayed_last_1 & !last_6_1)> <Delay = 0.00>
+ST_12 : Operation 140 [1/1] (1.76ns)   --->   "br label %._crit_edge857.2" [pixel_pack/pixel_pack.cpp:93]   --->   Operation 140 'br' <Predicate = (!delayed_last_1 & !last_6_1)> <Delay = 1.76>
+ST_12 : Operation 141 [1/1] (0.00ns)   --->   "%last_6_2 = phi i1 [ %stream_in_24_last_V_7, %7 ], [ %last_6_1, %._crit_edge857.1 ]" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 141 'phi' 'last_6_2' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+
+State 13 <SV = 5> <Delay = 2.74>
+ST_13 : Operation 142 [1/1] (0.00ns)   --->   "%p_0279_2_2 = phi i32 [ %p_Result_33_2, %7 ], [ %p_0279_2_1, %._crit_edge857.1 ]" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 142 'phi' 'p_0279_2_2' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_13 : Operation 143 [1/1] (0.00ns)   --->   "%user_1_2 = phi i1 [ %or_ln89_1, %7 ], [ %user_1_1, %._crit_edge857.1 ]" [pixel_pack/pixel_pack.cpp:89]   --->   Operation 143 'phi' 'user_1_2' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_13 : Operation 144 [1/1] (1.76ns)   --->   "br i1 %last_6_2, label %._crit_edge857.3, label %8" [pixel_pack/pixel_pack.cpp:88]   --->   Operation 144 'br' <Predicate = (!delayed_last_1)> <Delay = 1.76>
+ST_13 : Operation 145 [1/1] (0.00ns)   --->   "%empty_23 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 145 'read' 'empty_23' <Predicate = (!delayed_last_1 & !last_6_2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_13 : Operation 146 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_8 = extractvalue { i24, i1, i1 } %empty_23, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 146 'extractvalue' 'stream_in_24_data_V_8' <Predicate = (!delayed_last_1 & !last_6_2)> <Delay = 0.00>
+ST_13 : Operation 147 [1/1] (0.00ns) (grouped into LUT with out node or_ln89_2)   --->   "%stream_in_24_user_V_8 = extractvalue { i24, i1, i1 } %empty_23, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 147 'extractvalue' 'stream_in_24_user_V_8' <Predicate = (!delayed_last_1 & !last_6_2)> <Delay = 0.00>
+ST_13 : Operation 148 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_8 = extractvalue { i24, i1, i1 } %empty_23, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 148 'extractvalue' 'stream_in_24_last_V_8' <Predicate = (!delayed_last_1 & !last_6_2)> <Delay = 0.00>
+ST_13 : Operation 149 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln89_2 = or i1 %stream_in_24_user_V_8, %user_1_2" [pixel_pack/pixel_pack.cpp:89]   --->   Operation 149 'or' 'or_ln89_2' <Predicate = (!delayed_last_1 & !last_6_2)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 150 [1/1] (0.00ns)   --->   "%trunc_ln647_5 = trunc i24 %stream_in_24_data_V_8 to i8" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 150 'trunc' 'trunc_ln647_5' <Predicate = (!delayed_last_1 & !last_6_2)> <Delay = 0.00>
+ST_13 : Operation 151 [1/1] (0.00ns)   --->   "%p_Result_33_3 = call i32 @llvm.part.set.i32.i8(i32 %p_0279_2_2, i8 %trunc_ln647_5, i32 24, i32 31)" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 151 'partset' 'p_Result_33_3' <Predicate = (!delayed_last_1 & !last_6_2)> <Delay = 0.00>
+ST_13 : Operation 152 [1/1] (1.76ns)   --->   "br label %._crit_edge857.3" [pixel_pack/pixel_pack.cpp:93]   --->   Operation 152 'br' <Predicate = (!delayed_last_1 & !last_6_2)> <Delay = 1.76>
+ST_13 : Operation 153 [1/1] (0.00ns)   --->   "%p_0279_2_3 = phi i32 [ %p_Result_33_3, %8 ], [ %p_0279_2_2, %._crit_edge857.2 ]" [pixel_pack/pixel_pack.cpp:91]   --->   Operation 153 'phi' 'p_0279_2_3' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_13 : Operation 154 [1/1] (0.00ns)   --->   "%user_1_3 = phi i1 [ %or_ln89_2, %8 ], [ %user_1_2, %._crit_edge857.2 ]" [pixel_pack/pixel_pack.cpp:89]   --->   Operation 154 'phi' 'user_1_3' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_13 : Operation 155 [1/1] (0.00ns)   --->   "%last_6_3 = phi i1 [ %stream_in_24_last_V_8, %8 ], [ %last_6_2, %._crit_edge857.2 ]" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 155 'phi' 'last_6_3' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_13 : Operation 156 [1/1] (0.00ns)   --->   "br i1 %delayed_last_2, label %hls_label_2_end, label %9" [pixel_pack/pixel_pack.cpp:95]   --->   Operation 156 'br' <Predicate = (!delayed_last_1)> <Delay = 0.00>
+ST_13 : Operation 157 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_0279_2_3, i1 %user_1_3, i1 %last_6_3)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 157 'write' <Predicate = (!delayed_last_1 & !delayed_last_2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 14 <SV = 6> <Delay = 0.00>
+ST_14 : Operation 158 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_0279_2_3, i1 %user_1_3, i1 %last_6_3)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 158 'write' <Predicate = (!delayed_last_2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_14 : Operation 159 [1/1] (0.00ns)   --->   "br label %hls_label_2_end" [pixel_pack/pixel_pack.cpp:100]   --->   Operation 159 'br' <Predicate = (!delayed_last_2)> <Delay = 0.00>
+
+State 15 <SV = 3> <Delay = 0.00>
+ST_15 : Operation 160 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 160 'br' <Predicate = true> <Delay = 0.00>
+
+State 16 <SV = 2> <Delay = 0.00>
+ST_16 : Operation 161 [1/1] (0.00ns)   --->   "%empty_18 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 161 'read' 'empty_18' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_16 : Operation 162 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_4 = extractvalue { i24, i1, i1 } %empty_18, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 162 'extractvalue' 'stream_in_24_data_V_4' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 163 [1/1] (0.00ns)   --->   "%stream_in_24_user_V_4 = extractvalue { i24, i1, i1 } %empty_18, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 163 'extractvalue' 'stream_in_24_user_V_4' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 164 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_4 = extractvalue { i24, i1, i1 } %empty_18, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 164 'extractvalue' 'stream_in_24_last_V_4' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 165 [1/1] (0.00ns)   --->   "%p_Result_13 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i24(i8 %alpha_V_read, i24 %stream_in_24_data_V_4)" [pixel_pack/pixel_pack.cpp:72]   --->   Operation 165 'bitconcatenate' 'p_Result_13' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 166 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_Result_13, i1 %stream_in_24_user_V_4, i1 %stream_in_24_last_V_4)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 166 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_16 : Operation 167 [1/1] (0.00ns)   --->   "br i1 %stream_in_24_last_V_4, label %.loopexit.loopexit71, label %hls_label_1" [pixel_pack/pixel_pack.cpp:68]   --->   Operation 167 'br' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 3> <Delay = 0.00>
+ST_17 : Operation 168 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8)" [pixel_pack/pixel_pack.cpp:68]   --->   Operation 168 'specregionbegin' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 169 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:69]   --->   Operation 169 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 170 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_Result_13, i1 %stream_in_24_user_V_4, i1 %stream_in_24_last_V_4)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 170 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_17 : Operation 171 [1/1] (0.00ns)   --->   "%empty_19 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_1)" [pixel_pack/pixel_pack.cpp:79]   --->   Operation 171 'specregionend' 'empty_19' <Predicate = true> <Delay = 0.00>
+
+State 18 <SV = 4> <Delay = 0.00>
+ST_18 : Operation 172 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 172 'br' <Predicate = true> <Delay = 0.00>
+
+State 19 <SV = 2> <Delay = 1.95>
+ST_19 : Operation 173 [1/1] (0.00ns)   --->   "%p_0147_0817 = phi i4 [ %p_0147_2_3, %hls_label_0_end ], [ undef, %.preheader843.preheader ]" [pixel_pack/pixel_pack.cpp:51]   --->   Operation 173 'phi' 'p_0147_0817' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 174 [1/1] (0.00ns)   --->   "%p_0151_0816 = phi i4 [ %p_0151_2_3, %hls_label_0_end ], [ undef, %.preheader843.preheader ]" [pixel_pack/pixel_pack.cpp:52]   --->   Operation 174 'phi' 'p_0151_0816' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 175 [1/1] (0.00ns)   --->   "%p_0563_0815 = phi i96 [ %p_0563_2_3, %hls_label_0_end ], [ undef, %.preheader843.preheader ]" [pixel_pack/pixel_pack.cpp:50]   --->   Operation 175 'phi' 'p_0563_0815' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 176 [1/1] (0.00ns)   --->   "%delayed_last = phi i1 [ %last_2_3, %hls_label_0_end ], [ false, %.preheader843.preheader ]" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 176 'phi' 'delayed_last' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 177 [1/1] (0.00ns)   --->   "%delayed_last_0 = phi i1 [ %delayed_last, %hls_label_0_end ], [ false, %.preheader843.preheader ]"   --->   Operation 177 'phi' 'delayed_last_0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 178 [1/1] (0.00ns)   --->   "br i1 %delayed_last_0, label %.loopexit.loopexit72, label %hls_label_0_begin" [pixel_pack/pixel_pack.cpp:42]   --->   Operation 178 'br' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 179 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str7)" [pixel_pack/pixel_pack.cpp:42]   --->   Operation 179 'specregionbegin' 'tmp' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_19 : Operation 180 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 4, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [pixel_pack/pixel_pack.cpp:43]   --->   Operation 180 'specpipeline' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_19 : Operation 181 [1/1] (1.76ns)   --->   "br i1 %delayed_last, label %._crit_edge.0, label %1" [pixel_pack/pixel_pack.cpp:49]   --->   Operation 181 'br' <Predicate = (!delayed_last_0)> <Delay = 1.76>
+ST_19 : Operation 182 [1/1] (0.00ns)   --->   "%empty = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 182 'read' 'empty' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_19 : Operation 183 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_s = extractvalue { i24, i1, i1 } %empty, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 183 'extractvalue' 'stream_in_24_data_V_s' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_19 : Operation 184 [1/1] (0.00ns)   --->   "%stream_in_24_user_V_s = extractvalue { i24, i1, i1 } %empty, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 184 'extractvalue' 'stream_in_24_user_V_s' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_19 : Operation 185 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_s = extractvalue { i24, i1, i1 } %empty, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 185 'extractvalue' 'stream_in_24_last_V_s' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_19 : Operation 186 [1/1] (0.00ns)   --->   "%p_Result_9 = call i96 @llvm.part.set.i96.i24(i96 %p_0563_0815, i24 %stream_in_24_data_V_s, i32 0, i32 23)" [pixel_pack/pixel_pack.cpp:50]   --->   Operation 186 'partset' 'p_Result_9' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_19 : Operation 187 [1/1] (0.00ns)   --->   "%tmp_5 = call i4 @_ssdm_op_BitSet.i4.i4.i32.i1(i4 %p_0147_0817, i32 0, i1 %stream_in_24_user_V_s)" [pixel_pack/pixel_pack.cpp:51]   --->   Operation 187 'bitset' 'tmp_5' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_19 : Operation 188 [1/1] (0.00ns)   --->   "%tmp_6 = call i4 @_ssdm_op_BitSet.i4.i4.i32.i1(i4 %p_0151_0816, i32 0, i1 %stream_in_24_last_V_s)" [pixel_pack/pixel_pack.cpp:52]   --->   Operation 188 'bitset' 'tmp_6' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_19 : Operation 189 [1/1] (1.76ns)   --->   "br label %._crit_edge.0" [pixel_pack/pixel_pack.cpp:55]   --->   Operation 189 'br' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 1.76>
+ST_19 : Operation 190 [1/1] (0.00ns)   --->   "%last_2_0 = phi i1 [ %stream_in_24_last_V_s, %1 ], [ %delayed_last, %hls_label_0_begin ]"   --->   Operation 190 'phi' 'last_2_0' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_19 : Operation 191 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str7, i32 %tmp)" [pixel_pack/pixel_pack.cpp:65]   --->   Operation 191 'specregionend' 'empty_17' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_19 : Operation 192 [1/1] (0.00ns)   --->   "br label %.preheader843" [pixel_pack/pixel_pack.cpp:65]   --->   Operation 192 'br' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+
+State 20 <SV = 3> <Delay = 1.76>
+ST_20 : Operation 193 [1/1] (0.00ns)   --->   "%p_0147_2_0 = phi i4 [ %tmp_5, %1 ], [ %p_0147_0817, %hls_label_0_begin ]" [pixel_pack/pixel_pack.cpp:51]   --->   Operation 193 'phi' 'p_0147_2_0' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_20 : Operation 194 [1/1] (0.00ns)   --->   "%p_0151_2_0 = phi i4 [ %tmp_6, %1 ], [ %p_0151_0816, %hls_label_0_begin ]" [pixel_pack/pixel_pack.cpp:52]   --->   Operation 194 'phi' 'p_0151_2_0' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_20 : Operation 195 [1/1] (0.00ns)   --->   "%p_0563_2_0 = phi i96 [ %p_Result_9, %1 ], [ %p_0563_0815, %hls_label_0_begin ]" [pixel_pack/pixel_pack.cpp:50]   --->   Operation 195 'phi' 'p_0563_2_0' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_20 : Operation 196 [1/1] (1.76ns)   --->   "br i1 %last_2_0, label %._crit_edge.1, label %2" [pixel_pack/pixel_pack.cpp:49]   --->   Operation 196 'br' <Predicate = (!delayed_last_0)> <Delay = 1.76>
+ST_20 : Operation 197 [1/1] (0.00ns)   --->   "%empty_14 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 197 'read' 'empty_14' <Predicate = (!delayed_last_0 & !last_2_0)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_20 : Operation 198 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_1 = extractvalue { i24, i1, i1 } %empty_14, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 198 'extractvalue' 'stream_in_24_data_V_1' <Predicate = (!delayed_last_0 & !last_2_0)> <Delay = 0.00>
+ST_20 : Operation 199 [1/1] (0.00ns)   --->   "%stream_in_24_user_V_1 = extractvalue { i24, i1, i1 } %empty_14, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 199 'extractvalue' 'stream_in_24_user_V_1' <Predicate = (!delayed_last_0 & !last_2_0)> <Delay = 0.00>
+ST_20 : Operation 200 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_1 = extractvalue { i24, i1, i1 } %empty_14, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 200 'extractvalue' 'stream_in_24_last_V_1' <Predicate = (!delayed_last_0 & !last_2_0)> <Delay = 0.00>
+ST_20 : Operation 201 [1/1] (0.00ns)   --->   "%p_Result_26_1 = call i96 @llvm.part.set.i96.i24(i96 %p_0563_2_0, i24 %stream_in_24_data_V_1, i32 24, i32 47)" [pixel_pack/pixel_pack.cpp:50]   --->   Operation 201 'partset' 'p_Result_26_1' <Predicate = (!delayed_last_0 & !last_2_0)> <Delay = 0.00>
+ST_20 : Operation 202 [1/1] (0.00ns)   --->   "%tmp_7 = call i4 @_ssdm_op_BitSet.i4.i4.i32.i1(i4 %p_0147_2_0, i32 1, i1 %stream_in_24_user_V_1)" [pixel_pack/pixel_pack.cpp:51]   --->   Operation 202 'bitset' 'tmp_7' <Predicate = (!delayed_last_0 & !last_2_0)> <Delay = 0.00>
+ST_20 : Operation 203 [1/1] (0.00ns)   --->   "%tmp_8 = call i4 @_ssdm_op_BitSet.i4.i4.i32.i1(i4 %p_0151_2_0, i32 1, i1 %stream_in_24_last_V_1)" [pixel_pack/pixel_pack.cpp:52]   --->   Operation 203 'bitset' 'tmp_8' <Predicate = (!delayed_last_0 & !last_2_0)> <Delay = 0.00>
+ST_20 : Operation 204 [1/1] (1.76ns)   --->   "br label %._crit_edge.1" [pixel_pack/pixel_pack.cpp:55]   --->   Operation 204 'br' <Predicate = (!delayed_last_0 & !last_2_0)> <Delay = 1.76>
+ST_20 : Operation 205 [1/1] (0.00ns)   --->   "%last_2_1 = phi i1 [ %stream_in_24_last_V_1, %2 ], [ %last_2_0, %._crit_edge.0 ]" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 205 'phi' 'last_2_1' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+
+State 21 <SV = 4> <Delay = 1.76>
+ST_21 : Operation 206 [1/1] (0.00ns)   --->   "%p_0147_2_1 = phi i4 [ %tmp_7, %2 ], [ %p_0147_2_0, %._crit_edge.0 ]" [pixel_pack/pixel_pack.cpp:51]   --->   Operation 206 'phi' 'p_0147_2_1' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_21 : Operation 207 [1/1] (0.00ns)   --->   "%p_0151_2_1 = phi i4 [ %tmp_8, %2 ], [ %p_0151_2_0, %._crit_edge.0 ]" [pixel_pack/pixel_pack.cpp:52]   --->   Operation 207 'phi' 'p_0151_2_1' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_21 : Operation 208 [1/1] (0.00ns)   --->   "%p_0563_2_1 = phi i96 [ %p_Result_26_1, %2 ], [ %p_0563_2_0, %._crit_edge.0 ]" [pixel_pack/pixel_pack.cpp:50]   --->   Operation 208 'phi' 'p_0563_2_1' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_21 : Operation 209 [1/1] (1.76ns)   --->   "br i1 %last_2_1, label %._crit_edge.2, label %3" [pixel_pack/pixel_pack.cpp:49]   --->   Operation 209 'br' <Predicate = (!delayed_last_0)> <Delay = 1.76>
+ST_21 : Operation 210 [1/1] (0.00ns)   --->   "%empty_15 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 210 'read' 'empty_15' <Predicate = (!delayed_last_0 & !last_2_1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_21 : Operation 211 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_2 = extractvalue { i24, i1, i1 } %empty_15, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 211 'extractvalue' 'stream_in_24_data_V_2' <Predicate = (!delayed_last_0 & !last_2_1)> <Delay = 0.00>
+ST_21 : Operation 212 [1/1] (0.00ns)   --->   "%stream_in_24_user_V_2 = extractvalue { i24, i1, i1 } %empty_15, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 212 'extractvalue' 'stream_in_24_user_V_2' <Predicate = (!delayed_last_0 & !last_2_1)> <Delay = 0.00>
+ST_21 : Operation 213 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_2 = extractvalue { i24, i1, i1 } %empty_15, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 213 'extractvalue' 'stream_in_24_last_V_2' <Predicate = (!delayed_last_0 & !last_2_1)> <Delay = 0.00>
+ST_21 : Operation 214 [1/1] (0.00ns)   --->   "%p_Result_26_2 = call i96 @llvm.part.set.i96.i24(i96 %p_0563_2_1, i24 %stream_in_24_data_V_2, i32 48, i32 71)" [pixel_pack/pixel_pack.cpp:50]   --->   Operation 214 'partset' 'p_Result_26_2' <Predicate = (!delayed_last_0 & !last_2_1)> <Delay = 0.00>
+ST_21 : Operation 215 [1/1] (0.00ns)   --->   "%tmp_9 = call i4 @_ssdm_op_BitSet.i4.i4.i32.i1(i4 %p_0147_2_1, i32 2, i1 %stream_in_24_user_V_2)" [pixel_pack/pixel_pack.cpp:51]   --->   Operation 215 'bitset' 'tmp_9' <Predicate = (!delayed_last_0 & !last_2_1)> <Delay = 0.00>
+ST_21 : Operation 216 [1/1] (0.00ns)   --->   "%tmp_10 = call i4 @_ssdm_op_BitSet.i4.i4.i32.i1(i4 %p_0151_2_1, i32 2, i1 %stream_in_24_last_V_2)" [pixel_pack/pixel_pack.cpp:52]   --->   Operation 216 'bitset' 'tmp_10' <Predicate = (!delayed_last_0 & !last_2_1)> <Delay = 0.00>
+ST_21 : Operation 217 [1/1] (1.76ns)   --->   "br label %._crit_edge.2" [pixel_pack/pixel_pack.cpp:55]   --->   Operation 217 'br' <Predicate = (!delayed_last_0 & !last_2_1)> <Delay = 1.76>
+ST_21 : Operation 218 [1/1] (0.00ns)   --->   "%last_2_2 = phi i1 [ %stream_in_24_last_V_2, %3 ], [ %last_2_1, %._crit_edge.1 ]" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 218 'phi' 'last_2_2' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+
+State 22 <SV = 5> <Delay = 1.76>
+ST_22 : Operation 219 [1/1] (0.00ns)   --->   "%p_0147_2_2 = phi i4 [ %tmp_9, %3 ], [ %p_0147_2_1, %._crit_edge.1 ]" [pixel_pack/pixel_pack.cpp:51]   --->   Operation 219 'phi' 'p_0147_2_2' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_22 : Operation 220 [1/1] (0.00ns)   --->   "%p_0151_2_2 = phi i4 [ %tmp_10, %3 ], [ %p_0151_2_1, %._crit_edge.1 ]" [pixel_pack/pixel_pack.cpp:52]   --->   Operation 220 'phi' 'p_0151_2_2' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_22 : Operation 221 [1/1] (0.00ns)   --->   "%p_0563_2_2 = phi i96 [ %p_Result_26_2, %3 ], [ %p_0563_2_1, %._crit_edge.1 ]" [pixel_pack/pixel_pack.cpp:50]   --->   Operation 221 'phi' 'p_0563_2_2' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_22 : Operation 222 [1/1] (1.76ns)   --->   "br i1 %last_2_2, label %._crit_edge.3, label %4" [pixel_pack/pixel_pack.cpp:49]   --->   Operation 222 'br' <Predicate = (!delayed_last_0)> <Delay = 1.76>
+ST_22 : Operation 223 [1/1] (0.00ns)   --->   "%empty_16 = call { i24, i1, i1 } @_ssdm_op_Read.axis.volatile.i24P.i1P.i1P(i24* %stream_in_24_data_V, i1* %stream_in_24_user_V, i1* %stream_in_24_last_V)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 223 'read' 'empty_16' <Predicate = (!delayed_last_0 & !last_2_2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_22 : Operation 224 [1/1] (0.00ns)   --->   "%stream_in_24_data_V_3 = extractvalue { i24, i1, i1 } %empty_16, 0" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 224 'extractvalue' 'stream_in_24_data_V_3' <Predicate = (!delayed_last_0 & !last_2_2)> <Delay = 0.00>
+ST_22 : Operation 225 [1/1] (0.00ns)   --->   "%stream_in_24_user_V_3 = extractvalue { i24, i1, i1 } %empty_16, 1" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 225 'extractvalue' 'stream_in_24_user_V_3' <Predicate = (!delayed_last_0 & !last_2_2)> <Delay = 0.00>
+ST_22 : Operation 226 [1/1] (0.00ns)   --->   "%stream_in_24_last_V_3 = extractvalue { i24, i1, i1 } %empty_16, 2" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 226 'extractvalue' 'stream_in_24_last_V_3' <Predicate = (!delayed_last_0 & !last_2_2)> <Delay = 0.00>
+ST_22 : Operation 227 [1/1] (0.00ns)   --->   "%p_Result_26_3 = call i96 @llvm.part.set.i96.i24(i96 %p_0563_2_2, i24 %stream_in_24_data_V_3, i32 72, i32 95)" [pixel_pack/pixel_pack.cpp:50]   --->   Operation 227 'partset' 'p_Result_26_3' <Predicate = (!delayed_last_0 & !last_2_2)> <Delay = 0.00>
+ST_22 : Operation 228 [1/1] (0.00ns)   --->   "%tmp_11 = call i4 @_ssdm_op_BitSet.i4.i4.i32.i1(i4 %p_0147_2_2, i32 3, i1 %stream_in_24_user_V_3)" [pixel_pack/pixel_pack.cpp:51]   --->   Operation 228 'bitset' 'tmp_11' <Predicate = (!delayed_last_0 & !last_2_2)> <Delay = 0.00>
+ST_22 : Operation 229 [1/1] (0.00ns)   --->   "%tmp_12 = call i4 @_ssdm_op_BitSet.i4.i4.i32.i1(i4 %p_0151_2_2, i32 3, i1 %stream_in_24_last_V_3)" [pixel_pack/pixel_pack.cpp:52]   --->   Operation 229 'bitset' 'tmp_12' <Predicate = (!delayed_last_0 & !last_2_2)> <Delay = 0.00>
+ST_22 : Operation 230 [1/1] (1.76ns)   --->   "br label %._crit_edge.3" [pixel_pack/pixel_pack.cpp:55]   --->   Operation 230 'br' <Predicate = (!delayed_last_0 & !last_2_2)> <Delay = 1.76>
+ST_22 : Operation 231 [1/1] (0.00ns)   --->   "%p_0147_2_3 = phi i4 [ %tmp_11, %4 ], [ %p_0147_2_2, %._crit_edge.2 ]" [pixel_pack/pixel_pack.cpp:51]   --->   Operation 231 'phi' 'p_0147_2_3' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_22 : Operation 232 [1/1] (0.00ns)   --->   "%p_0151_2_3 = phi i4 [ %tmp_12, %4 ], [ %p_0151_2_2, %._crit_edge.2 ]" [pixel_pack/pixel_pack.cpp:52]   --->   Operation 232 'phi' 'p_0151_2_3' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_22 : Operation 233 [1/1] (0.00ns)   --->   "%p_0563_2_3 = phi i96 [ %p_Result_26_3, %4 ], [ %p_0563_2_2, %._crit_edge.2 ]" [pixel_pack/pixel_pack.cpp:50]   --->   Operation 233 'phi' 'p_0563_2_3' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_22 : Operation 234 [1/1] (0.00ns)   --->   "%last_2_3 = phi i1 [ %stream_in_24_last_V_3, %4 ], [ %last_2_2, %._crit_edge.2 ]" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 234 'phi' 'last_2_3' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_22 : Operation 235 [1/1] (0.00ns)   --->   "br i1 %delayed_last, label %hls_label_0_end, label %.preheader841.preheader" [pixel_pack/pixel_pack.cpp:57]   --->   Operation 235 'br' <Predicate = (!delayed_last_0)> <Delay = 0.00>
+ST_22 : Operation 236 [1/1] (0.00ns)   --->   "%trunc_ln647_6 = trunc i96 %p_0563_2_3 to i32" [pixel_pack/pixel_pack.cpp:59]   --->   Operation 236 'trunc' 'trunc_ln647_6' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_22 : Operation 237 [1/1] (0.00ns)   --->   "%p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i4.i4(i4 %p_0147_2_3, i4 0)" [pixel_pack/pixel_pack.cpp:60]   --->   Operation 237 'bitselect' 'p_Result_s' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_22 : Operation 238 [1/1] (0.00ns)   --->   "%p_Result_11 = call i1 @_ssdm_op_BitSelect.i1.i4.i4(i4 %p_0151_2_3, i4 1)" [pixel_pack/pixel_pack.cpp:61]   --->   Operation 238 'bitselect' 'p_Result_11' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_22 : Operation 239 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %trunc_ln647_6, i1 %p_Result_s, i1 %p_Result_11)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 239 'write' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_22 : Operation 240 [1/1] (0.00ns)   --->   "%p_Result_29_1 = call i32 @_ssdm_op_PartSelect.i32.i96.i32.i32(i96 %p_0563_2_3, i32 32, i32 63)" [pixel_pack/pixel_pack.cpp:59]   --->   Operation 240 'partselect' 'p_Result_29_1' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_22 : Operation 241 [1/1] (0.00ns)   --->   "%p_Result_10 = call i1 @_ssdm_op_BitSelect.i1.i4.i4(i4 %p_0147_2_3, i4 1)" [pixel_pack/pixel_pack.cpp:60]   --->   Operation 241 'bitselect' 'p_Result_10' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_22 : Operation 242 [1/1] (0.00ns)   --->   "%p_Result_1_1 = call i1 @_ssdm_op_BitSelect.i1.i4.i4(i4 %p_0151_2_3, i4 2)" [pixel_pack/pixel_pack.cpp:61]   --->   Operation 242 'bitselect' 'p_Result_1_1' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_22 : Operation 243 [1/1] (0.00ns)   --->   "%p_Result_29_2 = call i32 @_ssdm_op_PartSelect.i32.i96.i32.i32(i96 %p_0563_2_3, i32 64, i32 95)" [pixel_pack/pixel_pack.cpp:59]   --->   Operation 243 'partselect' 'p_Result_29_2' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_22 : Operation 244 [1/1] (0.00ns)   --->   "%p_Result_2 = call i1 @_ssdm_op_BitSelect.i1.i4.i4(i4 %p_0147_2_3, i4 2)" [pixel_pack/pixel_pack.cpp:60]   --->   Operation 244 'bitselect' 'p_Result_2' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+ST_22 : Operation 245 [1/1] (0.00ns)   --->   "%p_Result_1_2 = call i1 @_ssdm_op_BitSelect.i1.i4.i4(i4 %p_0151_2_3, i4 3)" [pixel_pack/pixel_pack.cpp:61]   --->   Operation 245 'bitselect' 'p_Result_1_2' <Predicate = (!delayed_last_0 & !delayed_last)> <Delay = 0.00>
+
+State 23 <SV = 6> <Delay = 0.00>
+ST_23 : Operation 246 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %trunc_ln647_6, i1 %p_Result_s, i1 %p_Result_11)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 246 'write' <Predicate = (!delayed_last)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_23 : Operation 247 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_Result_29_1, i1 %p_Result_10, i1 %p_Result_1_1)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 247 'write' <Predicate = (!delayed_last)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 24 <SV = 7> <Delay = 0.00>
+ST_24 : Operation 248 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_Result_29_1, i1 %p_Result_10, i1 %p_Result_1_1)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 248 'write' <Predicate = (!delayed_last)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_24 : Operation 249 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_Result_29_2, i1 %p_Result_2, i1 %p_Result_1_2)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 249 'write' <Predicate = (!delayed_last)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 25 <SV = 8> <Delay = 0.00>
+ST_25 : Operation 250 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i1P.i1P(i32* %stream_out_32_data_V, i1* %stream_out_32_user_V, i1* %stream_out_32_last_V, i32 %p_Result_29_2, i1 %p_Result_2, i1 %p_Result_1_2)" [pixel_pack/pixel_pack.cpp:28]   --->   Operation 250 'write' <Predicate = (!delayed_last)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_25 : Operation 251 [1/1] (0.00ns)   --->   "br label %hls_label_0_end"   --->   Operation 251 'br' <Predicate = (!delayed_last)> <Delay = 0.00>
+
+State 26 <SV = 3> <Delay = 0.00>
+ST_26 : Operation 252 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 252 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 7ns, clock uncertainty: 0.875ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'alpha_V' [9]  (1 ns)
+
+ <State 2>: 2.3ns
+The critical path consists of the following:
+	s_axi read on port 'mode' [10]  (1 ns)
+	blocking operation 1.3 ns on control path)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 1.92ns
+The critical path consists of the following:
+	axis read on port 'stream_in_24_data_V' (pixel_pack/pixel_pack.cpp:28) [35]  (0 ns)
+	'add' operation ('out_c1.V', pixel_pack/pixel_pack.cpp:132) [44]  (1.92 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0.978ns
+The critical path consists of the following:
+	'or' operation ('or_ln109', pixel_pack/pixel_pack.cpp:109) [73]  (0.978 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 1.96ns
+The critical path consists of the following:
+	'phi' operation ('delayed_last') with incoming values : ('stream_in_24_last_V_5', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_6', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_7', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_8', pixel_pack/pixel_pack.cpp:28) [86]  (0 ns)
+	blocking operation 1.96 ns on control path)
+
+ <State 11>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('last_6_1', pixel_pack/pixel_pack.cpp:28) with incoming values : ('stream_in_24_last_V_5', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_6', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_7', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_8', pixel_pack/pixel_pack.cpp:28) [117]  (1.77 ns)
+	'phi' operation ('last_6_1', pixel_pack/pixel_pack.cpp:28) with incoming values : ('stream_in_24_last_V_5', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_6', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_7', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_8', pixel_pack/pixel_pack.cpp:28) [117]  (0 ns)
+
+ <State 12>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('last_6_2', pixel_pack/pixel_pack.cpp:28) with incoming values : ('stream_in_24_last_V_5', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_6', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_7', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_8', pixel_pack/pixel_pack.cpp:28) [131]  (1.77 ns)
+	'phi' operation ('last_6_2', pixel_pack/pixel_pack.cpp:28) with incoming values : ('stream_in_24_last_V_5', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_6', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_7', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_8', pixel_pack/pixel_pack.cpp:28) [131]  (0 ns)
+
+ <State 13>: 2.75ns
+The critical path consists of the following:
+	'phi' operation ('user_1_2', pixel_pack/pixel_pack.cpp:89) with incoming values : ('stream_in_24_user_V_5', pixel_pack/pixel_pack.cpp:28) ('or_ln89', pixel_pack/pixel_pack.cpp:89) ('or_ln89_1', pixel_pack/pixel_pack.cpp:89) [130]  (0 ns)
+	'or' operation ('or_ln89_2', pixel_pack/pixel_pack.cpp:89) [138]  (0.978 ns)
+	multiplexor before 'phi' operation ('user_1_3', pixel_pack/pixel_pack.cpp:89) with incoming values : ('stream_in_24_user_V_5', pixel_pack/pixel_pack.cpp:28) ('or_ln89', pixel_pack/pixel_pack.cpp:89) ('or_ln89_1', pixel_pack/pixel_pack.cpp:89) ('or_ln89_2', pixel_pack/pixel_pack.cpp:89) [144]  (1.77 ns)
+	'phi' operation ('user_1_3', pixel_pack/pixel_pack.cpp:89) with incoming values : ('stream_in_24_user_V_5', pixel_pack/pixel_pack.cpp:28) ('or_ln89', pixel_pack/pixel_pack.cpp:89) ('or_ln89_1', pixel_pack/pixel_pack.cpp:89) ('or_ln89_2', pixel_pack/pixel_pack.cpp:89) [144]  (0 ns)
+	axis write on port 'stream_out_32_data_V' (pixel_pack/pixel_pack.cpp:28) [148]  (0 ns)
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+ <State 16>: 0ns
+The critical path consists of the following:
+
+ <State 17>: 0ns
+The critical path consists of the following:
+
+ <State 18>: 0ns
+The critical path consists of the following:
+
+ <State 19>: 1.96ns
+The critical path consists of the following:
+	'phi' operation ('delayed_last') with incoming values : ('stream_in_24_last_V_s', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_1', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_2', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_3', pixel_pack/pixel_pack.cpp:28) [177]  (0 ns)
+	blocking operation 1.96 ns on control path)
+
+ <State 20>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('last_2_1', pixel_pack/pixel_pack.cpp:28) with incoming values : ('stream_in_24_last_V_s', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_1', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_2', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_3', pixel_pack/pixel_pack.cpp:28) [211]  (1.77 ns)
+	'phi' operation ('last_2_1', pixel_pack/pixel_pack.cpp:28) with incoming values : ('stream_in_24_last_V_s', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_1', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_2', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_3', pixel_pack/pixel_pack.cpp:28) [211]  (0 ns)
+
+ <State 21>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('last_2_2', pixel_pack/pixel_pack.cpp:28) with incoming values : ('stream_in_24_last_V_s', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_1', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_2', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_3', pixel_pack/pixel_pack.cpp:28) [226]  (1.77 ns)
+	'phi' operation ('last_2_2', pixel_pack/pixel_pack.cpp:28) with incoming values : ('stream_in_24_last_V_s', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_1', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_2', pixel_pack/pixel_pack.cpp:28) ('stream_in_24_last_V_3', pixel_pack/pixel_pack.cpp:28) [226]  (0 ns)
+
+ <State 22>: 1.77ns
+The critical path consists of the following:
+	'phi' operation ('p_0147_2_2', pixel_pack/pixel_pack.cpp:51) with incoming values : ('tmp_5', pixel_pack/pixel_pack.cpp:51) ('tmp_7', pixel_pack/pixel_pack.cpp:51) ('tmp_9', pixel_pack/pixel_pack.cpp:51) ('tmp_11', pixel_pack/pixel_pack.cpp:51) [223]  (0 ns)
+	multiplexor before 'phi' operation ('p_0147_2_3', pixel_pack/pixel_pack.cpp:51) with incoming values : ('tmp_5', pixel_pack/pixel_pack.cpp:51) ('tmp_7', pixel_pack/pixel_pack.cpp:51) ('tmp_9', pixel_pack/pixel_pack.cpp:51) ('tmp_11', pixel_pack/pixel_pack.cpp:51) [238]  (1.77 ns)
+	'phi' operation ('p_0147_2_3', pixel_pack/pixel_pack.cpp:51) with incoming values : ('tmp_5', pixel_pack/pixel_pack.cpp:51) ('tmp_7', pixel_pack/pixel_pack.cpp:51) ('tmp_9', pixel_pack/pixel_pack.cpp:51) ('tmp_11', pixel_pack/pixel_pack.cpp:51) [238]  (0 ns)
+
+ <State 23>: 0ns
+The critical path consists of the following:
+
+ <State 24>: 0ns
+The critical path consists of the following:
+
+ <State 25>: 0ns
+The critical path consists of the following:
+
+ <State 26>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

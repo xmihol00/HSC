@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="pixel_proc.cpp" path="/mnt/sdc3/david/projs/hardware-software/part2/ip_cores/pixel_proc/pixel_proc.cpp"/>
+    <originFiles name="pixel_proc.h" path="/mnt/sdc3/david/projs/hardware-software/part2/ip_cores/pixel_proc/pixel_proc.h"/>
+  </source>
+  <testbench>
+    <originFiles name="pixel_proc_test.cpp" path="/mnt/sdc3/david/projs/hardware-software/part2/ip_cores/pixel_proc/pixel_proc_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
