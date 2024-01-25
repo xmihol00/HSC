@@ -7,8 +7,8 @@
 #include <fstream>
 
 // Files with simulation input and output data. Path is relative to ip_cores/pixel_proc/solution1/csim/build.
-#define INPUT_FILE  "../../../../../data/video.in"
-#define OUTPUT_FILE "../../../../../data/video.out"
+#define INPUT_FILE  "../../../../../../part1/data/video.in"
+#define OUTPUT_FILE "../../../../../../part1/data/video.out"
 
 
 

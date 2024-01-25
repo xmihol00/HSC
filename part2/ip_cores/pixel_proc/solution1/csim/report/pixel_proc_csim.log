@@ -1,15 +1,5 @@
-INFO: [HLS 200-10] Running '/home/david/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'david' on host 'david' (Linux_x86_64 version 6.5.0-14-generic) on Thu Jan 25 15:59:13 CET 2024
-INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
-INFO: [HLS 200-10] In directory '/mnt/sdc3/david/projs/hardware-software/part2/ip_cores'
-Sourcing Tcl script '/mnt/sdc3/david/projs/hardware-software/part2/ip_cores/pixel_proc/solution1/csim.tcl'
-INFO: [HLS 200-10] Opening project '/mnt/sdc3/david/projs/hardware-software/part2/ip_cores/pixel_proc'.
-INFO: [HLS 200-10] Opening solution '/mnt/sdc3/david/projs/hardware-software/part2/ip_cores/pixel_proc/solution1'.
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
-INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
-INFO: [XFORM 203-1161] The maximum of name length is set into 40.
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../pixel_proc_test.cpp in debug mode
    Compiling ../../../pixel_proc.cpp in debug mode
    Generating csim.exe
@@ -8262,17 +8252,5 @@ Frame: 8 	Means: 51.085 51.085 	CumSum: 0.000 	Pu: 0.000
 Image data mismatch on frame 8, row 0, pixel 0:
        expected value = pixel(B=131, G=149, R=151, sof=1, last=0)
     processing output = pixel(B=240, G=1, R=3, sof=1, last=0)
-@E Simulation failed: Function 'main' returns nonzero value '1'.
-ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
-INFO: [SIM 211-3] *************** CSIM finish ***************
-4
-    while executing
-"source /mnt/sdc3/david/projs/hardware-software/part2/ip_cores/pixel_proc/solution1/csim.tcl"
-    invoked from within
-"hls::main /mnt/sdc3/david/projs/hardware-software/part2/ip_cores/pixel_proc/solution1/csim.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$args"
-    (procedure "hls_proc" line 5)
-    invoked from within
-"hls_proc $argv"
+ERR: [SIM 100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 3] *************** CSIM finish ***************
