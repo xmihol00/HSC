@@ -1,0 +1,17 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x7f8d19242520]
+/home/david/Xilinx/Vivado/2020.1/lib/lnx64.o/libtcl8.5.so(+0xb9519) [0x7f8d12cb9519]
+/home/david/Xilinx/Vivado/2020.1/lib/lnx64.o/libtcl8.5.so(Tcl_ResetResult+0x10) [0x7f8d12cb9f20]
+/home/david/Xilinx/Vivado/2020.1/lib/lnx64.o/libtcl8.5.so(+0x34429) [0x7f8d12c34429]
+/home/david/Xilinx/Vivado/2020.1/lib/lnx64.o/libtcl8.5.so(Tcl_EvalEx+0x13) [0x7f8d12c350a3]
+/home/david/Xilinx/Vivado/2020.1/lib/lnx64.o/libtcl8.5.so(Tcl_Eval+0x15) [0x7f8d12c350c5]
+/home/david/Xilinx/Vivado/2020.1/lib/lnx64.o/libhls_support.so(+0x75c10) [0x7f8d0cc75c10]
+/home/david/Xilinx/Vivado/2020.1/lib/lnx64.o/libtcl8.5.so(Tcl_Finalize+0x49) [0x7f8d12c74199]
+/home/david/Xilinx/Vivado/2020.1/lib/lnx64.o/libtcl8.5.so(Tcl_Exit+0x4a) [0x7f8d12c7434a]
+/home/david/Xilinx/Vivado/2020.1/lib/lnx64.o/libtcl8.5.so(Tcl_Main+0x24e) [0x7f8d12ca028e]
+/home/david/Xilinx/Vivado/2020.1/lib/lnx64.o/librdi_common.so(+0x9a6e6b) [0x7f8d1aba6e6b]
+/lib/x86_64-linux-gnu/libc.so.6(+0x94ac3) [0x7f8d19294ac3]
+/lib/x86_64-linux-gnu/libc.so.6(+0x126850) [0x7f8d19326850]

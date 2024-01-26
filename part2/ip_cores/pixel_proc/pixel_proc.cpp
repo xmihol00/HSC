@@ -5,13 +5,13 @@
 
 #include "pixel_proc.h"
 
-const double MATRIX_BGR2YCrCb[][3] = {
+const ap_fixed<29,10> MATRIX_BGR2YCrCb[][3] = {
     {0.114, -0.081312,  0.5}, 
     {0.587, -0.418688, -0.331264},
     {0.299,  0.5,      -0.168736},
 };
 
-const double MATRIX_YCrCb2BGR[][3] = {
+const ap_fixed<29,10> MATRIX_YCrCb2BGR[][3] = {
     {1,      1,        1}, 
     {0,     -0.714136, 1.402},
     {1.772, -0.344136, 0},
@@ -175,10 +175,10 @@ void pixel_proc(
         frames = local_frames;
         
         // TODO: pixel data processing before context?
-        double Y = MATRIX_BGR2YCrCb[0][0]*B + MATRIX_BGR2YCrCb[1][0]*G + MATRIX_BGR2YCrCb[2][0]*R;
-        double Cr = MATRIX_BGR2YCrCb[0][1]*B + MATRIX_BGR2YCrCb[1][1]*G + MATRIX_BGR2YCrCb[2][1]*R;
-        double Cb = MATRIX_BGR2YCrCb[0][2]*B + MATRIX_BGR2YCrCb[1][2]*G + MATRIX_BGR2YCrCb[2][2]*R;
-
+        ap_fixed<29,10> Y = MATRIX_BGR2YCrCb[0][0]*B + MATRIX_BGR2YCrCb[1][0]*G + MATRIX_BGR2YCrCb[2][0]*R;
+        ap_fixed<29,10> Cr = MATRIX_BGR2YCrCb[0][1]*B + MATRIX_BGR2YCrCb[1][1]*G + MATRIX_BGR2YCrCb[2][1]*R;
+        ap_fixed<29,10> Cb = MATRIX_BGR2YCrCb[0][2]*B + MATRIX_BGR2YCrCb[1][2]*G + MATRIX_BGR2YCrCb[2][2]*R;
+        
         // processing of frame blocks in two contexts
         static Context copy1, copy2;
         color_type newY;
@@ -187,22 +187,28 @@ void pixel_proc(
         copy_select = local_frames.range(2, 2);        // 2nd bit of frame counter flips every 4 frames
         start = sof && (local_frames.range(1,0) == 0); // block of frames start is indicated by SoF in the first frame of the block
         if(copy_select) { // based on select bit, one copy is active and the other is updating
-            copy1.active(newY, (color_type)(Y + 0.5)); // TODO: maybe use something else than B here?
+            copy1.active(newY, (ap_fixed<8,8,AP_RND_CONV>)Y); // TODO: maybe use something else than B here?
             copy2.update(start, sum_before, sum_after, values, shared_memory, read_done, write_ready);
         } else {
-            copy2.active(newY, (color_type)(Y + 0.5)); // TODO: maybe use something else than B here?
+            copy2.active(newY, (ap_fixed<8,8,AP_RND_CONV>)Y); // TODO: maybe use something else than B here?
             copy1.update(start, sum_before, sum_after, values, shared_memory, read_done, write_ready);
         }
 
         // TODO: pixel data processing after context?
-        B = MATRIX_YCrCb2BGR[0][0]*newY + MATRIX_YCrCb2BGR[1][0]*Cr + MATRIX_YCrCb2BGR[2][0]*Cb + 0.5;
-        G = MATRIX_YCrCb2BGR[0][1]*newY + MATRIX_YCrCb2BGR[1][1]*Cr + MATRIX_YCrCb2BGR[2][1]*Cb + 0.5;
-        R = MATRIX_YCrCb2BGR[0][2]*newY + MATRIX_YCrCb2BGR[1][2]*Cr + MATRIX_YCrCb2BGR[2][2]*Cb + 0.5;
+        ap_fixed<29,10> B_fixed = (MATRIX_YCrCb2BGR[0][0]*newY + MATRIX_YCrCb2BGR[1][0]*Cr + MATRIX_YCrCb2BGR[2][0]*Cb);
+        if (B_fixed > 255) B_fixed = 255;
+        if (B_fixed < 0) B_fixed = 0;
+        ap_fixed<29,10> G_fixed = (MATRIX_YCrCb2BGR[0][1]*newY + MATRIX_YCrCb2BGR[1][1]*Cr + MATRIX_YCrCb2BGR[2][1]*Cb);
+        if (G_fixed > 255) G_fixed = 255;
+        if (G_fixed < 0) G_fixed = 0;
+        ap_fixed<29,10> R_fixed = (MATRIX_YCrCb2BGR[0][2]*newY + MATRIX_YCrCb2BGR[1][2]*Cr + MATRIX_YCrCb2BGR[2][2]*Cb);
+        if (R_fixed > 255) R_fixed = 255;
+        if (R_fixed < 0) R_fixed = 0;
 
         // pixel color channel encoding
-        video_out->data.byte0 = (color_type)B; // encoding
-        video_out->data.byte1 = (color_type)G;
-        video_out->data.byte2 = (color_type)R;
+        video_out->data.byte0 = (ap_fixed<8,8,AP_RND_CONV>)B_fixed; // encoding
+        video_out->data.byte1 = (ap_fixed<8,8,AP_RND_CONV>)G_fixed;
+        video_out->data.byte2 = (ap_fixed<8,8,AP_RND_CONV>)R_fixed;
         video_out->user = sof;
         video_out->last = eol;
         ++video_out;               // confirm axis write

@@ -14,8 +14,9 @@ create_clock -period 7 -name default
 config_compile -name_max_length 40
 config_schedule -effort medium -enable_dsp_full_reg -relax_ii_for_timing=0 -verbose
 config_rtl -reset all
+config_export -description {Pixel processing for 24-bit AXI video stream} -display_name {Pixel Processing} -format ip_catalog
 #source "./pixel_proc/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design
-export_design -format ip_catalog
+export_design -format ip_catalog -description "Pixel processing for 24-bit AXI video stream" -display_name "Pixel Processing"

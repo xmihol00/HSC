@@ -78,15 +78,17 @@ static void simulation_PSPL_communication(
     // /////////////////////////////////////////////////////////////////////////
     // Accelerator specific communication called once per every block of frames
     // /////////////////////////////////////////////////////////////////////////
-    word_type histogram[256], sum_histogram = 0;
-    float Pu = 0.0;
-    float cumsum = 0.0;
+    word_type sum_histogram = 0;
+    float table[256];
+    float Pu = 0;
+    float cumsum = 0;
     for(int i=0; i<256; i++) {// array read of shared memory
-        histogram[i] = shared_memory[i] / (double)v;
+        table[i] = shared_memory[i] / (double)v;
         sum_histogram += shared_memory[i];
-        if(histogram[i] > Pu)
-            Pu = histogram[i] / 2.0;
+        if(table[i] > Pu)
+            Pu = table[i];
     }
+    Pu /= 2;
     assert(v == 1280*720*4 && "Wrong pixel count for block of frames!");
     assert(v == sum_histogram && "Wrong pixel count in histogram!");
     // TODO: process shared memory data somehow?
@@ -95,26 +97,31 @@ static void simulation_PSPL_communication(
     for(int i=0; i<256; i++) // array write of shared memory
     {
         float Pwt = 0.0;
-        if (histogram[i] < Pl)
+        if (table[i] < Pl)
         {
             Pwt = 0.0;
         }
-        else if (histogram[i] > Pu)
+        else if (table[i] > Pu)
         {
             Pwt = Pu;
         }
         else
         {
-            Pwt = sqrt((histogram[i] - Pl) / (Pu - Pl)) * Pu;
+            Pwt = sqrt((table[i] - Pl) / (Pu - Pl)) * Pu;
         }
         
         cumsum += Pwt;
-        shared_memory[i] = cumsum * 255.0; // TODO: actually calculate data to write somehow?
+        //std::cout << "Pwt: " << Pwt << " cumsum: " << cumsum <<  std::endl;
+        table[i] = cumsum * 255.0; // TODO: actually calculate data to write somehow?
     }
 
     for (int i = 0; i < 256; i++)
     {
-        shared_memory[i] = shared_memory[i] / cumsum + 0.5;
+        shared_memory[i] = ((float)table[i] / cumsum) + 0.5;
+        if (shared_memory[i] > 255)
+        {
+            shared_memory[i] = 255;
+        }
     }
 
     write_ready = 1;

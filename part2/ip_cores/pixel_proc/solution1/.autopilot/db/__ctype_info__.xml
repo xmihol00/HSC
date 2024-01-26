@@ -1,0 +1,205 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>video_in_data</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>24</TypeWidth>
+<PhysicalWidth>24</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>byte0</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>byte1</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>byte2</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>video_in_user_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>video_in_last_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>video_out_data</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>24</TypeWidth>
+<PhysicalWidth>24</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>byte0</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>byte1</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>byte2</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>video_out_user_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>video_out_last_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>frames_V</name>
+<CType>
+<TypeName>ap_uint 32</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>rows_V</name>
+<CType>
+<TypeName>ap_uint 32</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>pixels_V</name>
+<CType>
+<TypeName>ap_uint 32</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>sum_before_V</name>
+<CType>
+<TypeName>ap_uint 32</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>sum_after_V</name>
+<CType>
+<TypeName>ap_uint 32</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>values_V</name>
+<CType>
+<TypeName>ap_uint 32</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>read_done_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>write_ready_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>shared_memory_V</name>
+<CType>
+<TypeName>ap_uint 32</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

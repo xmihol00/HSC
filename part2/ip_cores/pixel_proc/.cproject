@@ -60,6 +60,8 @@
                                     <listOptionValue builtIn="false" value="/home/david/Xilinx/Vivado/2020.1/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/david/Xilinx/Vivado/2020.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/mnt/sdc3/david/projs/hardware-software/part2/ip_cores"/>
                                     								
                                 </option>
                                 								
@@ -94,6 +96,8 @@
                                     <listOptionValue builtIn="false" value="/home/david/Xilinx/Vivado/2020.1/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/david/Xilinx/Vivado/2020.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/mnt/sdc3/david/projs/hardware-software/part2/ip_cores"/>
                                     								
                                 </option>
                                 								
@@ -258,6 +262,8 @@
                                     <listOptionValue builtIn="false" value="/home/david/Xilinx/Vivado/2020.1/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/david/Xilinx/Vivado/2020.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/mnt/sdc3/david/projs/hardware-software/part2/ip_cores"/>
                                     								
                                 </option>
                                 								
@@ -282,6 +288,8 @@
                                     <listOptionValue builtIn="false" value="/home/david/Xilinx/Vivado/2020.1/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/david/Xilinx/Vivado/2020.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/mnt/sdc3/david/projs/hardware-software/part2/ip_cores"/>
                                     								
                                 </option>
                                 								
