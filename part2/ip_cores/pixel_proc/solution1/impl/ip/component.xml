@@ -866,7 +866,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d91aa237</spirit:value>
+            <spirit:value>6ddcdb69</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -882,7 +882,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e88414b7</spirit:value>
+            <spirit:value>5c426de9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -898,7 +898,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7e405cad</spirit:value>
+            <spirit:value>830649da</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -914,7 +914,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3acb0079</spirit:value>
+            <spirit:value>c78d150e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1671,7 +1671,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/pixel_proc.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_d50324f4</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_28453183</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1869,13 +1869,13 @@
       <xilinx:displayName>Pixel Processing</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
       <xilinx:coreRevision>2103011301</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-03-01T12:01:16Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2021-03-01T12:01:17Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="43a1a0d6"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="33d2e17c"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e32ba6f7"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d6cdce7e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="4e0163d4"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d169d92d"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c72d120c"/>

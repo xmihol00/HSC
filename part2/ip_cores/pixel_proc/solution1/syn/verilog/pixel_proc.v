@@ -338,15 +338,15 @@ wire   [50:0] zext_ln1192_2_fu_1119_p1;
 wire   [50:0] ret_V_11_fu_1123_p2;
 wire   [28:0] B_fixed_V_1_fu_1139_p3;
 wire   [0:0] tmp_4_fu_1149_p3;
-wire   [26:0] trunc_ln199_fu_1145_p1;
+wire   [26:0] trunc_ln200_fu_1145_p1;
 wire   [0:0] icmp_ln1494_1_fu_1165_p2;
 wire   [28:0] G_fixed_V_1_fu_1170_p3;
 wire   [0:0] tmp_5_fu_1181_p3;
-wire   [26:0] trunc_ln202_fu_1177_p1;
+wire   [26:0] trunc_ln203_fu_1177_p1;
 wire   [0:0] icmp_ln1494_2_fu_1197_p2;
 wire   [28:0] R_fixed_V_1_fu_1202_p3;
 wire   [0:0] tmp_6_fu_1213_p3;
-wire   [26:0] trunc_ln205_fu_1209_p1;
+wire   [26:0] trunc_ln206_fu_1209_p1;
 wire   [26:0] B_fixed_V_3_fu_1157_p3;
 wire   [17:0] trunc_ln718_1_fu_1247_p1;
 wire   [0:0] r_1_fu_1251_p2;
@@ -2522,19 +2522,19 @@ assign B_V_fu_529_p1 = video_in_TDATA_int[7:0];
 
 assign B_fixed_V_1_fu_1139_p3 = ((icmp_ln1494_reg_1778[0:0] === 1'b1) ? 29'd133693440 : B_fixed_V_reg_1773);
 
-assign B_fixed_V_3_fu_1157_p3 = ((tmp_4_fu_1149_p3[0:0] === 1'b1) ? 27'd0 : trunc_ln199_fu_1145_p1);
+assign B_fixed_V_3_fu_1157_p3 = ((tmp_4_fu_1149_p3[0:0] === 1'b1) ? 27'd0 : trunc_ln200_fu_1145_p1);
 
 assign B_fixed_V_fu_1062_p4 = {{ret_V_fu_1056_p2[47:19]}};
 
 assign G_fixed_V_1_fu_1170_p3 = ((icmp_ln1494_1_fu_1165_p2[0:0] === 1'b1) ? 29'd133693440 : G_fixed_V_reg_1783);
 
-assign G_fixed_V_3_fu_1189_p3 = ((tmp_5_fu_1181_p3[0:0] === 1'b1) ? 27'd0 : trunc_ln202_fu_1177_p1);
+assign G_fixed_V_3_fu_1189_p3 = ((tmp_5_fu_1181_p3[0:0] === 1'b1) ? 27'd0 : trunc_ln203_fu_1177_p1);
 
 assign R_V_fu_543_p4 = {{video_in_TDATA_int[23:16]}};
 
 assign R_fixed_V_1_fu_1202_p3 = ((icmp_ln1494_2_fu_1197_p2[0:0] === 1'b1) ? 29'd133693440 : R_fixed_V_reg_1789);
 
-assign R_fixed_V_3_fu_1221_p3 = ((tmp_6_fu_1213_p3[0:0] === 1'b1) ? 27'd0 : trunc_ln205_fu_1209_p1);
+assign R_fixed_V_3_fu_1221_p3 = ((tmp_6_fu_1213_p3[0:0] === 1'b1) ? 27'd0 : trunc_ln206_fu_1209_p1);
 
 assign add_ln700_10_fu_994_p2 = (copy2_sum_after_V + zext_ln700_3_fu_991_p1);
 
@@ -2856,11 +2856,11 @@ assign tmp_8_fu_1263_p3 = B_fixed_V_3_fu_1157_p3[32'd18];
 
 assign tmp_9_fu_1297_p3 = G_fixed_V_3_fu_1189_p3[32'd19];
 
-assign trunc_ln199_fu_1145_p1 = B_fixed_V_1_fu_1139_p3[26:0];
+assign trunc_ln200_fu_1145_p1 = B_fixed_V_1_fu_1139_p3[26:0];
 
-assign trunc_ln202_fu_1177_p1 = G_fixed_V_1_fu_1170_p3[26:0];
+assign trunc_ln203_fu_1177_p1 = G_fixed_V_1_fu_1170_p3[26:0];
 
-assign trunc_ln205_fu_1209_p1 = R_fixed_V_1_fu_1202_p3[26:0];
+assign trunc_ln206_fu_1209_p1 = R_fixed_V_1_fu_1202_p3[26:0];
 
 assign trunc_ln647_fu_676_p1 = frame_counter_V[1:0];
 

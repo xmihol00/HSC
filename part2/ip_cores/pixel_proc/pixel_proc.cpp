@@ -154,6 +154,7 @@ void pixel_proc(
 #pragma HLS INTERFACE s_axilite register port=write_ready
 #pragma HLS INTERFACE s_axilite port=shared_memory
 
+
     bool last = false; // loop to process video row-by-row (required only for simulation purposes)
     while(!last) {
 #pragma HLS loop_tripcount min=1280 max=1280 avg=1280 // inform the HLS tool for better statistics

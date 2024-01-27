@@ -1,0 +1,1246 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Mar  1 13:19:14 2021
+# Process ID: 14552
+# Current directory: /mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1
+# Command line: vivado -log hsc_video_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hsc_video_wrapper.tcl -notrace
+# Log file: /mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1/hsc_video_wrapper.vdi
+# Journal file: /mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source hsc_video_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/sdc3/david/projs/hardware-software/part2/ip_cores'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/david/Xilinx/Vivado/2020.1/data/ip'.
+Command: link_design -top hsc_video_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_ps7_0_0/hsc_video_ps7_0_0.dcp' for cell 'hsc_video_i/ps7_0'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rst_ps7_0_fclk0_0/hsc_video_rst_ps7_0_fclk0_0.dcp' for cell 'hsc_video_i/rst_ps7_0_fclk0'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rst_ps7_0_fclk1_0/hsc_video_rst_ps7_0_fclk1_0.dcp' for cell 'hsc_video_i/rst_ps7_0_fclk1'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_system_interrupts_0/hsc_video_system_interrupts_0.dcp' for cell 'hsc_video_i/system_interrupts'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_xbar_0/hsc_video_xbar_0.dcp' for cell 'hsc_video_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_pc_0/hsc_video_auto_pc_0.dcp' for cell 'hsc_video_i/ps7_0_axi_periph/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_2/hsc_video_m00_regslice_2.dcp' for cell 'hsc_video_i/ps7_0_axi_periph/m00_couplers/m00_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_2/hsc_video_m01_regslice_2.dcp' for cell 'hsc_video_i/ps7_0_axi_periph/m01_couplers/m01_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_pc_1/hsc_video_auto_pc_1.dcp' for cell 'hsc_video_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_2/hsc_video_s00_regslice_2.dcp' for cell 'hsc_video_i/ps7_0_axi_periph/s00_couplers/s00_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.dcp' for cell 'hsc_video_i/video/axi_vdma'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_proc_sys_reset_pixelclk_0/hsc_video_proc_sys_reset_pixelclk_0.dcp' for cell 'hsc_video_i/video/proc_sys_reset_pixelclk'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_xbar_1/hsc_video_xbar_1.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_3/hsc_video_m00_regslice_3.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m00_couplers/m00_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_0/hsc_video_auto_cc_0.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_3/hsc_video_m01_regslice_3.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/m01_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_1/hsc_video_auto_cc_1.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m02_regslice_0/hsc_video_m02_regslice_0.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/m02_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m03_regslice_0/hsc_video_m03_regslice_0.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m03_couplers/m03_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m04_regslice_0/hsc_video_m04_regslice_0.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m04_couplers/m04_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m05_regslice_0/hsc_video_m05_regslice_0.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m05_couplers/m05_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_2/hsc_video_auto_cc_2.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m06_regslice_0/hsc_video_m06_regslice_0.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/m06_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_3/hsc_video_auto_cc_3.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m07_regslice_0/hsc_video_m07_regslice_0.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/m07_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m08_regslice_0/hsc_video_m08_regslice_0.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m08_couplers/m08_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m09_regslice_0/hsc_video_m09_regslice_0.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m09_couplers/m09_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_4/hsc_video_auto_cc_4.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_pc_2/hsc_video_auto_pc_2.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_3/hsc_video_s00_regslice_3.dcp' for cell 'hsc_video_i/video/axi_interconnect_0/s00_couplers/s00_regslice'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_xbar_2/hsc_video_xbar_2.dcp' for cell 'hsc_video_i/video/axi_mem_intercon/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_pc_3/hsc_video_auto_pc_3.dcp' for cell 'hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_us_0/hsc_video_auto_us_0.dcp' for cell 'hsc_video_i/video/axi_mem_intercon/s01_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axis_register_slice_0_0/hsc_video_axis_register_slice_0_0.dcp' for cell 'hsc_video_i/video/hdmi_in/axis_register_slice_0'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_color_convert_0/hsc_video_color_convert_0.dcp' for cell 'hsc_video_i/video/hdmi_in/color_convert'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_pixel_pack_0/hsc_video_pixel_pack_0.dcp' for cell 'hsc_video_i/video/hdmi_in/pixel_pack'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_gpio_hdmiin_0/hsc_video_axi_gpio_hdmiin_0.dcp' for cell 'hsc_video_i/video/hdmi_in/frontend/axi_gpio_hdmiin'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_color_swap_0_0/hsc_video_color_swap_0_0.dcp' for cell 'hsc_video_i/video/hdmi_in/frontend/color_swap_0'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_dvi2rgb_0_0/hsc_video_dvi2rgb_0_0.dcp' for cell 'hsc_video_i/video/hdmi_in/frontend/dvi2rgb_0'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_v_vid_in_axi4s_0_0/hsc_video_v_vid_in_axi4s_0_0.dcp' for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_vtc_in_0/hsc_video_vtc_in_0.dcp' for cell 'hsc_video_i/video/hdmi_in/frontend/vtc_in'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axis_register_slice_0_1/hsc_video_axis_register_slice_0_1.dcp' for cell 'hsc_video_i/video/hdmi_out/axis_register_slice_0'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axis_register_slice_1_0/hsc_video_axis_register_slice_1_0.dcp' for cell 'hsc_video_i/video/hdmi_out/axis_register_slice_1'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_color_convert_1/hsc_video_color_convert_1.dcp' for cell 'hsc_video_i/video/hdmi_out/color_convert'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_pixel_proc_0/hsc_video_pixel_proc_0.dcp' for cell 'hsc_video_i/video/hdmi_out/pixel_proc'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_pixel_unpack_0/hsc_video_pixel_unpack_0.dcp' for cell 'hsc_video_i/video/hdmi_out/pixel_unpack'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_dynclk_0/hsc_video_axi_dynclk_0.dcp' for cell 'hsc_video_i/video/hdmi_out/frontend/axi_dynclk'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_color_swap_0_1/hsc_video_color_swap_0_1.dcp' for cell 'hsc_video_i/video/hdmi_out/frontend/color_swap_0'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_hdmi_out_hpd_video_0/hsc_video_hdmi_out_hpd_video_0.dcp' for cell 'hsc_video_i/video/hdmi_out/frontend/hdmi_out_hpd_video'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rgb2dvi_0_0/hsc_video_rgb2dvi_0_0.dcp' for cell 'hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_v_axi4s_vid_out_0_0/hsc_video_v_axi4s_vid_out_0_0.dcp' for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0'
+INFO: [Project 1-454] Reading design checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_vtc_out_0/hsc_video_vtc_out_0.dcp' for cell 'hsc_video_i/video/hdmi_out/frontend/vtc_out'
+Netlist sorting complete. Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2083.855 ; gain = 0.000 ; free physical = 4210 ; free virtual = 25594
+INFO: [Netlist 29-17] Analyzing 1179 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_ps7_0_0/hsc_video_ps7_0_0.xdc] for cell 'hsc_video_i/ps7_0/inst'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_ps7_0_0/hsc_video_ps7_0_0.xdc] for cell 'hsc_video_i/ps7_0/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rst_ps7_0_fclk0_0/hsc_video_rst_ps7_0_fclk0_0_board.xdc] for cell 'hsc_video_i/rst_ps7_0_fclk0/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rst_ps7_0_fclk0_0/hsc_video_rst_ps7_0_fclk0_0_board.xdc] for cell 'hsc_video_i/rst_ps7_0_fclk0/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rst_ps7_0_fclk0_0/hsc_video_rst_ps7_0_fclk0_0.xdc] for cell 'hsc_video_i/rst_ps7_0_fclk0/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rst_ps7_0_fclk0_0/hsc_video_rst_ps7_0_fclk0_0.xdc] for cell 'hsc_video_i/rst_ps7_0_fclk0/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rst_ps7_0_fclk1_0/hsc_video_rst_ps7_0_fclk1_0_board.xdc] for cell 'hsc_video_i/rst_ps7_0_fclk1/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rst_ps7_0_fclk1_0/hsc_video_rst_ps7_0_fclk1_0_board.xdc] for cell 'hsc_video_i/rst_ps7_0_fclk1/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rst_ps7_0_fclk1_0/hsc_video_rst_ps7_0_fclk1_0.xdc] for cell 'hsc_video_i/rst_ps7_0_fclk1/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rst_ps7_0_fclk1_0/hsc_video_rst_ps7_0_fclk1_0.xdc] for cell 'hsc_video_i/rst_ps7_0_fclk1/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_system_interrupts_0/hsc_video_system_interrupts_0.xdc] for cell 'hsc_video_i/system_interrupts/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_system_interrupts_0/hsc_video_system_interrupts_0.xdc] for cell 'hsc_video_i/system_interrupts/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc] for cell 'hsc_video_i/video/axi_vdma/U0'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:68]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:72]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:76]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:80]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:84]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:88]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:92]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:96]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:100]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:104]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:108]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:192]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:196]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:200]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:204]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:208]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:212]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:216]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-6' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc:220]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0.xdc] for cell 'hsc_video_i/video/axi_vdma/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_gpio_hdmiin_0/hsc_video_axi_gpio_hdmiin_0_board.xdc] for cell 'hsc_video_i/video/hdmi_in/frontend/axi_gpio_hdmiin/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_gpio_hdmiin_0/hsc_video_axi_gpio_hdmiin_0_board.xdc] for cell 'hsc_video_i/video/hdmi_in/frontend/axi_gpio_hdmiin/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_gpio_hdmiin_0/hsc_video_axi_gpio_hdmiin_0.xdc] for cell 'hsc_video_i/video/hdmi_in/frontend/axi_gpio_hdmiin/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_gpio_hdmiin_0/hsc_video_axi_gpio_hdmiin_0.xdc] for cell 'hsc_video_i/video/hdmi_in/frontend/axi_gpio_hdmiin/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'hsc_video_i/video/hdmi_in/frontend/dvi2rgb_0/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'hsc_video_i/video/hdmi_in/frontend/dvi2rgb_0/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_hdmi_out_hpd_video_0/hsc_video_hdmi_out_hpd_video_0_board.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/hdmi_out_hpd_video/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_hdmi_out_hpd_video_0/hsc_video_hdmi_out_hpd_video_0_board.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/hdmi_out_hpd_video/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_hdmi_out_hpd_video_0/hsc_video_hdmi_out_hpd_video_0.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/hdmi_out_hpd_video/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_hdmi_out_hpd_video_0/hsc_video_hdmi_out_hpd_video_0.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/hdmi_out_hpd_video/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_proc_sys_reset_pixelclk_0/hsc_video_proc_sys_reset_pixelclk_0_board.xdc] for cell 'hsc_video_i/video/proc_sys_reset_pixelclk/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_proc_sys_reset_pixelclk_0/hsc_video_proc_sys_reset_pixelclk_0_board.xdc] for cell 'hsc_video_i/video/proc_sys_reset_pixelclk/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_proc_sys_reset_pixelclk_0/hsc_video_proc_sys_reset_pixelclk_0.xdc] for cell 'hsc_video_i/video/proc_sys_reset_pixelclk/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_proc_sys_reset_pixelclk_0/hsc_video_proc_sys_reset_pixelclk_0.xdc] for cell 'hsc_video_i/video/proc_sys_reset_pixelclk/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/constrs_1/imports/overlay/hsc_video.xdc]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/constrs_1/imports/overlay/hsc_video.xdc]
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_2/hsc_video_s00_regslice_2_clocks.xdc] for cell 'hsc_video_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_2/hsc_video_s00_regslice_2_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_2/hsc_video_s00_regslice_2_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_2/hsc_video_s00_regslice_2_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_2/hsc_video_s00_regslice_2_clocks.xdc] for cell 'hsc_video_i/ps7_0_axi_periph/s00_couplers/s00_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_2/hsc_video_m00_regslice_2_clocks.xdc] for cell 'hsc_video_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_2/hsc_video_m00_regslice_2_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_2/hsc_video_m00_regslice_2_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_2/hsc_video_m00_regslice_2_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_2/hsc_video_m00_regslice_2_clocks.xdc] for cell 'hsc_video_i/ps7_0_axi_periph/m00_couplers/m00_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_2/hsc_video_m01_regslice_2_clocks.xdc] for cell 'hsc_video_i/ps7_0_axi_periph/m01_couplers/m01_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_2/hsc_video_m01_regslice_2_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_2/hsc_video_m01_regslice_2_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_2/hsc_video_m01_regslice_2_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_2/hsc_video_m01_regslice_2_clocks.xdc] for cell 'hsc_video_i/ps7_0_axi_periph/m01_couplers/m01_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_system_interrupts_0/hsc_video_system_interrupts_0_clocks.xdc] for cell 'hsc_video_i/system_interrupts/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_system_interrupts_0/hsc_video_system_interrupts_0_clocks.xdc] for cell 'hsc_video_i/system_interrupts/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_3/hsc_video_s00_regslice_3_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/s00_couplers/s00_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_3/hsc_video_s00_regslice_3_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_3/hsc_video_s00_regslice_3_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_3/hsc_video_s00_regslice_3_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_s00_regslice_3/hsc_video_s00_regslice_3_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/s00_couplers/s00_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_3/hsc_video_m00_regslice_3_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m00_couplers/m00_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_3/hsc_video_m00_regslice_3_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_3/hsc_video_m00_regslice_3_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_3/hsc_video_m00_regslice_3_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m00_regslice_3/hsc_video_m00_regslice_3_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m00_couplers/m00_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_3/hsc_video_m01_regslice_3_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/m01_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_3/hsc_video_m01_regslice_3_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_3/hsc_video_m01_regslice_3_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_3/hsc_video_m01_regslice_3_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m01_regslice_3/hsc_video_m01_regslice_3_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/m01_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_0/hsc_video_auto_cc_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_0/hsc_video_auto_cc_0_clocks.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_0/hsc_video_auto_cc_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_0/hsc_video_auto_cc_0_clocks.xdc:13]
+WARNING: [Vivado 12-180] No cells matched '*gen_clock_conv.gen_async_conv.asyncfifo_axi*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_0/hsc_video_auto_cc_0_clocks.xdc:17]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical * -filter {(NAME=~*gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.g*_ch.g*ch2.axi_*/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst/arststages_ff_reg*/PRE) || (NAME=~*gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.g*_ch.g*ch2.axi_*/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/arststages_ff_reg*/PRE)}'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_0/hsc_video_auto_cc_0_clocks.xdc:17]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_0/hsc_video_auto_cc_0_clocks.xdc:17]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_0/hsc_video_auto_cc_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m02_regslice_0/hsc_video_m02_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/m02_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m02_regslice_0/hsc_video_m02_regslice_0_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m02_regslice_0/hsc_video_m02_regslice_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m02_regslice_0/hsc_video_m02_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m02_regslice_0/hsc_video_m02_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/m02_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_1/hsc_video_auto_cc_1_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_1/hsc_video_auto_cc_1_clocks.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_1/hsc_video_auto_cc_1_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_1/hsc_video_auto_cc_1_clocks.xdc:13]
+WARNING: [Vivado 12-180] No cells matched '*gen_clock_conv.gen_async_conv.asyncfifo_axi*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_1/hsc_video_auto_cc_1_clocks.xdc:17]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical * -filter {(NAME=~*gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.g*_ch.g*ch2.axi_*/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst/arststages_ff_reg*/PRE) || (NAME=~*gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.g*_ch.g*ch2.axi_*/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/arststages_ff_reg*/PRE)}'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_1/hsc_video_auto_cc_1_clocks.xdc:17]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_1/hsc_video_auto_cc_1_clocks.xdc:17]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_1/hsc_video_auto_cc_1_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m03_regslice_0/hsc_video_m03_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m03_couplers/m03_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m03_regslice_0/hsc_video_m03_regslice_0_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m03_regslice_0/hsc_video_m03_regslice_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m03_regslice_0/hsc_video_m03_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m03_regslice_0/hsc_video_m03_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m03_couplers/m03_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m04_regslice_0/hsc_video_m04_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m04_couplers/m04_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m04_regslice_0/hsc_video_m04_regslice_0_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m04_regslice_0/hsc_video_m04_regslice_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m04_regslice_0/hsc_video_m04_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m04_regslice_0/hsc_video_m04_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m04_couplers/m04_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m05_regslice_0/hsc_video_m05_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m05_couplers/m05_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m05_regslice_0/hsc_video_m05_regslice_0_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m05_regslice_0/hsc_video_m05_regslice_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m05_regslice_0/hsc_video_m05_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m05_regslice_0/hsc_video_m05_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m05_couplers/m05_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m06_regslice_0/hsc_video_m06_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/m06_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m06_regslice_0/hsc_video_m06_regslice_0_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m06_regslice_0/hsc_video_m06_regslice_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m06_regslice_0/hsc_video_m06_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m06_regslice_0/hsc_video_m06_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/m06_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_2/hsc_video_auto_cc_2_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_2/hsc_video_auto_cc_2_clocks.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_2/hsc_video_auto_cc_2_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_2/hsc_video_auto_cc_2_clocks.xdc:13]
+WARNING: [Vivado 12-180] No cells matched '*gen_clock_conv.gen_async_conv.asyncfifo_axi*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_2/hsc_video_auto_cc_2_clocks.xdc:17]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical * -filter {(NAME=~*gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.g*_ch.g*ch2.axi_*/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst/arststages_ff_reg*/PRE) || (NAME=~*gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.g*_ch.g*ch2.axi_*/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/arststages_ff_reg*/PRE)}'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_2/hsc_video_auto_cc_2_clocks.xdc:17]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_2/hsc_video_auto_cc_2_clocks.xdc:17]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_2/hsc_video_auto_cc_2_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m07_regslice_0/hsc_video_m07_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/m07_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m07_regslice_0/hsc_video_m07_regslice_0_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m07_regslice_0/hsc_video_m07_regslice_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m07_regslice_0/hsc_video_m07_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m07_regslice_0/hsc_video_m07_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/m07_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_3/hsc_video_auto_cc_3_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_3/hsc_video_auto_cc_3_clocks.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_3/hsc_video_auto_cc_3_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_3/hsc_video_auto_cc_3_clocks.xdc:13]
+WARNING: [Vivado 12-180] No cells matched '*gen_clock_conv.gen_async_conv.asyncfifo_axi*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_3/hsc_video_auto_cc_3_clocks.xdc:17]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical * -filter {(NAME=~*gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.g*_ch.g*ch2.axi_*/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst/arststages_ff_reg*/PRE) || (NAME=~*gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.g*_ch.g*ch2.axi_*/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/arststages_ff_reg*/PRE)}'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_3/hsc_video_auto_cc_3_clocks.xdc:17]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_3/hsc_video_auto_cc_3_clocks.xdc:17]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_3/hsc_video_auto_cc_3_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m08_regslice_0/hsc_video_m08_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m08_couplers/m08_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m08_regslice_0/hsc_video_m08_regslice_0_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m08_regslice_0/hsc_video_m08_regslice_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m08_regslice_0/hsc_video_m08_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m08_regslice_0/hsc_video_m08_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m08_couplers/m08_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m09_regslice_0/hsc_video_m09_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m09_couplers/m09_regslice/inst'
+WARNING: [Vivado 12-180] No cells matched '.*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m09_regslice_0/hsc_video_m09_regslice_0_clocks.xdc:10]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CLR -of_objects [get_cells -hierarchical -regexp .*15.*_multi/.*/common.srl_fifo_0/asyncclear_.*]'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m09_regslice_0/hsc_video_m09_regslice_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m09_regslice_0/hsc_video_m09_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_m09_regslice_0/hsc_video_m09_regslice_0_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m09_couplers/m09_regslice/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_4/hsc_video_auto_cc_4_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_4/hsc_video_auto_cc_4_clocks.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_4/hsc_video_auto_cc_4_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_4/hsc_video_auto_cc_4_clocks.xdc:13]
+WARNING: [Vivado 12-180] No cells matched '*gen_clock_conv.gen_async_conv.asyncfifo_axi*'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_4/hsc_video_auto_cc_4_clocks.xdc:17]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical * -filter {(NAME=~*gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.g*_ch.g*ch2.axi_*/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst/arststages_ff_reg*/PRE) || (NAME=~*gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.g*_ch.g*ch2.axi_*/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst/arststages_ff_reg*/PRE)}'. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_4/hsc_video_auto_cc_4_clocks.xdc:17]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_4/hsc_video_auto_cc_4_clocks.xdc:17]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_cc_4/hsc_video_auto_cc_4_clocks.xdc] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_us_0/hsc_video_auto_us_0_clocks.xdc] for cell 'hsc_video_i/video/axi_mem_intercon/s01_couplers/auto_us/inst'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_auto_us_0/hsc_video_auto_us_0_clocks.xdc] for cell 'hsc_video_i/video/axi_mem_intercon/s01_couplers/auto_us/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0_clocks.xdc] for cell 'hsc_video_i/video/axi_vdma/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axi_vdma_0/hsc_video_axi_vdma_0_clocks.xdc] for cell 'hsc_video_i/video/axi_vdma/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axis_register_slice_0_0/hsc_video_axis_register_slice_0_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_in/axis_register_slice_0/inst'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axis_register_slice_0_0/hsc_video_axis_register_slice_0_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_in/axis_register_slice_0/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_v_vid_in_axi4s_0_0/hsc_video_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_v_vid_in_axi4s_0_0/hsc_video_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_vtc_in_0/hsc_video_vtc_in_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_in/frontend/vtc_in/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_vtc_in_0/hsc_video_vtc_in_0_clocks.xdc:2]
+INFO: [Timing 38-2] Deriving generated clocks [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_vtc_in_0/hsc_video_vtc_in_0_clocks.xdc:2]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2559.820 ; gain = 453.930 ; free physical = 3641 ; free virtual = 25040
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_vtc_in_0/hsc_video_vtc_in_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_in/frontend/vtc_in/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axis_register_slice_0_1/hsc_video_axis_register_slice_0_1_clocks.xdc] for cell 'hsc_video_i/video/hdmi_out/axis_register_slice_0/inst'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axis_register_slice_0_1/hsc_video_axis_register_slice_0_1_clocks.xdc] for cell 'hsc_video_i/video/hdmi_out/axis_register_slice_0/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axis_register_slice_1_0/hsc_video_axis_register_slice_1_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_out/axis_register_slice_1/inst'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_axis_register_slice_1_0/hsc_video_axis_register_slice_1_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_out/axis_register_slice_1/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_v_axi4s_vid_out_0_0/hsc_video_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_v_axi4s_vid_out_0_0/hsc_video_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_vtc_out_0/hsc_video_vtc_out_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/vtc_out/U0'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_vtc_out_0/hsc_video_vtc_out_0_clocks.xdc] for cell 'hsc_video_i/video/hdmi_out/frontend/vtc_out/U0'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m06_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/axi_interconnect_0/m10_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/CDC_SINGLE_LOCKED_INST/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/CDC_SINGLE_LOCKED_INST/xpm_cdc_single_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/CDC_SINGLE_REMAP_UNDERFLOW_INST/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/CDC_SINGLE_REMAP_UNDERFLOW_INST/xpm_cdc_single_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/CDC_SINGLE_REMAP_OVERFLOW_INST/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/CDC_SINGLE_REMAP_OVERFLOW_INST/xpm_cdc_single_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/CDC_SINGLE_RESET_PULSE_INST/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/CDC_SINGLE_RESET_PULSE_INST/xpm_cdc_single_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/axi_vdma/U0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_SYNC_FIFO.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/axi_vdma/U0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_SYNC_FIFO.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/axi_vdma/U0/GEN_SPRT_FOR_S2MM.S2MM_LINEBUFFER_I/GEN_S2MM_FLUSH_SOF_LOGIC.GEN_LINEBUFFER_FLUSH_SOF.GEN_SYNC_FIFO_FLUSH_SOF.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/axi_vdma/U0/GEN_SPRT_FOR_S2MM.S2MM_LINEBUFFER_I/GEN_S2MM_FLUSH_SOF_LOGIC.GEN_LINEBUFFER_FLUSH_SOF.GEN_SYNC_FIFO_FLUSH_SOF.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/axi_vdma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/axi_vdma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/axi_vdma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [/home/david/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'hsc_video_i/video/axi_vdma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2575.855 ; gain = 0.000 ; free physical = 3644 ; free virtual = 25044
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 15 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+
+64 Infos, 91 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2575.855 ; gain = 492.000 ; free physical = 3643 ; free virtual = 25044
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2591.836 ; gain = 15.980 ; free physical = 3662 ; free virtual = 25062
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 22b75919b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2591.836 ; gain = 0.000 ; free physical = 3661 ; free virtual = 25061
+
+Starting Logic Optimization Task
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 14 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1097b31b5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2725.836 ; gain = 1.000 ; free physical = 3504 ; free virtual = 24904
+INFO: [Opt 31-389] Phase Retarget created 458 cells and removed 727 cells
+INFO: [Opt 31-1021] In phase Retarget, 106 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 3 load pin(s).
+Phase 2 Constant propagation | Checksum: 1a9769cb6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2725.836 ; gain = 1.000 ; free physical = 3504 ; free virtual = 24904
+INFO: [Opt 31-389] Phase Constant propagation created 230 cells and removed 1417 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 778 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 195414e68
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2725.836 ; gain = 1.000 ; free physical = 3508 ; free virtual = 24908
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 3528 cells
+INFO: [Opt 31-1021] In phase Sweep, 160 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 195414e68
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2725.836 ; gain = 1.000 ; free physical = 3509 ; free virtual = 24909
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 195414e68
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2725.836 ; gain = 1.000 ; free physical = 3509 ; free virtual = 24908
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 195414e68
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2725.836 ; gain = 1.000 ; free physical = 3509 ; free virtual = 24908
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 33 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             458  |             727  |                                            106  |
+|  Constant propagation         |             230  |            1417  |                                            778  |
+|  Sweep                        |               0  |            3528  |                                            160  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             33  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2725.836 ; gain = 0.000 ; free physical = 3502 ; free virtual = 24902
+Ending Logic Optimization Task | Checksum: 1892dbbc8
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2725.836 ; gain = 1.000 ; free physical = 3502 ; free virtual = 24902
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 16 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 2 WE to EN ports
+Number of BRAM Ports augmented: 7 newly gated: 2 Total Ports: 32
+Ending PowerOpt Patch Enables Task | Checksum: 1d12c53cb
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3078.055 ; gain = 0.000 ; free physical = 3456 ; free virtual = 24861
+Ending Power Optimization Task | Checksum: 1d12c53cb
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 3078.055 ; gain = 352.219 ; free physical = 3480 ; free virtual = 24886
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1d12c53cb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3078.055 ; gain = 0.000 ; free physical = 3480 ; free virtual = 24886
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3078.055 ; gain = 0.000 ; free physical = 3480 ; free virtual = 24886
+Ending Netlist Obfuscation Task | Checksum: 18a8760ed
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3078.055 ; gain = 0.000 ; free physical = 3480 ; free virtual = 24886
+INFO: [Common 17-83] Releasing license: Implementation
+90 Infos, 91 Warnings, 2 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 3078.055 ; gain = 502.199 ; free physical = 3485 ; free virtual = 24890
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3078.055 ; gain = 0.000 ; free physical = 3483 ; free virtual = 24891
+INFO: [Common 17-1381] The checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1/hsc_video_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 3078.055 ; gain = 0.000 ; free physical = 3460 ; free virtual = 24878
+INFO: [runtcl-4] Executing : report_drc -file hsc_video_wrapper_drc_opted.rpt -pb hsc_video_wrapper_drc_opted.pb -rpx hsc_video_wrapper_drc_opted.rpx
+Command: report_drc -file hsc_video_wrapper_drc_opted.rpt -pb hsc_video_wrapper_drc_opted.pb -rpx hsc_video_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1/hsc_video_wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+CRITICAL WARNING: [DRC AVAL-46] v7v8_mmcm_fvco_rule1: The current computed target frequency, FVCO, is out of range for cell hsc_video_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/DVI_ClkGenerator. The computed FVCO is 599.952 MHz. The valid FVCO range for speed grade -1 is 600MHz to 1200MHz. The cell attribute values used to compute FVCO are CLKFBOUT_MULT_F = 5.000, CLKIN1_PERIOD = 8.33400, and DIVCLK_DIVIDE = 1 (FVCO = 1000 * CLKFBOUT_MULT_F/(CLKIN1_PERIOD * DIVCLK_DIVIDE)).
+This violation may be corrected by:
+  1. The timer uses timing constraints for clock period or clock frequency that affect CLKIN1 to set cell attribute CLKIN1_PERIOD, over-riding any previous value. This may already be in place and, if so this violation will be resolved once Timing is run.  Otherwise, consider modifying timing constraints to adjust the CLKIN1_PERIOD and bring FVCO into the allowed range.
+  2. In the absence of timing constraints that affect CLKIN1, consider modifying the cell CLKIN1_PERIOD to bring FVCO into the allowed range.
+  3. If CLKIN1_PERIOD is satisfactory, modify the CLKFBOUT_MULT_F or DIVCLK_DIVIDE cell attributes to bring FVCO into the allowed range.
+  4. The MMCM configuration may be dynamically modified by use of DRP which is recognized by an ACTIVE signal on DCLK pin.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Critical Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3427 ; free virtual = 24843
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 13c9800ec
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3427 ; free virtual = 24843
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3427 ; free virtual = 24843
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1745713c4
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3409 ; free virtual = 24829
+
+Phase 1.3 Build Placer Netlist Model
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+Phase 1.3 Build Placer Netlist Model | Checksum: 1ace78922
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3370 ; free virtual = 24788
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1ace78922
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3370 ; free virtual = 24788
+Phase 1 Placer Initialization | Checksum: 1ace78922
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3370 ; free virtual = 24788
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 2036497ed
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3345 ; free virtual = 24763
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 1 LUTNM shape to break, 830 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 1, two critical 0, total 1, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 322 nets or cells. Created 1 new cell, deleted 321 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3323 ; free virtual = 24745
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            1  |            321  |                   322  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            1  |            321  |                   322  |           0  |           8  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: ba3b4168
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:26 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3336 ; free virtual = 24757
+Phase 2.2 Global Placement Core | Checksum: a519b796
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:26 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3335 ; free virtual = 24757
+Phase 2 Global Placement | Checksum: a519b796
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:26 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3337 ; free virtual = 24759
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: b924b9d1
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:28 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3336 ; free virtual = 24756
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 18bfefbff
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:30 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3332 ; free virtual = 24752
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 17c6d9b65
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:30 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3332 ; free virtual = 24752
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 19daba70d
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:30 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3332 ; free virtual = 24752
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1c8b9f241
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:31 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3339 ; free virtual = 24759
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 10a08f613
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:39 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3316 ; free virtual = 24737
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: e7e6de8c
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:41 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3315 ; free virtual = 24736
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 15a3724ac
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:41 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3315 ; free virtual = 24736
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 87740d7f
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:43 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3309 ; free virtual = 24732
+Phase 3 Detail Placement | Checksum: 87740d7f
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:43 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3309 ; free virtual = 24732
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1c61d1e75
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.889 | TNS=-9.912 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1ff486a2c
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.97 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3284 ; free virtual = 24705
+INFO: [Place 46-33] Processed net hsc_video_i/video/hdmi_out/pixel_proc/inst/copy2_empty_data_V_U/ap_rst_n_inv, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net hsc_video_i/video/hdmi_out/frontend/vtc_out/U0/U_VIDEO_CTRL/GEN_HAS_IRQ.irq_i_1_n_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 2 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 2, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+Ending Physical Synthesis Task | Checksum: 12072f940
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3284 ; free virtual = 24705
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1c61d1e75
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:49 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3285 ; free virtual = 24706
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.369. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1bcf3bbed
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:58 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3294 ; free virtual = 24715
+Phase 4.1 Post Commit Optimization | Checksum: 1bcf3bbed
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:00:58 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3293 ; free virtual = 24714
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1bcf3bbed
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:00:58 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3293 ; free virtual = 24714
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1bcf3bbed
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:00:58 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3293 ; free virtual = 24714
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3293 ; free virtual = 24714
+Phase 4.4 Final Placement Cleanup | Checksum: 12c597743
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:00:59 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3293 ; free virtual = 24714
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 12c597743
+
+Time (s): cpu = 00:01:30 ; elapsed = 00:00:59 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3293 ; free virtual = 24714
+Ending Placer Task | Checksum: 49c66235
+
+Time (s): cpu = 00:01:30 ; elapsed = 00:00:59 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3293 ; free virtual = 24714
+INFO: [Common 17-83] Releasing license: Implementation
+131 Infos, 91 Warnings, 6 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:33 ; elapsed = 00:01:01 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3307 ; free virtual = 24729
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3267 ; free virtual = 24737
+INFO: [Common 17-1381] The checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1/hsc_video_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3312 ; free virtual = 24750
+INFO: [runtcl-4] Executing : report_io -file hsc_video_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3328 ; free virtual = 24766
+INFO: [runtcl-4] Executing : report_utilization -file hsc_video_wrapper_utilization_placed.rpt -pb hsc_video_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file hsc_video_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.23 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3322 ; free virtual = 24760
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3336 ; free virtual = 24775
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.369 | TNS=-0.838 |
+Phase 1 Physical Synthesis Initialization | Checksum: 129ce5c3c
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3321 ; free virtual = 24758
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.369 | TNS=-0.838 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 129ce5c3c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3321 ; free virtual = 24758
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.369 | TNS=-0.838 |
+INFO: [Physopt 32-702] Processed net hsc_video_i/video/hdmi_out/pixel_proc/inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/q0_ram_0[16]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hsc_video_i/ps7_0/inst/FCLK_CLK_unbuffered[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hsc_video_i/video/hdmi_out/pixel_proc/inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/add_ln700_6_fu_835_p2[20]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hsc_video_i/video/hdmi_out/pixel_proc/inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg_i_34__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hsc_video_i/video/hdmi_out/pixel_proc/inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg_i_35__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hsc_video_i/video/hdmi_out/pixel_proc/inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg_i_36__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hsc_video_i/video/hdmi_out/pixel_proc/inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg_i_37__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net hsc_video_i/video/hdmi_out/pixel_proc/inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg_i_53__1_n_0.  Re-placed instance hsc_video_i/video/hdmi_out/pixel_proc/inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg_i_53__1
+INFO: [Physopt 32-735] Processed net hsc_video_i/video/hdmi_out/pixel_proc/inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg_i_53__1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.006 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.006 | TNS=0.000 |
+Phase 3 Critical Path Optimization | Checksum: 129ce5c3c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3321 ; free virtual = 24758
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.006 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.006 | TNS=0.000 |
+Phase 4 Critical Path Optimization | Checksum: 129ce5c3c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3321 ; free virtual = 24758
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3321 ; free virtual = 24758
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.006 | TNS=0.000 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.375  |          0.838  |            0  |              0  |                     1  |           0  |           2  |  00:00:00  |
+|  Total          |          0.375  |          0.838  |            0  |              0  |                     1  |           0  |           3  |  00:00:00  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3321 ; free virtual = 24758
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+Ending Physical Synthesis Task | Checksum: 1e95dd18e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3320 ; free virtual = 24757
+INFO: [Common 17-83] Releasing license: Implementation
+158 Infos, 91 Warnings, 9 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3322 ; free virtual = 24759
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3274 ; free virtual = 24760
+INFO: [Common 17-1381] The checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1/hsc_video_wrapper_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3325 ; free virtual = 24775
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: b31c8f7f ConstDB: 0 ShapeSum: e851e20e RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 2c0f22c1
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3132 ; free virtual = 24581
+Post Restoration Checksum: NetGraph: 6953113 NumContArr: 2579f1ae Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 2c0f22c1
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3139 ; free virtual = 24589
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 2c0f22c1
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3120 ; free virtual = 24570
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 2c0f22c1
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 3089.070 ; gain = 0.000 ; free physical = 3120 ; free virtual = 24570
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1784d94d3
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:20 . Memory (MB): peak = 3101.848 ; gain = 12.777 ; free physical = 3094 ; free virtual = 24544
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.127 | TNS=-0.127 | WHS=-0.283 | THS=-374.968|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 97b8c3ce
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:24 . Memory (MB): peak = 3121.848 ; gain = 32.777 ; free physical = 3077 ; free virtual = 24524
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.127 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: c1dc0501
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 3137.848 ; gain = 48.777 ; free physical = 3071 ; free virtual = 24518
+Phase 2 Router Initialization | Checksum: feca5f0f
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:25 . Memory (MB): peak = 3137.848 ; gain = 48.777 ; free physical = 3071 ; free virtual = 24518
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00264057 %
+  Global Horizontal Routing Utilization  = 0.000422583 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 28904
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 28903
+  Number of Partially Routed Nets     = 1
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1bccbd038
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:27 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3058 ; free virtual = 24509
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 3200
+ Number of Nodes with overlaps = 437
+ Number of Nodes with overlaps = 99
+ Number of Nodes with overlaps = 35
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.009 | TNS=-0.009 | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 15562b2c3
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:40 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3062 ; free virtual = 24510
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 71
+ Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.151 | TNS=-0.151 | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1686665f9
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:43 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3069 ; free virtual = 24517
+Phase 4 Rip-up And Reroute | Checksum: 1686665f9
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:43 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3069 ; free virtual = 24517
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1d4ecd499
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:44 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3075 ; free virtual = 24522
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.106  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 2063f20e1
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:44 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3075 ; free virtual = 24522
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2063f20e1
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:44 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3075 ; free virtual = 24522
+Phase 5 Delay and Skew Optimization | Checksum: 2063f20e1
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:44 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3075 ; free virtual = 24522
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1258018fd
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:46 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3082 ; free virtual = 24529
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.106  | TNS=0.000  | WHS=-0.047 | THS=-0.115 |
+
+Phase 6.1 Hold Fix Iter | Checksum: 98d8ac19
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:46 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3082 ; free virtual = 24529
+Phase 6 Post Hold Fix | Checksum: 1613d22d7
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:46 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3082 ; free virtual = 24529
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 5.22662 %
+  Global Horizontal Routing Utilization  = 6.45259 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 99e6a8e7
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:46 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3082 ; free virtual = 24529
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 99e6a8e7
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:46 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3082 ; free virtual = 24529
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 9843d72c
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:48 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3080 ; free virtual = 24529
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: bd95d95c
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:50 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3079 ; free virtual = 24528
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.106  | TNS=0.000  | WHS=0.050  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: bd95d95c
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:50 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3079 ; free virtual = 24528
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:50 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3100 ; free virtual = 24547
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+175 Infos, 91 Warnings, 9 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:29 ; elapsed = 00:00:53 . Memory (MB): peak = 3138.852 ; gain = 49.781 ; free physical = 3100 ; free virtual = 24547
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3146.855 ; gain = 0.000 ; free physical = 3026 ; free virtual = 24530
+INFO: [Common 17-1381] The checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1/hsc_video_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3146.855 ; gain = 8.004 ; free physical = 3087 ; free virtual = 24552
+INFO: [runtcl-4] Executing : report_drc -file hsc_video_wrapper_drc_routed.rpt -pb hsc_video_wrapper_drc_routed.pb -rpx hsc_video_wrapper_drc_routed.rpx
+Command: report_drc -file hsc_video_wrapper_drc_routed.rpt -pb hsc_video_wrapper_drc_routed.pb -rpx hsc_video_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1/hsc_video_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file hsc_video_wrapper_methodology_drc_routed.rpt -pb hsc_video_wrapper_methodology_drc_routed.pb -rpx hsc_video_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file hsc_video_wrapper_methodology_drc_routed.rpt -pb hsc_video_wrapper_methodology_drc_routed.pb -rpx hsc_video_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1/hsc_video_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 3225.445 ; gain = 16.988 ; free physical = 3009 ; free virtual = 24472
+INFO: [runtcl-4] Executing : report_power -file hsc_video_wrapper_power_routed.rpt -pb hsc_video_wrapper_power_summary_routed.pb -rpx hsc_video_wrapper_power_routed.rpx
+Command: report_power -file hsc_video_wrapper_power_routed.rpt -pb hsc_video_wrapper_power_summary_routed.pb -rpx hsc_video_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+Running Vector-less Activity Propagation...
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+188 Infos, 92 Warnings, 12 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 3257.465 ; gain = 32.020 ; free physical = 2957 ; free virtual = 24437
+INFO: [runtcl-4] Executing : report_route_status -file hsc_video_wrapper_route_status.rpt -pb hsc_video_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file hsc_video_wrapper_timing_summary_routed.rpt -pb hsc_video_wrapper_timing_summary_routed.pb -rpx hsc_video_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file hsc_video_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file hsc_video_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file hsc_video_wrapper_bus_skew_routed.rpt -pb hsc_video_wrapper_bus_skew_routed.pb -rpx hsc_video_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+CRITICAL WARNING: [Timing 38-249] Generated clock hsc_video_i/video/hdmi_out/frontend/rgb2dvi_0/U0/SerialClk has no logical paths from master clock axi_dynclk_0_PXL_CLK_O.
+Resolution: Review the path between the master clock and the generated clock with the schematic viewer and correct the -source option. If it is correct and the master clock does not have a timing path to the generated clock, define the generated clock as a primary clock by using create_clock.
+INFO: [Memdata 28-208] The XPM instance: <hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <hsc_video_i/video/hdmi_out/frontend/v_axi4s_vid_out_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <hsc_video_i/video/hdmi_in/frontend/v_vid_in_axi4s_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-167] Found XPM memory block hsc_video_i/video/axi_vdma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the hsc_video_i/video/axi_vdma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-208] The XPM instance: <hsc_video_i/video/axi_vdma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <hsc_video_i/video/axi_vdma>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <hsc_video_i/video/axi_vdma/U0/GEN_SPRT_FOR_S2MM.S2MM_LINEBUFFER_I/GEN_S2MM_FLUSH_SOF_LOGIC.GEN_LINEBUFFER_FLUSH_SOF.GEN_SYNC_FIFO_FLUSH_SOF.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <hsc_video_i/video/axi_vdma>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <hsc_video_i/video/axi_vdma/U0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_SYNC_FIFO.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <hsc_video_i/video/axi_vdma>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+Command: write_bitstream -force hsc_video_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_11_reg_1016_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_11_reg_1016_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_12_reg_1031_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_12_reg_1031_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_6_reg_1006_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_6_reg_1006_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_7_reg_1021_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_7_reg_1021_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_9_reg_1026_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_9_reg_1026_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_reg_1011_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_reg_1011_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_12_reg_1031_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_12_reg_1031_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_7_reg_1021_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_7_reg_1021_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_9_reg_1026_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_9_reg_1026_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_reg_1011_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_reg_1011_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p_reg_reg input hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg input hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg input hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p_reg_reg input hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/r_V_12_reg_986_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/r_V_12_reg_986_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/r_V_16_reg_996_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/r_V_16_reg_996_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/r_V_19_reg_1001_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/r_V_19_reg_1001_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_11_reg_1016_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_11_reg_1016_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_6_reg_1006_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_6_reg_1006_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_reg_1011_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_reg_1011_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/r_V_12_reg_986_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/r_V_12_reg_986_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/r_V_16_reg_996_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/r_V_16_reg_996_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/r_V_19_reg_1001_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/r_V_19_reg_1001_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_reg_1011_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_reg_1011_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC RTSTAT-10] No routable loads: 33 net(s) have no routable loads. The problem bus(es) and/or net(s) are hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], hsc_video_i/video/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0]... and (the first 15 of 21 listed).
+INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (hsc_video_i/video/axi_vdma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 29 Warnings, 1 Advisories
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./hsc_video_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+214 Infos, 122 Warnings, 14 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:35 ; elapsed = 00:00:25 . Memory (MB): peak = 3568.121 ; gain = 310.656 ; free physical = 2882 ; free virtual = 24383
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  1 13:23:27 2021...

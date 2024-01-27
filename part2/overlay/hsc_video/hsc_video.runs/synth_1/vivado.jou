@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Mar  1 13:18:24 2021
+# Process ID: 14398
+# Current directory: /mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/synth_1
+# Command line: vivado -log hsc_video_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hsc_video_wrapper.tcl
+# Log file: /mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/synth_1/hsc_video_wrapper.vds
+# Journal file: /mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source hsc_video_wrapper.tcl -notrace

@@ -6,31 +6,31 @@ INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
 INFO: [XFORM 203-1161] The maximum of name length is set into 40.
 INFO: [HLS 200-10] Analyzing design file 'pixel_proc/pixel_proc.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6263 ; free virtual = 27091
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6263 ; free virtual = 27091
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6714 ; free virtual = 27396
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6714 ; free virtual = 27396
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [XFORM 203-603] Inlining function 'counters' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:174).
-INFO: [XFORM 203-603] Inlining function 'Context::active' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:190).
-INFO: [XFORM 203-603] Inlining function 'Context::update' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:191).
-INFO: [XFORM 203-603] Inlining function 'Context::active' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:193).
-INFO: [XFORM 203-603] Inlining function 'Context::update' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:194).
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6146 ; free virtual = 26990
+INFO: [XFORM 203-603] Inlining function 'counters' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:175).
+INFO: [XFORM 203-603] Inlining function 'Context::active' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:191).
+INFO: [XFORM 203-603] Inlining function 'Context::update' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:192).
+INFO: [XFORM 203-603] Inlining function 'Context::active' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:194).
+INFO: [XFORM 203-603] Inlining function 'Context::update' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:195).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6663 ; free virtual = 27360
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6104 ; free virtual = 26954
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6619 ; free virtual = 27321
 INFO: [XFORM 203-1101] Packing variable 'video_out.data' (pixel_proc/pixel_proc.cpp:131) into a 24-bit variable.
 INFO: [XFORM 203-1101] Packing variable 'video_in.data' (pixel_proc/pixel_proc.cpp:130) into a 24-bit variable.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:117:5) to (pixel_proc/pixel_proc.cpp:189:12) in function 'pixel_proc'... converting 3 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:190:13) to (pixel_proc/pixel_proc.cpp:58:9) in function 'pixel_proc'... converting 3 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:193:13) to (pixel_proc/pixel_proc.cpp:58:9) in function 'pixel_proc'... converting 3 basic blocks.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6000 ; free virtual = 26856
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:117:5) to (pixel_proc/pixel_proc.cpp:190:12) in function 'pixel_proc'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:191:13) to (pixel_proc/pixel_proc.cpp:58:9) in function 'pixel_proc'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:194:13) to (pixel_proc/pixel_proc.cpp:58:9) in function 'pixel_proc'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6548 ; free virtual = 27257
 INFO: [HLS 200-472] Inferring partial write operation for 'copy1.histogram.V' (pixel_proc/pixel_proc.cpp:43:19)
 INFO: [HLS 200-472] Inferring partial write operation for 'copy2.histogram.V' (pixel_proc/pixel_proc.cpp:74:27)
 INFO: [HLS 200-472] Inferring partial write operation for 'copy2._empty_data.V' (pixel_proc/pixel_proc.cpp:94:51)
 INFO: [HLS 200-472] Inferring partial write operation for 'copy2.histogram.V' (pixel_proc/pixel_proc.cpp:43:19)
 INFO: [HLS 200-472] Inferring partial write operation for 'copy1.histogram.V' (pixel_proc/pixel_proc.cpp:74:27)
 INFO: [HLS 200-472] Inferring partial write operation for 'copy1._empty_data.V' (pixel_proc/pixel_proc.cpp:94:51)
-INFO: [XFORM 203-531] Rewinding loop (pixel_proc/pixel_proc.cpp:158) in function 'pixel_proc'.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 5982 ; free virtual = 26841
+INFO: [XFORM 203-531] Rewinding loop (pixel_proc/pixel_proc.cpp:159) in function 'pixel_proc'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6536 ; free virtual = 27247
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'pixel_proc' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -40,52 +40,52 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln703_5) to 3 in order to utilize available DSP registers.
 INFO: [SYN 201-351] The following objects are mapped to a DSP.
    a  constant -173678
-   b  'partselect' operation ('G.V', pixel_proc/pixel_proc.cpp:166)
-   c  'add' operation ('add_ln703_4', pixel_proc/pixel_proc.cpp:180)
+   b  'partselect' operation ('G.V', pixel_proc/pixel_proc.cpp:167)
+   c  'add' operation ('add_ln703_4', pixel_proc/pixel_proc.cpp:181)
   DSP Expression: Cb_V = -173678 * zext_ln703_2 + add_ln703_4
 INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln703_6) to 3 in order to utilize available DSP registers.
 INFO: [SYN 201-351] The following objects are mapped to a DSP.
    a  constant -88467
-   b  'partselect' operation ('R.V', pixel_proc/pixel_proc.cpp:167)
-   c  'bitconcatenate' operation ('shl_ln703_1', pixel_proc/pixel_proc.cpp:180)
+   b  'partselect' operation ('R.V', pixel_proc/pixel_proc.cpp:168)
+   c  'bitconcatenate' operation ('shl_ln703_1', pixel_proc/pixel_proc.cpp:181)
   DSP Expression: add_ln703_4 = -88467 * zext_ln703_3 + zext_ln703_7
 INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln703_4) to 3 in order to utilize available DSP registers.
 INFO: [SYN 201-351] The following objects are mapped to a DSP.
    a  constant -219514
-   b  'partselect' operation ('G.V', pixel_proc/pixel_proc.cpp:166)
-   c  'add' operation ('add_ln703_2', pixel_proc/pixel_proc.cpp:179)
+   b  'partselect' operation ('G.V', pixel_proc/pixel_proc.cpp:167)
+   c  'add' operation ('add_ln703_2', pixel_proc/pixel_proc.cpp:180)
   DSP Expression: Cr_V = -219514 * zext_ln703_2 + add_ln703_2
 INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln703_3) to 3 in order to utilize available DSP registers.
 INFO: [SYN 201-351] The following objects are mapped to a DSP.
    a  constant -42631
    b  'extractvalue' operation ('video_in_data_tmp', pixel_proc/pixel_proc.cpp:130)
-   c  'bitconcatenate' operation ('shl_ln', pixel_proc/pixel_proc.cpp:179)
+   c  'bitconcatenate' operation ('shl_ln', pixel_proc/pixel_proc.cpp:180)
   DSP Expression: add_ln703_2 = zext_ln703_6 + -42631 * zext_ln703
 INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln703_1) to 3 in order to utilize available DSP registers.
 INFO: [SYN 201-351] The following objects are mapped to a DSP.
    a  constant 307757
-   b  'partselect' operation ('G.V', pixel_proc/pixel_proc.cpp:166)
-   c  'add' operation ('add_ln703', pixel_proc/pixel_proc.cpp:178)
+   b  'partselect' operation ('G.V', pixel_proc/pixel_proc.cpp:167)
+   c  'add' operation ('add_ln703', pixel_proc/pixel_proc.cpp:179)
   DSP Expression: Y_V = 307757 * zext_ln703_2 + zext_ln703_4
 INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln703) to 3 in order to utilize available DSP registers.
 INFO: [SYN 201-351] The following objects are mapped to a DSP.
    a  constant 59768
    b  'extractvalue' operation ('video_in_data_tmp', pixel_proc/pixel_proc.cpp:130)
-   c  'mul' operation ('mul_ln703_2', pixel_proc/pixel_proc.cpp:178)
+   c  'mul' operation ('mul_ln703_2', pixel_proc/pixel_proc.cpp:179)
   DSP Expression: add_ln703 = mul_ln703_2 + 59768 * zext_ln703
 INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln703_2) to 3 in order to utilize available DSP registers.
 INFO: [SYN 201-351] The following objects are mapped to a DSP.
    a  constant 156762
-   b  'partselect' operation ('R.V', pixel_proc/pixel_proc.cpp:167)
+   b  'partselect' operation ('R.V', pixel_proc/pixel_proc.cpp:168)
   DSP Expression: mul_ln703_2 = 156762 * zext_ln703_3
 WARNING: [SYN 201-303] Root Node r_V_3 mapped to expression  {mul a b}, but failed in bitwidth check.
 WARNING: [SYN 201-303] Root Node r_V_2 mapped to expression  {mul a b}, but failed in bitwidth check.
 WARNING: [SYN 201-303] Root Node r_V_1 mapped to expression  {mul a b}, but failed in bitwidth check.
 WARNING: [SYN 201-303] Root Node r_V mapped to expression  {mul a b}, but failed in bitwidth check.
 INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
-   a  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:201)
-   b  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:201)
-   c  'bitconcatenate' operation ('lhs.V', pixel_proc/pixel_proc.cpp:198)
+   a  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:202)
+   b  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:202)
+   c  'bitconcatenate' operation ('lhs.V', pixel_proc/pixel_proc.cpp:199)
 
 INFO: [SCHED 204-11] Generating True dependence constraints ... 
 INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
@@ -98,7 +98,7 @@ INFO: [SCHED 204-11] Generating Precedence constraints ...
 INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
 INFO: [SCHED 204-11] Generating Pipeline constraints ... 
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
-WARNING: [SCHED 204-63] Unable to schedule the whole 2 cycles 'load' operation ('shared_memory_V_load_1', pixel_proc/pixel_proc.cpp:94->pixel_proc/pixel_proc.cpp:194) on array 'shared_memory_V' within the first 2 cycles (II = 2).
+WARNING: [SCHED 204-63] Unable to schedule the whole 2 cycles 'load' operation ('shared_memory_V_load_1', pixel_proc/pixel_proc.cpp:94->pixel_proc/pixel_proc.cpp:195) on array 'shared_memory_V' within the first 2 cycles (II = 2).
 Please consider 1) removing the 'rewind' option from the pipeline, or 2) increasing the target initiation interval of the pipeline.
 INFO: [SCHED 204-61]  rescheduled in stage scheduling from 6 to 8 with current asap = 6, alap = 9
 INFO: [SCHED 204-61]  rescheduled in stage scheduling from 6 to 8 with current asap = 6, alap = 9
@@ -121,18 +121,18 @@ INFO: [SCHED 204-11] Finished scheduling optimization.
 INFO: [SCHED 204-11] Start constructing STG ...
 WARNING: [SCHED 204-21] Estimated clock period (8.76313ns) exceeds the target (target clock period: 7ns, clock uncertainty: 0.875ns, effective delay budget: 6.125ns).
 WARNING: [SCHED 204-21] The critical path in module 'pixel_proc' consists of the following:
-	'load' operation ('t.V', pixel_proc/pixel_proc.cpp:43->pixel_proc/pixel_proc.cpp:193) on array 'copy2_histogram_V' [153]  (3.25 ns)
-	'add' operation ('add_ln700_6', pixel_proc/pixel_proc.cpp:43->pixel_proc/pixel_proc.cpp:193) [154]  (2.26 ns)
-	'store' operation ('copy2_histogram_V_addr_write_ln43', pixel_proc/pixel_proc.cpp:43->pixel_proc/pixel_proc.cpp:193) of variable 'add_ln700_6', pixel_proc/pixel_proc.cpp:43->pixel_proc/pixel_proc.cpp:193 on array 'copy2_histogram_V' [155]  (3.25 ns)
+	'load' operation ('t.V', pixel_proc/pixel_proc.cpp:43->pixel_proc/pixel_proc.cpp:194) on array 'copy2_histogram_V' [153]  (3.25 ns)
+	'add' operation ('add_ln700_6', pixel_proc/pixel_proc.cpp:43->pixel_proc/pixel_proc.cpp:194) [154]  (2.26 ns)
+	'store' operation ('copy2_histogram_V_addr_write_ln43', pixel_proc/pixel_proc.cpp:43->pixel_proc/pixel_proc.cpp:194) of variable 'add_ln700_6', pixel_proc/pixel_proc.cpp:43->pixel_proc/pixel_proc.cpp:194 on array 'copy2_histogram_V' [155]  (3.25 ns)
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 51.68 seconds; current allocated memory: 231.257 MB.
+INFO: [HLS 200-111]  Elapsed time: 52.55 seconds; current allocated memory: 231.253 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 232.637 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 232.639 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'pixel_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -175,20 +175,4 @@ INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_20s_27s_47_7_1': 1 
 INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_21ns_27s_48_7_1': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_mul_19ns_8ns_26_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'pixel_proc'.
-INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 235.157 MB.
-==============================================================
-Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
-Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-==============================================================
-==============================================================
-Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
-Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-==============================================================
-==============================================================
-Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
-Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-==============================================================
-==============================================================
-Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
-Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-==============================================================
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 235.159 MB.

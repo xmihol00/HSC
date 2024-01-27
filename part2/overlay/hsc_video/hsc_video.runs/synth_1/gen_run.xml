@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1614600155">
+  <File Type="VDS-TIMING-PB" Name="hsc_video_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="hsc_video_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="hsc_video_wrapper.dcp"/>
+  <File Type="PA-TCL" Name="hsc_video_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="hsc_video_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="hsc_video_wrapper.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="hsc_video_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="hsc_video_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="hsc_video_wrapper_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/hsc_video/hsc_video.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/hsc_video/hdl/hsc_video_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hsc_video_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/overlay/hsc_video.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hsc_video.xdc"/>
+        <Attr Name="ImportTime" Val="1451111846"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_ps7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m09_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_pixel_unpack_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_pixel_proc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_vtc_out_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_v_axi4s_vid_out_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_auto_cc_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_rgb2dvi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_color_swap_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_axi_dynclk_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_color_convert_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m07_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_auto_pc_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_s00_regslice_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_auto_cc_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m00_regslice_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m02_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_axi_gpio_hdmiin_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_auto_cc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_axis_register_slice_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m08_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_rst_ps7_0_fclk0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_xbar_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_rst_ps7_0_fclk1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_auto_pc_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m01_regslice_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m03_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_vtc_in_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m04_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_auto_us_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m00_regslice_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m05_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_auto_cc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m01_regslice_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_m06_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_s00_regslice_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_proc_sys_reset_pixelclk_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_auto_cc_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_color_convert_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_axi_vdma_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_hdmi_out_hpd_video_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_system_interrupts_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_dvi2rgb_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_v_vid_in_axi4s_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_pixel_pack_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_color_swap_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_axis_register_slice_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hsc_video_axis_register_slice_1_0"/>
+</GenRun>

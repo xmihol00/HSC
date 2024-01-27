@@ -46525,12 +46525,16 @@ static void simulation_PSPL_communication(
 
         cumsum += Pwt;
 
-        shared_memory[i] = cumsum * 255.0;
+        table[i] = cumsum * 255.0;
     }
 
     for (int i = 0; i < 256; i++)
     {
-        shared_memory[i] = shared_memory[i] / cumsum + 0.5;
+        shared_memory[i] = ((float)table[i] / cumsum) + 0.5;
+        if (shared_memory[i] > 255)
+        {
+            shared_memory[i] = 255;
+        }
     }
 
     write_ready = 1;
@@ -46707,6 +46711,7 @@ void pixel_proc(
 #pragma HLS INTERFACE s_axilite register port=&read_done
 #pragma HLS INTERFACE s_axilite register port=&write_ready
 #pragma HLS INTERFACE s_axilite port=&shared_memory
+
 
  bool last = false;
     while(!last) {

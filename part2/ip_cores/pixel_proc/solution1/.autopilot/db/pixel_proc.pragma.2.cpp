@@ -46525,12 +46525,16 @@ static void simulation_PSPL_communication(
 
         cumsum += Pwt;
 
-        shared_memory[i] = cumsum * 255.0;
+        table[i] = cumsum * 255.0;
     }
 
     for (int i = 0; i < 256; i++)
     {
-        shared_memory[i] = shared_memory[i] / cumsum + 0.5;
+        shared_memory[i] = ((float)table[i] / cumsum) + 0.5;
+        if (shared_memory[i] > 255)
+        {
+            shared_memory[i] = 255;
+        }
     }
 
     write_ready = 1;
@@ -46707,6 +46711,7 @@ _ssdm_op_SpecInterface(&values, "s_axilite", 1, 1, "", 0, 0, "", "", "", 0, 0, 0
 _ssdm_op_SpecInterface(&read_done, "s_axilite", 1, 1, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(&write_ready, "s_axilite", 1, 1, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(shared_memory, "s_axilite", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
+
 
  bool last = false;
     while(!last) {

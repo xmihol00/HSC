@@ -1,0 +1,654 @@
+
+*** Running vivado
+    with args -log hsc_video_pixel_proc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hsc_video_pixel_proc_0.tcl
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source hsc_video_pixel_proc_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/sdc3/david/projs/hardware-software/part2/ip_cores'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/david/Xilinx/Vivado/2020.1/data/ip'.
+Command: synth_design -top hsc_video_pixel_proc_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13109
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2083.918 ; gain = 0.000 ; free physical = 1936 ; free virtual = 23237
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hsc_video_pixel_proc_0' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_pixel_proc_0/synth/hsc_video_pixel_proc_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 3'b010 
+	Parameter ap_ST_fsm_pp0_stage1 bound to: 3'b100 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_copy1_histogram_V' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_copy1_histogram_V.v:8]
+	Parameter DataWidth bound to: 22 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_copy1_histogram_V_ram' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_copy1_histogram_V_ram.v:6]
+	Parameter DWIDTH bound to: 22 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_copy1_histogram_V_ram' (1#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_copy1_histogram_V_ram.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_copy1_histogram_V' (2#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_copy1_histogram_V.v:8]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_copy1_empty_data_V' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_copy1_empty_data_V.v:8]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_copy1_empty_data_V_ram' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_copy1_empty_data_V_ram.v:6]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_copy1_empty_data_V_ram' (3#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_copy1_empty_data_V_ram.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_copy1_empty_data_V' (4#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_copy1_empty_data_V.v:8]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_AXILiteS_s_axi' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_AXILiteS_s_axi.v:6]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_FRAMES_V_DATA_0 bound to: 11'b00000010000 
+	Parameter ADDR_FRAMES_V_CTRL bound to: 11'b00000010100 
+	Parameter ADDR_ROWS_V_DATA_0 bound to: 11'b00000011000 
+	Parameter ADDR_ROWS_V_CTRL bound to: 11'b00000011100 
+	Parameter ADDR_PIXELS_V_DATA_0 bound to: 11'b00000100000 
+	Parameter ADDR_PIXELS_V_CTRL bound to: 11'b00000100100 
+	Parameter ADDR_SUM_BEFORE_V_DATA_0 bound to: 11'b00000101000 
+	Parameter ADDR_SUM_BEFORE_V_CTRL bound to: 11'b00000101100 
+	Parameter ADDR_SUM_AFTER_V_DATA_0 bound to: 11'b00000110000 
+	Parameter ADDR_SUM_AFTER_V_CTRL bound to: 11'b00000110100 
+	Parameter ADDR_VALUES_V_DATA_0 bound to: 11'b00000111000 
+	Parameter ADDR_VALUES_V_CTRL bound to: 11'b00000111100 
+	Parameter ADDR_READ_DONE_V_DATA_0 bound to: 11'b00001000000 
+	Parameter ADDR_READ_DONE_V_CTRL bound to: 11'b00001000100 
+	Parameter ADDR_WRITE_READY_V_DATA_0 bound to: 11'b00001001000 
+	Parameter ADDR_WRITE_READY_V_CTRL bound to: 11'b00001001100 
+	Parameter ADDR_SHARED_MEMORY_V_BASE bound to: 11'b10000000000 
+	Parameter ADDR_SHARED_MEMORY_V_HIGH bound to: 11'b11111111111 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_AXILiteS_s_axi_ram' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_AXILiteS_s_axi.v:549]
+	Parameter BYTES bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_AXILiteS_s_axi_ram' (5#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_AXILiteS_s_axi.v:549]
+INFO: [Synth 8-155] case statement is not full and has no default [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_AXILiteS_s_axi.v:284]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_AXILiteS_s_axi' (6#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_AXILiteS_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mul_21ns_27s_48_7_1' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_21ns_27s_48_7_1.v:39]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 21 - type: integer 
+	Parameter din1_WIDTH bound to: 27 - type: integer 
+	Parameter dout_WIDTH bound to: 48 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mul_21ns_27s_48_7_1_MulnS_0' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_21ns_27s_48_7_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mul_21ns_27s_48_7_1_MulnS_0' (7#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_21ns_27s_48_7_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mul_21ns_27s_48_7_1' (8#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_21ns_27s_48_7_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mul_20s_27s_47_7_1' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_20s_27s_47_7_1.v:39]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 20 - type: integer 
+	Parameter din1_WIDTH bound to: 27 - type: integer 
+	Parameter dout_WIDTH bound to: 47 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mul_20s_27s_47_7_1_MulnS_1' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_20s_27s_47_7_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mul_20s_27s_47_7_1_MulnS_1' (9#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_20s_27s_47_7_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mul_20s_27s_47_7_1' (10#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_20s_27s_47_7_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mul_19s_27s_46_7_1' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_19s_27s_46_7_1.v:39]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 19 - type: integer 
+	Parameter din1_WIDTH bound to: 27 - type: integer 
+	Parameter dout_WIDTH bound to: 46 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mul_19s_27s_46_7_1_MulnS_2' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_19s_27s_46_7_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mul_19s_27s_46_7_1_MulnS_2' (11#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_19s_27s_46_7_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mul_19s_27s_46_7_1' (12#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_19s_27s_46_7_1.v:39]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mul_mul_19ns_8ns_26_4_1' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_mul_19ns_8ns_26_4_1.v:38]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 19 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_mul_19ns_8ns_26_4_1.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0' (13#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_mul_19ns_8ns_26_4_1.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mul_mul_19ns_8ns_26_4_1' (14#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mul_mul_19ns_8ns_26_4_1.v:38]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mac_muladd_17s_8ns_26s_27_bkb' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb.v:51]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 17 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 27 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1' (15#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mac_muladd_17s_8ns_26s_27_bkb' (16#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb.v:51]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mac_muladd_18s_8ns_26ns_27cud' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_18s_8ns_26ns_27cud.v:51]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 18 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 27 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_18s_8ns_26ns_27cud.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2' (17#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_18s_8ns_26ns_27cud.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mac_muladd_18s_8ns_26ns_27cud' (18#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_18s_8ns_26ns_27cud.v:51]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe.v:51]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 17 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3' (19#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe' (20#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe.v:51]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mac_muladd_19s_8ns_27s_27_eOg' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg.v:51]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 19 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 27 - type: integer 
+	Parameter dout_WIDTH bound to: 27 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4' (21#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mac_muladd_19s_8ns_27s_27_eOg' (22#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg.v:51]
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi.v:51]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 20 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 27 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5' (23#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi' (24#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi.v:51]
+INFO: [Synth 8-6157] synthesizing module 'regslice_both' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:8]
+	Parameter DataWidth bound to: 24 - type: integer 
+	Parameter W bound to: 25 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ibuf' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:372]
+	Parameter W bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ibuf' (25#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6157] synthesizing module 'obuf' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:402]
+	Parameter W bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'obuf' (26#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'regslice_both' (27#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:8]
+INFO: [Synth 8-6157] synthesizing module 'regslice_both__parameterized0' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:8]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ibuf__parameterized0' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:372]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ibuf__parameterized0' (27#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6157] synthesizing module 'obuf__parameterized0' [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:402]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'obuf__parameterized0' (27#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'regslice_both__parameterized0' (27#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/regslice_core.v:8]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc.v:2523]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc.v:2525]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc.v:2529]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc.v:2531]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc.v:2535]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc.v:2537]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc.v:2775]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc.v:2779]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_proc' (28#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ipshared/fcd0/hdl/verilog/pixel_proc.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'hsc_video_pixel_proc_0' (29#1) [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_pixel_proc_0/synth/hsc_video_pixel_proc_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2083.918 ; gain = 0.000 ; free physical = 2104 ; free virtual = 23409
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2083.918 ; gain = 0.000 ; free physical = 2016 ; free virtual = 23321
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2083.918 ; gain = 0.000 ; free physical = 2016 ; free virtual = 23321
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2083.918 ; gain = 0.000 ; free physical = 2007 ; free virtual = 23313
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_pixel_proc_0/constraints/pixel_proc_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/ip/hsc_video_pixel_proc_0/constraints/pixel_proc_ooc.xdc] for cell 'inst'
+Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_pixel_proc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_pixel_proc_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2152.770 ; gain = 0.000 ; free physical = 1920 ; free virtual = 23225
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2152.770 ; gain = 0.000 ; free physical = 1911 ; free virtual = 23216
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 2152.770 ; gain = 68.852 ; free physical = 2018 ; free virtual = 23333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 2152.770 ; gain = 68.852 ; free physical = 2018 ; free virtual = 23333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_pixel_proc_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 2152.770 ; gain = 68.852 ; free physical = 2018 ; free virtual = 23333
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'pixel_proc_AXILiteS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'pixel_proc_AXILiteS_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-3971] The signal "pixel_proc_AXILiteS_s_axi_ram:/gen_write[1].mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'pixel_proc_AXILiteS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'pixel_proc_AXILiteS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 2152.770 ; gain = 68.852 ; free physical = 1930 ; free virtual = 23250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   48 Bit       Adders := 2     
+	   3 Input   48 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   22 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 5     
++---Registers : 
+	              256 Bit    Registers := 4     
+	               48 Bit    Registers := 7     
+	               47 Bit    Registers := 2     
+	               46 Bit    Registers := 1     
+	               44 Bit    Registers := 2     
+	               32 Bit    Registers := 17    
+	               29 Bit    Registers := 3     
+	               27 Bit    Registers := 7     
+	               25 Bit    Registers := 10    
+	               22 Bit    Registers := 2     
+	               21 Bit    Registers := 2     
+	               18 Bit    Registers := 10    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 24    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 20    
+	                1 Bit    Registers := 59    
++---RAMs : 
+	               8K Bit	(256 X 32 bit)          RAMs := 3     
+	               5K Bit	(256 X 22 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input  256 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 19    
+	  16 Input   32 Bit        Muxes := 1     
+	   2 Input   29 Bit        Muxes := 3     
+	   2 Input   25 Bit        Muxes := 4     
+	   2 Input   22 Bit        Muxes := 5     
+	   2 Input   21 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 7     
+	   2 Input    9 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 15    
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	  16 Input    4 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 20    
+	   4 Input    2 Bit        Muxes := 6     
+	   3 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 52    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/p_reg_reg, operation Mode is: ((A:0x2645a)'*B2)'.
+DSP Report: register pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/p_reg_tmp_reg is absorbed into DSP pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/p_reg_tmp0 is absorbed into DSP pixel_proc_mul_mul_19ns_8ns_26_4_1_U5/pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p_reg_reg, operation Mode is: (C+(A*B)')'.
+DSP Report: register pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p_reg_reg is absorbed into DSP pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/m_reg_reg is absorbed into DSP pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p is absorbed into DSP pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/m is absorbed into DSP pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p_reg_reg.
+DSP Report: Generating DSP pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p_reg_reg, operation Mode is: (C+(A*B)')'.
+DSP Report: register pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p_reg_reg is absorbed into DSP pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/m_reg_reg is absorbed into DSP pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p is absorbed into DSP pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/m is absorbed into DSP pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p_reg_reg.
+DSP Report: Generating DSP pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/p_reg_reg, operation Mode is: (C'+((A:0x3ffea66d)'*B)')'.
+DSP Report: register pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/a_reg_reg is absorbed into DSP pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/p_reg_reg is absorbed into DSP pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/p_reg_reg is absorbed into DSP pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/m_reg_reg is absorbed into DSP pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/p is absorbed into DSP pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/m is absorbed into DSP pixel_proc_mac_muladd_18s_8ns_26ns_27cud_U7/pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2_U/p_reg_reg.
+DSP Report: Generating DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg, operation Mode is: (C+((A:0x3ffd5992)'*B)')'.
+DSP Report: register pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/a_reg_reg is absorbed into DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg is absorbed into DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/m_reg_reg is absorbed into DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p is absorbed into DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/m is absorbed into DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg.
+DSP Report: Generating DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg, operation Mode is: ((A:0xe2d0e)''*B'')'.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff1_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: operator pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/tmp_product is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: operator pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/tmp_product is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: Generating DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff0_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff1_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: operator pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/tmp_product is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: operator pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/tmp_product is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U1/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: Generating DSP pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/p_reg_reg, operation Mode is: (C'+((A:0x3fff5979)'*B)')'.
+DSP Report: register pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/a_reg_reg is absorbed into DSP pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/p_reg_reg is absorbed into DSP pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/p_reg_reg is absorbed into DSP pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/m_reg_reg is absorbed into DSP pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/p is absorbed into DSP pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/m is absorbed into DSP pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_U6/pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1_U/p_reg_reg.
+DSP Report: Generating DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg, operation Mode is: (C+((A:0x3ffca686)'*B)')'.
+DSP Report: register pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/a_reg_reg is absorbed into DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg is absorbed into DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg.
+DSP Report: register pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/m_reg_reg is absorbed into DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p is absorbed into DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg.
+DSP Report: operator pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/m is absorbed into DSP pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg.
+DSP Report: Generating DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg, operation Mode is: ((A:0x3ffa4973)''*B'')'.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/a_reg0_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff0_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff1_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg.
+DSP Report: operator pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/tmp_product is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg.
+DSP Report: operator pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/tmp_product is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg.
+DSP Report: Generating DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff3_reg, operation Mode is: (PCIN>>17)+(ACIN''*B'')'.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff0_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff3_reg.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff1_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff3_reg.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff0_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff3_reg.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff1_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff3_reg.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff3_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff3_reg.
+DSP Report: register pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff2_reg is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff3_reg.
+DSP Report: operator pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/tmp_product is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff3_reg.
+DSP Report: operator pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/tmp_product is absorbed into DSP pixel_proc_mul_20s_27s_47_7_1_U2/pixel_proc_mul_20s_27s_47_7_1_MulnS_1_U/buff3_reg.
+DSP Report: Generating DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg, operation Mode is: ((A:0x3ffd3f35)''*B'')'.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/a_reg0_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff0_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff1_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg.
+DSP Report: operator pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/tmp_product is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg.
+DSP Report: operator pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/tmp_product is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg.
+DSP Report: Generating DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff3_reg, operation Mode is: (PCIN>>17)+(ACIN''*B'')'.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff0_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff3_reg.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff1_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff3_reg.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff0_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff3_reg.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff1_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff3_reg.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff3_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff3_reg.
+DSP Report: register pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff2_reg is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff3_reg.
+DSP Report: operator pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/tmp_product is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff3_reg.
+DSP Report: operator pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/tmp_product is absorbed into DSP pixel_proc_mul_19s_27s_46_7_1_U3/pixel_proc_mul_19s_27s_46_7_1_MulnS_2_U/buff3_reg.
+DSP Report: Generating DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg, operation Mode is: ((A:0xb374b)''*B'')'.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff1_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: operator pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/tmp_product is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: operator pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/tmp_product is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg.
+DSP Report: Generating DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff0_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff1_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: register pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff2_reg is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: operator pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/tmp_product is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+DSP Report: operator pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/tmp_product is absorbed into DSP pixel_proc_mul_21ns_27s_48_7_1_U4/pixel_proc_mul_21ns_27s_48_7_1_MulnS_0_U/buff3_reg.
+INFO: [Synth 8-3971] The signal "inst/pixel_proc_AXILiteS_s_axi_U/int_shared_memory_V/gen_write[1].mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 2152.770 ; gain = 68.852 ; free physical = 2406 ; free virtual = 23734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++---------------------------------+---------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                      | RTL Object                                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------+---------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|pixel_proc_copy1_histogram_V:    | pixel_proc_copy1_histogram_V_ram_u/ram_reg  | 256 x 22(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|pixel_proc_copy1_empty_data_V:   | pixel_proc_copy1_empty_data_V_ram_u/ram_reg | 256 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|pixel_proc_copy1_histogram_V:    | pixel_proc_copy1_histogram_V_ram_u/ram_reg  | 256 x 22(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|pixel_proc_copy1_empty_data_V:   | pixel_proc_copy1_empty_data_V_ram_u/ram_reg | 256 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|inst/pixel_proc_AXILiteS_s_axi_U | int_shared_memory_V/gen_write[1].mem_reg    | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
++---------------------------------+---------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping	Report (see note below)
++-------------------------------------------------+----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                      | DSP Mapping                | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------------------------------------+----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|pixel_proc_mul_mul_19ns_8ns_26_4_1_DSP48_0       | ((A:0x2645a)'*B2)'         | 19     | 8      | -      | -      | 26     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3 | (C+(A*B)')'                | 25     | 18     | 27     | -      | 26     | 0    | 0    | 0    | -    | -     | 1    | 1    | 
+|pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5 | (C+(A*B)')'                | 25     | 18     | 27     | -      | 44     | 0    | 0    | 0    | -    | -     | 1    | 1    | 
+|pixel_proc_mac_muladd_18s_8ns_26ns_27cud_DSP48_2 | (C'+((A:0x3ffea66d)'*B)')' | 25     | 18     | 27     | -      | 44     | 1    | 0    | 1    | -    | -     | 1    | 1    | 
+|pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4 | (C+((A:0x3ffd5992)'*B)')'  | 25     | 18     | 27     | -      | 44     | 1    | 0    | 0    | -    | -     | 1    | 1    | 
+|pixel_proc                                       | ((A:0xe2d0e)''*B'')'       | 22     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|pixel_proc_mul_21ns_27s_48_7_1_MulnS_0           | (PCIN>>17)+(A''*B'')'      | 22     | 10     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|pixel_proc_mac_muladd_17s_8ns_26s_27_bkb_DSP48_1 | (C'+((A:0x3fff5979)'*B)')' | 25     | 18     | 26     | -      | 44     | 1    | 0    | 1    | -    | -     | 1    | 1    | 
+|pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4 | (C+((A:0x3ffca686)'*B)')'  | 25     | 18     | 27     | -      | 44     | 1    | 0    | 0    | -    | -     | 1    | 1    | 
+|pixel_proc                                       | ((A:0x3ffa4973)''*B'')'    | 20     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|pixel_proc_mul_20s_27s_47_7_1_MulnS_1            | (PCIN>>17)+(ACIN''*B'')'   | 20     | 10     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|pixel_proc                                       | ((A:0x3ffd3f35)''*B'')'    | 19     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|pixel_proc_mul_19s_27s_46_7_1_MulnS_2            | (PCIN>>17)+(ACIN''*B'')'   | 19     | 10     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|pixel_proc                                       | ((A:0xb374b)''*B'')'       | 22     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|pixel_proc_mul_21ns_27s_48_7_1_MulnS_0           | (PCIN>>17)+(A''*B'')'      | 22     | 10     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
++-------------------------------------------------+----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:56 . Memory (MB): peak = 2152.770 ; gain = 68.852 ; free physical = 3025 ; free virtual = 24350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 2174.785 ; gain = 90.867 ; free physical = 3261 ; free virtual = 24593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++---------------------------------+---------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                      | RTL Object                                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------+---------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|pixel_proc_copy1_histogram_V:    | pixel_proc_copy1_histogram_V_ram_u/ram_reg  | 256 x 22(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|pixel_proc_copy1_empty_data_V:   | pixel_proc_copy1_empty_data_V_ram_u/ram_reg | 256 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|pixel_proc_copy1_histogram_V:    | pixel_proc_copy1_histogram_V_ram_u/ram_reg  | 256 x 22(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|pixel_proc_copy1_empty_data_V:   | pixel_proc_copy1_empty_data_V_ram_u/ram_reg | 256 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
+|inst/pixel_proc_AXILiteS_s_axi_U | int_shared_memory_V/gen_write[1].mem_reg    | 256 x 32(READ_FIRST)   | W | R | 256 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
++---------------------------------+---------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/copy1_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/copy1_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/copy1_empty_data_V_U/pixel_proc_copy1_empty_data_V_ram_u/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/copy2_histogram_V_U/pixel_proc_copy1_histogram_V_ram_u/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/copy2_empty_data_V_U/pixel_proc_copy1_empty_data_V_ram_u/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/pixel_proc_AXILiteS_s_axi_U/int_shared_memory_V/gen_write[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/pixel_proc_AXILiteS_s_axi_U/int_shared_memory_V/gen_write[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:03 . Memory (MB): peak = 2212.816 ; gain = 128.898 ; free physical = 3242 ; free virtual = 24570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:01:07 . Memory (MB): peak = 2212.816 ; gain = 128.898 ; free physical = 3739 ; free virtual = 25066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:01:07 . Memory (MB): peak = 2212.816 ; gain = 128.898 ; free physical = 3716 ; free virtual = 25044
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 2212.816 ; gain = 128.898 ; free physical = 3712 ; free virtual = 25037
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 2212.816 ; gain = 128.898 ; free physical = 3684 ; free virtual = 25010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 2212.816 ; gain = 128.898 ; free physical = 3678 ; free virtual = 25005
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 2212.816 ; gain = 128.898 ; free physical = 3685 ; free virtual = 25013
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   122|
+|2     |DSP48E1  |    15|
+|6     |LUT1     |    12|
+|7     |LUT2     |   276|
+|8     |LUT3     |   122|
+|9     |LUT4     |   660|
+|10    |LUT5     |   202|
+|11    |LUT6     |  1053|
+|12    |MUXF7    |   136|
+|13    |MUXF8    |    64|
+|14    |RAMB18E1 |     4|
+|15    |RAMB36E1 |     1|
+|16    |FDRE     |  2518|
+|17    |FDSE     |    33|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 2212.816 ; gain = 128.898 ; free physical = 3685 ; free virtual = 25013
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:01:05 . Memory (MB): peak = 2212.816 ; gain = 60.047 ; free physical = 3848 ; free virtual = 25123
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:01:09 . Memory (MB): peak = 2212.824 ; gain = 128.898 ; free physical = 3829 ; free virtual = 25104
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2212.824 ; gain = 0.000 ; free physical = 3115 ; free virtual = 24438
+INFO: [Netlist 29-17] Analyzing 342 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2212.824 ; gain = 0.000 ; free physical = 3548 ; free virtual = 24875
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+97 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:24 . Memory (MB): peak = 2212.824 ; gain = 128.906 ; free physical = 3624 ; free virtual = 24952
+INFO: [Common 17-1381] The checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_pixel_proc_0_synth_1/hsc_video_pixel_proc_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP hsc_video_pixel_proc_0, cache-ID = 9588cdf1a21dd858
+INFO: [Coretcl 2-1174] Renamed 51 cell refs.
+INFO: [Common 17-1381] The checkpoint '/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_pixel_proc_0_synth_1/hsc_video_pixel_proc_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file hsc_video_pixel_proc_0_utilization_synth.rpt -pb hsc_video_pixel_proc_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  1 13:16:46 2021...

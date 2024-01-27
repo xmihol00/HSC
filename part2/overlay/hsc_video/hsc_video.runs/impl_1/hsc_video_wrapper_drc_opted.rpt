@@ -1,0 +1,194 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Mon Mar  1 13:20:19 2021
+| Host         : david running 64-bit Ubuntu 22.04.2 LTS
+| Command      : report_drc -file hsc_video_wrapper_drc_opted.rpt -pb hsc_video_wrapper_drc_opted.pb -rpx hsc_video_wrapper_drc_opted.rpx
+| Design       : hsc_video_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 30
++----------+------------------+------------------------+------------+
+| Rule     | Severity         | Description            | Violations |
++----------+------------------+------------------------+------------+
+| AVAL-46  | Critical Warning | v7v8_mmcm_fvco_rule1   | 1          |
+| DPIP-1   | Warning          | Input pipelining       | 16         |
+| DPOP-2   | Warning          | MREG Output pipelining | 12         |
+| REQP-181 | Advisory         | writefirst             | 1          |
++----------+------------------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+AVAL-46#1 Critical Warning
+v7v8_mmcm_fvco_rule1  
+The current computed target frequency, FVCO, is out of range for cell hsc_video_i/video/hdmi_in/frontend/dvi2rgb_0/U0/TMDS_ClockingX/DVI_ClkGenerator. The computed FVCO is 599.952 MHz. The valid FVCO range for speed grade -1 is 600MHz to 1200MHz. The cell attribute values used to compute FVCO are CLKFBOUT_MULT_F = 5.000, CLKIN1_PERIOD = 8.33400, and DIVCLK_DIVIDE = 1 (FVCO = 1000 * CLKFBOUT_MULT_F/(CLKIN1_PERIOD * DIVCLK_DIVIDE)).
+This violation may be corrected by:
+  1. The timer uses timing constraints for clock period or clock frequency that affect CLKIN1 to set cell attribute CLKIN1_PERIOD, over-riding any previous value. This may already be in place and, if so this violation will be resolved once Timing is run.  Otherwise, consider modifying timing constraints to adjust the CLKIN1_PERIOD and bring FVCO into the allowed range.
+  2. In the absence of timing constraints that affect CLKIN1, consider modifying the cell CLKIN1_PERIOD to bring FVCO into the allowed range.
+  3. If CLKIN1_PERIOD is satisfactory, modify the CLKFBOUT_MULT_F or DIVCLK_DIVIDE cell attributes to bring FVCO into the allowed range.
+  4. The MMCM configuration may be dynamically modified by use of DRP which is recognized by an ACTIVE signal on DCLK pin.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_11_reg_1016_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_11_reg_1016_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_12_reg_1031_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_12_reg_1031_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_6_reg_1006_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_6_reg_1006_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_7_reg_1021_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_7_reg_1021_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_9_reg_1026_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_9_reg_1026_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_reg_1011_reg input hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_reg_1011_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_12_reg_1031_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_12_reg_1031_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_7_reg_1021_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_7_reg_1021_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#11 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_9_reg_1026_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_9_reg_1026_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#12 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_reg_1011_reg input hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_reg_1011_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p_reg_reg input hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_U8/pixel_proc_mac_muladd_17ns_8ns_26ns_2dEe_DSP48_3_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg input hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U10/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg input hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_U9/pixel_proc_mac_muladd_19s_8ns_27s_27_eOg_DSP48_4_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p_reg_reg input hsc_video_i/video/hdmi_out/pixel_proc/inst/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_U11/pixel_proc_mac_muladd_20ns_8ns_26ns_2fYi_DSP48_5_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/r_V_12_reg_986_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/r_V_12_reg_986_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/r_V_16_reg_996_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/r_V_16_reg_996_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/r_V_19_reg_1001_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/r_V_19_reg_1001_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_11_reg_1016_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_11_reg_1016_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#5 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_6_reg_1006_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_6_reg_1006_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#6 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_reg_1011_reg multiplier stage hsc_video_i/video/hdmi_in/color_convert/inst/ret_V_reg_1011_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#7 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/r_V_12_reg_986_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/r_V_12_reg_986_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#8 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/r_V_16_reg_996_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/r_V_16_reg_996_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#9 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/r_V_19_reg_1001_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/r_V_19_reg_1001_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#10 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#11 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#12 Warning
+MREG Output pipelining  
+DSP hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_reg_1011_reg multiplier stage hsc_video_i/video/hdmi_out/color_convert/inst/ret_V_reg_1011_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+REQP-181#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (hsc_video_i/video/axi_vdma/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+

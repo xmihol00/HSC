@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Mar  1 13:00:01 2021
+# Process ID: 4701
+# Current directory: /mnt/sdc3/david/projs/hardware-software/part2/overlay
+# Command line: vivado -mode batch -source build_hlsip.tcl -notrace
+# Log file: /mnt/sdc3/david/projs/hardware-software/part2/overlay/vivado.log
+# Journal file: /mnt/sdc3/david/projs/hardware-software/part2/overlay/vivado.jou
+#-----------------------------------------------------------
+source build_hlsip.tcl -notrace
+Skipping building color_convert
+Skipping building pixel_pack
+Skipping building pixel_unpack
+Building pixel_proc IP
+HLS IP builds complete
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  1 13:01:20 2021...

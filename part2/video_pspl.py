@@ -40,9 +40,9 @@ def PSPL_communication(accelerator, last_frames):
         last_frames += 4
     if not accelerator.read_read_done(): # waiting for read data ready confirmation from PL
         return last_frames
-    sb = accelerator.read_sum_before();
-    sa = accelerator.read_sum_after();
-    v = accelerator.read_values();
+    sb = accelerator.read_sum_before()
+    sa = accelerator.read_sum_after()
+    v = accelerator.read_values()
     if not v: # histogram empty
         return last_frames
     
@@ -53,15 +53,34 @@ def PSPL_communication(accelerator, last_frames):
     assert v == 1280*720*4, "Wrong pixel count for block of frames!"
     assert v == sum(histogram), "Wrong pixel count in histogram!"
     # process shared memory data somehow?
-    empty_data = numpy.arange(256) # actually calculate data to write somehow?
-    accelerator.write_shared_memory(empty_data)
+
+    histogram = histogram / v # normalize histogram
+    Pl = 0.0003
+    Pu = histogram.max() * 0.5
+    Pr = Pu - Pl
+    cumsum = 0.0
+    table = numpy.arange(256) # actually calculate data to write somehow?
+    for k in range(256): # cumulative sum over P with thresholds and weigth application 
+        if histogram[k] < Pl: # thresholding of Pk
+            Pwt = 0.0
+        elif histogram[k] > Pu:
+            Pwt = Pu
+        else: # weighted probability transformation with r = 0.5 (sqrt)
+            Pwt = math.sqrt((histogram[k] - Pl) / Pr) * Pu
+        cumsum += Pwt
+        table[k] = cumsum * 255.0
+
+    table /= cumsum # normalize table
+    table = numpy.around(table).astype(numpy.uint8) # convert to uint8 
+
+    accelerator.write_shared_memory(table)
     accelerator.write_write_ready_enable()
     # ##########################################################################
     
     print( # TODO: finish the print message!
         "Frame:", last_frames,
         "\tMeans:", "{:.3f}".format(sb/v), "{:.3f}".format(sa/v),
-        "\tCumSum:", "{:.3f}".format(-1), "\tPu:", "{:.3f}".format(-1)
+        "\tCumSum:", "{:.3f}".format(cumsum), "\tPu:", "{:.3f}".format(Pu)
     )
     last_frames += 4
     return last_frames
@@ -96,7 +115,7 @@ def hardware_communication(sd):
 # ##############################################################################
 def main():
     # TODO: Enable (true) or disable (false) the PS bypass for video data.
-    HDMI_TIE = False 
+    HDMI_TIE = True 
     # Arguments parsing
     parser = argparse.ArgumentParser(description='HDMI video capture and replay for Pynq.')
     parser.add_argument('-i', metavar='PATH', dest='input', action='store', default=None,

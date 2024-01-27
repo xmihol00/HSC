@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="hsc_video_m08_regslice_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m08_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_xbar_1_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_xbar_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_system_interrupts_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_system_interrupts_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_rst_ps7_0_fclk1_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_rst_ps7_0_fclk1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_rst_ps7_0_fclk0_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_rst_ps7_0_fclk0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_m01_regslice_2_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m01_regslice_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_auto_pc_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_m00_regslice_2_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m00_regslice_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_m08_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_auto_pc_1_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_auto_pc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_auto_cc_3_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_auto_cc_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_s00_regslice_3_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_s00_regslice_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_m01_regslice_2_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_auto_pc_2_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_auto_pc_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_auto_pc_0_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_m00_regslice_3_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m00_regslice_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_m08_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_m01_regslice_3_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m01_regslice_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_auto_cc_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_auto_cc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_auto_cc_3_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_m02_regslice_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m02_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_auto_cc_1_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_auto_cc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_m03_regslice_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m03_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_m04_regslice_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m04_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_m08_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_m05_regslice_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m05_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_m08_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_m06_regslice_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m06_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_m02_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_auto_cc_2_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_auto_cc_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_auto_cc_1_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_m07_regslice_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m07_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_m01_regslice_3_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_auto_us_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_auto_us_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_auto_pc_3_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_auto_pc_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_axi_vdma_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_axi_vdma_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_axis_register_slice_0_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_axis_register_slice_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_color_convert_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_color_convert_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_axi_gpio_hdmiin_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_axi_gpio_hdmiin_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_color_swap_0_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_color_swap_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_dvi2rgb_0_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_dvi2rgb_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_v_vid_in_axi4s_0_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_v_vid_in_axi4s_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_vtc_in_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_vtc_in_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_pixel_pack_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_pixel_pack_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_axis_register_slice_0_1_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_axis_register_slice_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_axis_register_slice_0_0_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_axis_register_slice_1_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_axis_register_slice_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_axis_register_slice_0_0_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_color_convert_1_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_color_convert_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_color_convert_0_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_axi_dynclk_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_axi_dynclk_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_color_swap_0_1_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_color_swap_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_hdmi_out_hpd_video_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_hdmi_out_hpd_video_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_rgb2dvi_0_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_rgb2dvi_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_v_axi4s_vid_out_0_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_v_axi4s_vid_out_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_vtc_out_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_vtc_out_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_pixel_proc_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_pixel_proc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_pixel_unpack_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_pixel_unpack_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_proc_sys_reset_pixelclk_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_proc_sys_reset_pixelclk_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_rst_ps7_0_fclk0_0_synth_1"/>
+	</Run>
+	<Run Id="hsc_video_s00_regslice_2_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_s00_regslice_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_xbar_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_ps7_0_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_ps7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_xbar_2_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_xbar_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_auto_cc_4_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_auto_cc_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="hsc_video_m09_regslice_0_synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/hsc_video_m09_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="hsc_video_m08_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="synth_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="hsc_video_m08_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_xbar_1_synth_1"/>
+		<Parent Id="hsc_video_system_interrupts_0_synth_1"/>
+		<Parent Id="hsc_video_rst_ps7_0_fclk1_0_synth_1"/>
+		<Parent Id="hsc_video_rst_ps7_0_fclk0_0_synth_1"/>
+		<Parent Id="hsc_video_m01_regslice_2_synth_1"/>
+		<Parent Id="hsc_video_auto_pc_0_synth_1"/>
+		<Parent Id="hsc_video_m00_regslice_2_synth_1"/>
+		<Parent Id="hsc_video_auto_pc_1_synth_1"/>
+		<Parent Id="hsc_video_auto_cc_3_synth_1"/>
+		<Parent Id="hsc_video_s00_regslice_3_synth_1"/>
+		<Parent Id="hsc_video_auto_pc_2_synth_1"/>
+		<Parent Id="hsc_video_m00_regslice_3_synth_1"/>
+		<Parent Id="hsc_video_m01_regslice_3_synth_1"/>
+		<Parent Id="hsc_video_auto_cc_0_synth_1"/>
+		<Parent Id="hsc_video_m02_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_auto_cc_1_synth_1"/>
+		<Parent Id="hsc_video_m03_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_m04_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_m05_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_m06_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_auto_cc_2_synth_1"/>
+		<Parent Id="hsc_video_m07_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_auto_us_0_synth_1"/>
+		<Parent Id="hsc_video_auto_pc_3_synth_1"/>
+		<Parent Id="hsc_video_axi_vdma_0_synth_1"/>
+		<Parent Id="hsc_video_axis_register_slice_0_0_synth_1"/>
+		<Parent Id="hsc_video_color_convert_0_synth_1"/>
+		<Parent Id="hsc_video_axi_gpio_hdmiin_0_synth_1"/>
+		<Parent Id="hsc_video_color_swap_0_0_synth_1"/>
+		<Parent Id="hsc_video_dvi2rgb_0_0_synth_1"/>
+		<Parent Id="hsc_video_v_vid_in_axi4s_0_0_synth_1"/>
+		<Parent Id="hsc_video_vtc_in_0_synth_1"/>
+		<Parent Id="hsc_video_pixel_pack_0_synth_1"/>
+		<Parent Id="hsc_video_axis_register_slice_0_1_synth_1"/>
+		<Parent Id="hsc_video_axis_register_slice_1_0_synth_1"/>
+		<Parent Id="hsc_video_color_convert_1_synth_1"/>
+		<Parent Id="hsc_video_axi_dynclk_0_synth_1"/>
+		<Parent Id="hsc_video_color_swap_0_1_synth_1"/>
+		<Parent Id="hsc_video_hdmi_out_hpd_video_0_synth_1"/>
+		<Parent Id="hsc_video_rgb2dvi_0_0_synth_1"/>
+		<Parent Id="hsc_video_v_axi4s_vid_out_0_0_synth_1"/>
+		<Parent Id="hsc_video_vtc_out_0_synth_1"/>
+		<Parent Id="hsc_video_pixel_proc_0_synth_1"/>
+		<Parent Id="hsc_video_pixel_unpack_0_synth_1"/>
+		<Parent Id="hsc_video_proc_sys_reset_pixelclk_0_synth_1"/>
+		<Parent Id="hsc_video_s00_regslice_2_synth_1"/>
+		<Parent Id="hsc_video_xbar_0_synth_1"/>
+		<Parent Id="hsc_video_ps7_0_0_synth_1"/>
+		<Parent Id="hsc_video_xbar_2_synth_1"/>
+		<Parent Id="hsc_video_auto_cc_4_synth_1"/>
+		<Parent Id="hsc_video_m09_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="hsc_video_m08_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_xbar_1_synth_1"/>
+		<Parent Id="hsc_video_system_interrupts_0_synth_1"/>
+		<Parent Id="hsc_video_rst_ps7_0_fclk1_0_synth_1"/>
+		<Parent Id="hsc_video_rst_ps7_0_fclk0_0_synth_1"/>
+		<Parent Id="hsc_video_m01_regslice_2_synth_1"/>
+		<Parent Id="hsc_video_auto_pc_0_synth_1"/>
+		<Parent Id="hsc_video_m00_regslice_2_synth_1"/>
+		<Parent Id="hsc_video_auto_pc_1_synth_1"/>
+		<Parent Id="hsc_video_auto_cc_3_synth_1"/>
+		<Parent Id="hsc_video_s00_regslice_3_synth_1"/>
+		<Parent Id="hsc_video_auto_pc_2_synth_1"/>
+		<Parent Id="hsc_video_m00_regslice_3_synth_1"/>
+		<Parent Id="hsc_video_m01_regslice_3_synth_1"/>
+		<Parent Id="hsc_video_auto_cc_0_synth_1"/>
+		<Parent Id="hsc_video_m02_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_auto_cc_1_synth_1"/>
+		<Parent Id="hsc_video_m03_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_m04_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_m05_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_m06_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_auto_cc_2_synth_1"/>
+		<Parent Id="hsc_video_m07_regslice_0_synth_1"/>
+		<Parent Id="hsc_video_auto_us_0_synth_1"/>
+		<Parent Id="hsc_video_auto_pc_3_synth_1"/>
+		<Parent Id="hsc_video_axi_vdma_0_synth_1"/>
+		<Parent Id="hsc_video_axis_register_slice_0_0_synth_1"/>
+		<Parent Id="hsc_video_color_convert_0_synth_1"/>
+		<Parent Id="hsc_video_axi_gpio_hdmiin_0_synth_1"/>
+		<Parent Id="hsc_video_color_swap_0_0_synth_1"/>
+		<Parent Id="hsc_video_dvi2rgb_0_0_synth_1"/>
+		<Parent Id="hsc_video_v_vid_in_axi4s_0_0_synth_1"/>
+		<Parent Id="hsc_video_vtc_in_0_synth_1"/>
+		<Parent Id="hsc_video_pixel_pack_0_synth_1"/>
+		<Parent Id="hsc_video_axis_register_slice_0_1_synth_1"/>
+		<Parent Id="hsc_video_axis_register_slice_1_0_synth_1"/>
+		<Parent Id="hsc_video_color_convert_1_synth_1"/>
+		<Parent Id="hsc_video_axi_dynclk_0_synth_1"/>
+		<Parent Id="hsc_video_color_swap_0_1_synth_1"/>
+		<Parent Id="hsc_video_hdmi_out_hpd_video_0_synth_1"/>
+		<Parent Id="hsc_video_rgb2dvi_0_0_synth_1"/>
+		<Parent Id="hsc_video_v_axi4s_vid_out_0_0_synth_1"/>
+		<Parent Id="hsc_video_vtc_out_0_synth_1"/>
+		<Parent Id="hsc_video_pixel_proc_0_synth_1"/>
+		<Parent Id="hsc_video_pixel_unpack_0_synth_1"/>
+		<Parent Id="hsc_video_proc_sys_reset_pixelclk_0_synth_1"/>
+		<Parent Id="hsc_video_s00_regslice_2_synth_1"/>
+		<Parent Id="hsc_video_xbar_0_synth_1"/>
+		<Parent Id="hsc_video_ps7_0_0_synth_1"/>
+		<Parent Id="hsc_video_xbar_2_synth_1"/>
+		<Parent Id="hsc_video_auto_cc_4_synth_1"/>
+		<Parent Id="hsc_video_m09_regslice_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

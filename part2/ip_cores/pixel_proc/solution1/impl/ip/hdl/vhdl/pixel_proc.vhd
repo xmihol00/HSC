@@ -363,15 +363,15 @@ architecture behav of pixel_proc is
     signal ret_V_11_fu_1123_p2 : STD_LOGIC_VECTOR (50 downto 0);
     signal B_fixed_V_1_fu_1139_p3 : STD_LOGIC_VECTOR (28 downto 0);
     signal tmp_4_fu_1149_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal trunc_ln199_fu_1145_p1 : STD_LOGIC_VECTOR (26 downto 0);
+    signal trunc_ln200_fu_1145_p1 : STD_LOGIC_VECTOR (26 downto 0);
     signal icmp_ln1494_1_fu_1165_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal G_fixed_V_1_fu_1170_p3 : STD_LOGIC_VECTOR (28 downto 0);
     signal tmp_5_fu_1181_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal trunc_ln202_fu_1177_p1 : STD_LOGIC_VECTOR (26 downto 0);
+    signal trunc_ln203_fu_1177_p1 : STD_LOGIC_VECTOR (26 downto 0);
     signal icmp_ln1494_2_fu_1197_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal R_fixed_V_1_fu_1202_p3 : STD_LOGIC_VECTOR (28 downto 0);
     signal tmp_6_fu_1213_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal trunc_ln205_fu_1209_p1 : STD_LOGIC_VECTOR (26 downto 0);
+    signal trunc_ln206_fu_1209_p1 : STD_LOGIC_VECTOR (26 downto 0);
     signal B_fixed_V_3_fu_1157_p3 : STD_LOGIC_VECTOR (26 downto 0);
     signal trunc_ln718_1_fu_1247_p1 : STD_LOGIC_VECTOR (17 downto 0);
     signal r_1_fu_1251_p2 : STD_LOGIC_VECTOR (0 downto 0);
@@ -2611,21 +2611,21 @@ begin
         B_fixed_V_reg_1773;
     B_fixed_V_3_fu_1157_p3 <= 
         ap_const_lv27_0 when (tmp_4_fu_1149_p3(0) = '1') else 
-        trunc_ln199_fu_1145_p1;
+        trunc_ln200_fu_1145_p1;
     B_fixed_V_fu_1062_p4 <= ret_V_fu_1056_p2(47 downto 19);
     G_fixed_V_1_fu_1170_p3 <= 
         ap_const_lv29_7F80000 when (icmp_ln1494_1_fu_1165_p2(0) = '1') else 
         G_fixed_V_reg_1783;
     G_fixed_V_3_fu_1189_p3 <= 
         ap_const_lv27_0 when (tmp_5_fu_1181_p3(0) = '1') else 
-        trunc_ln202_fu_1177_p1;
+        trunc_ln203_fu_1177_p1;
     R_V_fu_543_p4 <= video_in_TDATA_int(23 downto 16);
     R_fixed_V_1_fu_1202_p3 <= 
         ap_const_lv29_7F80000 when (icmp_ln1494_2_fu_1197_p2(0) = '1') else 
         R_fixed_V_reg_1789;
     R_fixed_V_3_fu_1221_p3 <= 
         ap_const_lv27_0 when (tmp_6_fu_1213_p3(0) = '1') else 
-        trunc_ln205_fu_1209_p1;
+        trunc_ln206_fu_1209_p1;
     add_ln700_10_fu_994_p2 <= std_logic_vector(unsigned(copy2_sum_after_V) + unsigned(zext_ln700_3_fu_991_p1));
     add_ln700_1_fu_606_p2 <= std_logic_vector(unsigned(row_counter_V) + unsigned(ap_const_lv32_1));
     add_ln700_2_fu_645_p2 <= std_logic_vector(unsigned(ap_const_lv32_1) + unsigned(pixel_counter_V));
@@ -3403,9 +3403,9 @@ begin
     tmp_7_fu_1239_p3 <= B_fixed_V_3_fu_1157_p3(19 downto 19);
     tmp_8_fu_1263_p3 <= B_fixed_V_3_fu_1157_p3(18 downto 18);
     tmp_9_fu_1297_p3 <= G_fixed_V_3_fu_1189_p3(19 downto 19);
-    trunc_ln199_fu_1145_p1 <= B_fixed_V_1_fu_1139_p3(27 - 1 downto 0);
-    trunc_ln202_fu_1177_p1 <= G_fixed_V_1_fu_1170_p3(27 - 1 downto 0);
-    trunc_ln205_fu_1209_p1 <= R_fixed_V_1_fu_1202_p3(27 - 1 downto 0);
+    trunc_ln200_fu_1145_p1 <= B_fixed_V_1_fu_1139_p3(27 - 1 downto 0);
+    trunc_ln203_fu_1177_p1 <= G_fixed_V_1_fu_1170_p3(27 - 1 downto 0);
+    trunc_ln206_fu_1209_p1 <= R_fixed_V_1_fu_1202_p3(27 - 1 downto 0);
     trunc_ln647_fu_676_p1 <= frame_counter_V(2 - 1 downto 0);
     trunc_ln718_1_fu_1247_p1 <= B_fixed_V_3_fu_1157_p3(18 - 1 downto 0);
     trunc_ln718_2_fu_1305_p1 <= G_fixed_V_3_fu_1189_p3(18 - 1 downto 0);

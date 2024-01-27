@@ -1,0 +1,63 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Mar  1 13:01:21 2021
+# Process ID: 6362
+# Current directory: /mnt/sdc3/david/projs/hardware-software/part2/overlay
+# Command line: vivado -mode batch -source build_blockdesign.tcl -notrace
+# Log file: /mnt/sdc3/david/projs/hardware-software/part2/overlay/vivado.log
+# Journal file: /mnt/sdc3/david/projs/hardware-software/part2/overlay/vivado.jou
+#-----------------------------------------------------------
+source build_blockdesign.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/sdc3/david/projs/hardware-software/part2/ip_cores'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/david/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [BD::TCL 103-2003] Currently there is no design <hsc_video> in project, so creating one...
+Wrote  : </mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/hsc_video.bd> 
+INFO: [BD::TCL 103-2004] Making design <hsc_video> as current_bd_design.
+INFO: [BD::TCL 103-2005] Currently the variable <design_name> is equal to "hsc_video".
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-1306] The connection to interface pin /video/hdmi_in/frontend/axi_gpio_hdmiin/gpio_io_o is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+WARNING: [BD 41-1306] The connection to interface pin /video/hdmi_in/frontend/axi_gpio_hdmiin/gpio2_io_i is being overridden by the user. This pin will not be connected as a part of interface connection GPIO2
+WARNING: [BD 41-1731] Type mismatch between connected pins: /video/hdmi_out/frontend/axi_dynclk/LOCKED_O(undef) and /video/hdmi_out/frontend/rgb2dvi_0/aRst_n(rst)
+WARNING: [BD 41-1306] The connection to interface pin /video/hdmi_out/frontend/hdmi_out_hpd_video/gpio_io_o is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
+WARNING: [BD 41-1306] The connection to interface pin /system_interrupts/irq is being overridden by the user. This pin will not be connected as a part of interface connection interrupt
+Slave segment '/video/hdmi_out/frontend/axi_dynclk/s00_axi/reg0' is being assigned into address space '/ps7_0/Data' at <0x43C1_0000 [ 64K ]>.
+Slave segment '/video/hdmi_in/frontend/axi_gpio_hdmiin/S_AXI/Reg' is being assigned into address space '/ps7_0/Data' at <0x4122_0000 [ 64K ]>.
+Slave segment '/video/axi_vdma/S_AXI_LITE/Reg' is being assigned into address space '/ps7_0/Data' at <0x4300_0000 [ 64K ]>.
+Slave segment '/video/hdmi_in/color_convert/s_axi_AXILiteS/Reg' is being assigned into address space '/ps7_0/Data' at <0x43C5_0000 [ 64K ]>.
+Slave segment '/video/hdmi_out/color_convert/s_axi_AXILiteS/Reg' is being assigned into address space '/ps7_0/Data' at <0x43C6_0000 [ 64K ]>.
+Slave segment '/video/hdmi_out/frontend/hdmi_out_hpd_video/S_AXI/Reg' is being assigned into address space '/ps7_0/Data' at <0x4123_0000 [ 64K ]>.
+Slave segment '/video/hdmi_in/pixel_pack/s_axi_AXILiteS/Reg' is being assigned into address space '/ps7_0/Data' at <0x43C4_0000 [ 64K ]>.
+Slave segment '/video/hdmi_out/pixel_proc/s_axi_AXILiteS/Reg' is being assigned into address space '/ps7_0/Data' at <0x43C0_0000 [ 64K ]>.
+Slave segment '/video/hdmi_out/pixel_unpack/s_axi_AXILiteS/Reg' is being assigned into address space '/ps7_0/Data' at <0x43C7_0000 [ 64K ]>.
+Slave segment '/system_interrupts/S_AXI/Reg' is being assigned into address space '/ps7_0/Data' at <0x4180_0000 [ 64K ]>.
+Slave segment '/video/hdmi_in/frontend/vtc_in/ctrl/Reg' is being assigned into address space '/ps7_0/Data' at <0x43C3_0000 [ 64K ]>.
+Slave segment '/video/hdmi_out/frontend/vtc_out/ctrl/Reg' is being assigned into address space '/ps7_0/Data' at <0x43C2_0000 [ 64K ]>.
+Slave segment '/ps7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/video/axi_vdma/Data_MM2S' at <0x1000_0000 [ 256M ]>.
+Slave segment '/ps7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/video/axi_vdma/Data_S2MM' at <0x1000_0000 [ 256M ]>.
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [xilinx.com:ip:axi_intc:4.1-6] /system_interrupts: Property SENSITIVITY = "NULL" for interrupt input 11 not recognized - using default interrupt type Rising Edge. Please change this manually if necessary.
+WARNING: [xilinx.com:ip:axi_intc:4.1-6] /system_interrupts: Property SENSITIVITY = "NULL" for interrupt input 10 not recognized - using default interrupt type Rising Edge. Please change this manually if necessary.
+WARNING: [xilinx.com:ip:axi_intc:4.1-6] /system_interrupts: Property SENSITIVITY = "NULL" for interrupt input 9 not recognized - using default interrupt type Rising Edge. Please change this manually if necessary.
+WARNING: [xilinx.com:ip:axi_intc:4.1-6] /system_interrupts: Property SENSITIVITY = "NULL" for interrupt input 8 not recognized - using default interrupt type Rising Edge. Please change this manually if necessary.
+WARNING: [xilinx.com:ip:axi_intc:4.1-6] /system_interrupts: Property SENSITIVITY = "NULL" for interrupt input 7 not recognized - using default interrupt type Rising Edge. Please change this manually if necessary.
+WARNING: [xilinx.com:ip:axi_intc:4.1-6] /system_interrupts: Property SENSITIVITY = "NULL" for interrupt input 6 not recognized - using default interrupt type Rising Edge. Please change this manually if necessary.
+WARNING: [xilinx.com:ip:axi_intc:4.1-13] /system_interrupts: Interrupt output connection Bus is selected, but the interrupt bus interface is not connected to a matching interface. Please consider selecting Single instead.
+WARNING: [BD 41-927] Following properties on pin /video/hdmi_in/frontend/dvi2rgb_0/RefClk have been updated from connected ip, but BD cell '/video/hdmi_in/frontend/dvi2rgb_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 200000000 
+Please resolve any mismatches by directly setting properties on BD cell </video/hdmi_in/frontend/dvi2rgb_0> to completely resolve these warnings.
+validate_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2148.766 ; gain = 0.000 ; free physical = 6339 ; free virtual = 27142
+Wrote  : </mnt/sdc3/david/projs/hardware-software/part2/overlay/hsc_video/hsc_video.srcs/sources_1/bd/hsc_video/hsc_video.bd> 
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  1 13:01:47 2021...

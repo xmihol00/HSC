@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;pixel_proc/pixel_proc.cpp&apos; ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6263 ; free virtual = 27091"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6263 ; free virtual = 27091"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6714 ; free virtual = 27396"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6714 ; free virtual = 27396"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;counters&apos; into &apos;pixel_proc&apos; (pixel_proc/pixel_proc.cpp:174)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;Context::active&apos; into &apos;pixel_proc&apos; (pixel_proc/pixel_proc.cpp:190)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;Context::update&apos; into &apos;pixel_proc&apos; (pixel_proc/pixel_proc.cpp:191)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;Context::active&apos; into &apos;pixel_proc&apos; (pixel_proc/pixel_proc.cpp:193)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;Context::update&apos; into &apos;pixel_proc&apos; (pixel_proc/pixel_proc.cpp:194)."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6146 ; free virtual = 26990"/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;counters&apos; into &apos;pixel_proc&apos; (pixel_proc/pixel_proc.cpp:175)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;Context::active&apos; into &apos;pixel_proc&apos; (pixel_proc/pixel_proc.cpp:191)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;Context::update&apos; into &apos;pixel_proc&apos; (pixel_proc/pixel_proc.cpp:192)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;Context::active&apos; into &apos;pixel_proc&apos; (pixel_proc/pixel_proc.cpp:194)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;Context::update&apos; into &apos;pixel_proc&apos; (pixel_proc/pixel_proc.cpp:195)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6663 ; free virtual = 27360"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6104 ; free virtual = 26954"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6619 ; free virtual = 27321"/>
 	<Message severity="INFO" prefix="[XFORM 203-1101]" key="XFORM_DATA_PACK_STATUS_345" tag="" content="Packing variable &apos;video_out.data&apos; (pixel_proc/pixel_proc.cpp:131) into a 24-bit variable."/>
 	<Message severity="INFO" prefix="[XFORM 203-1101]" key="XFORM_DATA_PACK_STATUS_345" tag="" content="Packing variable &apos;video_in.data&apos; (pixel_proc/pixel_proc.cpp:130) into a 24-bit variable."/>
-	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:117:5) to (pixel_proc/pixel_proc.cpp:189:12) in function &apos;pixel_proc&apos;... converting 3 basic blocks."/>
-	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:190:13) to (pixel_proc/pixel_proc.cpp:58:9) in function &apos;pixel_proc&apos;... converting 3 basic blocks."/>
-	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:193:13) to (pixel_proc/pixel_proc.cpp:58:9) in function &apos;pixel_proc&apos;... converting 3 basic blocks."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6000 ; free virtual = 26856"/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:117:5) to (pixel_proc/pixel_proc.cpp:190:12) in function &apos;pixel_proc&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:191:13) to (pixel_proc/pixel_proc.cpp:58:9) in function &apos;pixel_proc&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:194:13) to (pixel_proc/pixel_proc.cpp:58:9) in function &apos;pixel_proc&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6548 ; free virtual = 27257"/>
 	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;copy1.histogram.V&apos; (pixel_proc/pixel_proc.cpp:43:19)"/>
 	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;copy2.histogram.V&apos; (pixel_proc/pixel_proc.cpp:74:27)"/>
 	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;copy2._empty_data.V&apos; (pixel_proc/pixel_proc.cpp:94:51)"/>
 	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;copy2.histogram.V&apos; (pixel_proc/pixel_proc.cpp:43:19)"/>
 	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;copy1.histogram.V&apos; (pixel_proc/pixel_proc.cpp:74:27)"/>
 	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;copy1._empty_data.V&apos; (pixel_proc/pixel_proc.cpp:94:51)"/>
-	<Message severity="INFO" prefix="[XFORM 203-531]" key="XFORM_LOOP_REWIND_STATUS_298" tag="" content="Rewinding loop (pixel_proc/pixel_proc.cpp:158) in function &apos;pixel_proc&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 5982 ; free virtual = 26841"/>
+	<Message severity="INFO" prefix="[XFORM 203-531]" key="XFORM_LOOP_REWIND_STATUS_298" tag="" content="Rewinding loop (pixel_proc/pixel_proc.cpp:159) in function &apos;pixel_proc&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6536 ; free virtual = 27247"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;pixel_proc&apos; ..."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
@@ -35,52 +35,52 @@
 	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln703_5) to 3 in order to utilize available DSP registers."/>
 	<Message severity="INFO" prefix="[SYN 201-351]" key="PREPROC_IPBLOCK_MAPPING_6" tag="" content="The following objects are mapped to a DSP.
    a  constant -173678
-   b  &apos;partselect&apos; operation (&apos;G.V&apos;, pixel_proc/pixel_proc.cpp:166)
-   c  &apos;add&apos; operation (&apos;add_ln703_4&apos;, pixel_proc/pixel_proc.cpp:180)
+   b  &apos;partselect&apos; operation (&apos;G.V&apos;, pixel_proc/pixel_proc.cpp:167)
+   c  &apos;add&apos; operation (&apos;add_ln703_4&apos;, pixel_proc/pixel_proc.cpp:181)
   DSP Expression: Cb_V = -173678 * zext_ln703_2 + add_ln703_4"/>
 	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln703_6) to 3 in order to utilize available DSP registers."/>
 	<Message severity="INFO" prefix="[SYN 201-351]" key="PREPROC_IPBLOCK_MAPPING_6" tag="" content="The following objects are mapped to a DSP.
    a  constant -88467
-   b  &apos;partselect&apos; operation (&apos;R.V&apos;, pixel_proc/pixel_proc.cpp:167)
-   c  &apos;bitconcatenate&apos; operation (&apos;shl_ln703_1&apos;, pixel_proc/pixel_proc.cpp:180)
+   b  &apos;partselect&apos; operation (&apos;R.V&apos;, pixel_proc/pixel_proc.cpp:168)
+   c  &apos;bitconcatenate&apos; operation (&apos;shl_ln703_1&apos;, pixel_proc/pixel_proc.cpp:181)
   DSP Expression: add_ln703_4 = -88467 * zext_ln703_3 + zext_ln703_7"/>
 	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln703_4) to 3 in order to utilize available DSP registers."/>
 	<Message severity="INFO" prefix="[SYN 201-351]" key="PREPROC_IPBLOCK_MAPPING_6" tag="" content="The following objects are mapped to a DSP.
    a  constant -219514
-   b  &apos;partselect&apos; operation (&apos;G.V&apos;, pixel_proc/pixel_proc.cpp:166)
-   c  &apos;add&apos; operation (&apos;add_ln703_2&apos;, pixel_proc/pixel_proc.cpp:179)
+   b  &apos;partselect&apos; operation (&apos;G.V&apos;, pixel_proc/pixel_proc.cpp:167)
+   c  &apos;add&apos; operation (&apos;add_ln703_2&apos;, pixel_proc/pixel_proc.cpp:180)
   DSP Expression: Cr_V = -219514 * zext_ln703_2 + add_ln703_2"/>
 	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln703_3) to 3 in order to utilize available DSP registers."/>
 	<Message severity="INFO" prefix="[SYN 201-351]" key="PREPROC_IPBLOCK_MAPPING_6" tag="" content="The following objects are mapped to a DSP.
    a  constant -42631
    b  &apos;extractvalue&apos; operation (&apos;video_in_data_tmp&apos;, pixel_proc/pixel_proc.cpp:130)
-   c  &apos;bitconcatenate&apos; operation (&apos;shl_ln&apos;, pixel_proc/pixel_proc.cpp:179)
+   c  &apos;bitconcatenate&apos; operation (&apos;shl_ln&apos;, pixel_proc/pixel_proc.cpp:180)
   DSP Expression: add_ln703_2 = zext_ln703_6 + -42631 * zext_ln703"/>
 	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln703_1) to 3 in order to utilize available DSP registers."/>
 	<Message severity="INFO" prefix="[SYN 201-351]" key="PREPROC_IPBLOCK_MAPPING_6" tag="" content="The following objects are mapped to a DSP.
    a  constant 307757
-   b  &apos;partselect&apos; operation (&apos;G.V&apos;, pixel_proc/pixel_proc.cpp:166)
-   c  &apos;add&apos; operation (&apos;add_ln703&apos;, pixel_proc/pixel_proc.cpp:178)
+   b  &apos;partselect&apos; operation (&apos;G.V&apos;, pixel_proc/pixel_proc.cpp:167)
+   c  &apos;add&apos; operation (&apos;add_ln703&apos;, pixel_proc/pixel_proc.cpp:179)
   DSP Expression: Y_V = 307757 * zext_ln703_2 + zext_ln703_4"/>
 	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln703) to 3 in order to utilize available DSP registers."/>
 	<Message severity="INFO" prefix="[SYN 201-351]" key="PREPROC_IPBLOCK_MAPPING_6" tag="" content="The following objects are mapped to a DSP.
    a  constant 59768
    b  &apos;extractvalue&apos; operation (&apos;video_in_data_tmp&apos;, pixel_proc/pixel_proc.cpp:130)
-   c  &apos;mul&apos; operation (&apos;mul_ln703_2&apos;, pixel_proc/pixel_proc.cpp:178)
+   c  &apos;mul&apos; operation (&apos;mul_ln703_2&apos;, pixel_proc/pixel_proc.cpp:179)
   DSP Expression: add_ln703 = mul_ln703_2 + 59768 * zext_ln703"/>
 	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln703_2) to 3 in order to utilize available DSP registers."/>
 	<Message severity="INFO" prefix="[SYN 201-351]" key="PREPROC_IPBLOCK_MAPPING_6" tag="" content="The following objects are mapped to a DSP.
    a  constant 156762
-   b  &apos;partselect&apos; operation (&apos;R.V&apos;, pixel_proc/pixel_proc.cpp:167)
+   b  &apos;partselect&apos; operation (&apos;R.V&apos;, pixel_proc/pixel_proc.cpp:168)
   DSP Expression: mul_ln703_2 = 156762 * zext_ln703_3"/>
 	<Message severity="WARNING" prefix="[SYN 201-303]" key="PREPROC_CORE_ASSIGN_ILLEGAL_2" tag="" content="Root Node r_V_3 mapped to expression  {mul a b}, but failed in bitwidth check."/>
 	<Message severity="WARNING" prefix="[SYN 201-303]" key="PREPROC_CORE_ASSIGN_ILLEGAL_2" tag="" content="Root Node r_V_2 mapped to expression  {mul a b}, but failed in bitwidth check."/>
 	<Message severity="WARNING" prefix="[SYN 201-303]" key="PREPROC_CORE_ASSIGN_ILLEGAL_2" tag="" content="Root Node r_V_1 mapped to expression  {mul a b}, but failed in bitwidth check."/>
 	<Message severity="WARNING" prefix="[SYN 201-303]" key="PREPROC_CORE_ASSIGN_ILLEGAL_2" tag="" content="Root Node r_V mapped to expression  {mul a b}, but failed in bitwidth check."/>
 	<Message severity="INFO" prefix="[SYN 201-351]" key="PREPROC_IPBLOCK_MAPPING_6" tag="" content="The following objects are mapped to a ternary adder tree.
-   a  &apos;mul&apos; operation (&apos;r.V&apos;, pixel_proc/pixel_proc.cpp:201)
-   b  &apos;mul&apos; operation (&apos;r.V&apos;, pixel_proc/pixel_proc.cpp:201)
-   c  &apos;bitconcatenate&apos; operation (&apos;lhs.V&apos;, pixel_proc/pixel_proc.cpp:198)"/>
+   a  &apos;mul&apos; operation (&apos;r.V&apos;, pixel_proc/pixel_proc.cpp:202)
+   b  &apos;mul&apos; operation (&apos;r.V&apos;, pixel_proc/pixel_proc.cpp:202)
+   c  &apos;bitconcatenate&apos; operation (&apos;lhs.V&apos;, pixel_proc/pixel_proc.cpp:199)"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating True dependence constraints ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating Auxiliary dependence constraints ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating Ternary mapping constraints ..."/>
@@ -92,7 +92,7 @@
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating Supporting dependence constraints ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating Pipeline constraints ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;."/>
-	<Message severity="WARNING" prefix="[SCHED 204-63]" key="SCHED_PORT_ACCESS_TOO_LATE_31" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule the whole 2 cycles &apos;load&apos; operation (&apos;shared_memory_V_load_1&apos;, pixel_proc/pixel_proc.cpp:94-&gt;pixel_proc/pixel_proc.cpp:194) on array &apos;shared_memory_V&apos; within the first 2 cycles (II = 2).
+	<Message severity="WARNING" prefix="[SCHED 204-63]" key="SCHED_PORT_ACCESS_TOO_LATE_31" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule the whole 2 cycles &apos;load&apos; operation (&apos;shared_memory_V_load_1&apos;, pixel_proc/pixel_proc.cpp:94-&gt;pixel_proc/pixel_proc.cpp:195) on array &apos;shared_memory_V&apos; within the first 2 cycles (II = 2).
 Please consider 1) removing the &apos;rewind&apos; option from the pipeline, or 2) increasing the target initiation interval of the pipeline."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_60" tag="" content=" rescheduled in stage scheduling from 6 to 8 with current asap = 6, alap = 9"/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_60" tag="" content=" rescheduled in stage scheduling from 6 to 8 with current asap = 6, alap = 9"/>
@@ -115,18 +115,18 @@ Please consider 1) removing the &apos;rewind&apos; option from the pipeline, or 
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_16" tag="" content="Start constructing STG ..."/>
 	<Message severity="WARNING" prefix="[SCHED 204-21]" key="SCHED_DELAY_EXCEEDED_76" tag="SDX_KERNEL,SCHEDULE" content="Estimated clock period (8.76313ns) exceeds the target (target clock period: 7ns, clock uncertainty: 0.875ns, effective delay budget: 6.125ns)."/>
 	<Message severity="WARNING" prefix="[SCHED 204-21]" key="SCHED_DELAY_EXCEEDED_74" tag="SDX_KERNEL,SCHEDULE" content="The critical path in module &apos;pixel_proc&apos; consists of the following:
-	&apos;load&apos; operation (&apos;t.V&apos;, pixel_proc/pixel_proc.cpp:43-&gt;pixel_proc/pixel_proc.cpp:193) on array &apos;copy2_histogram_V&apos; [153]  (3.25 ns)
-	&apos;add&apos; operation (&apos;add_ln700_6&apos;, pixel_proc/pixel_proc.cpp:43-&gt;pixel_proc/pixel_proc.cpp:193) [154]  (2.26 ns)
-	&apos;store&apos; operation (&apos;copy2_histogram_V_addr_write_ln43&apos;, pixel_proc/pixel_proc.cpp:43-&gt;pixel_proc/pixel_proc.cpp:193) of variable &apos;add_ln700_6&apos;, pixel_proc/pixel_proc.cpp:43-&gt;pixel_proc/pixel_proc.cpp:193 on array &apos;copy2_histogram_V&apos; [155]  (3.25 ns)"/>
+	&apos;load&apos; operation (&apos;t.V&apos;, pixel_proc/pixel_proc.cpp:43-&gt;pixel_proc/pixel_proc.cpp:194) on array &apos;copy2_histogram_V&apos; [153]  (3.25 ns)
+	&apos;add&apos; operation (&apos;add_ln700_6&apos;, pixel_proc/pixel_proc.cpp:43-&gt;pixel_proc/pixel_proc.cpp:194) [154]  (2.26 ns)
+	&apos;store&apos; operation (&apos;copy2_histogram_V_addr_write_ln43&apos;, pixel_proc/pixel_proc.cpp:43-&gt;pixel_proc/pixel_proc.cpp:194) of variable &apos;add_ln700_6&apos;, pixel_proc/pixel_proc.cpp:43-&gt;pixel_proc/pixel_proc.cpp:194 on array &apos;copy2_histogram_V&apos; [155]  (3.25 ns)"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_15" tag="" content="Finished constructing STG."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 51.68 seconds; current allocated memory: 231.257 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 52.55 seconds; current allocated memory: 231.253 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.2 seconds; current allocated memory: 232.637 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.19 seconds; current allocated memory: 232.639 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;pixel_proc&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
@@ -169,7 +169,7 @@ Please consider 1) removing the &apos;rewind&apos; option from the pipeline, or 
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;pixel_proc_mul_21ns_27s_48_7_1&apos;: 2 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;pixel_proc_mul_mul_19ns_8ns_26_4_1&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;pixel_proc&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.28 seconds; current allocated memory: 235.157 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.3 seconds; current allocated memory: 235.159 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-790]" key="HLS 200-790" tag="LOOP,SDX_LOOP" content="**** Loop Constraint Status: All loop constraints were satisfied."/>
 	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,SDX_KERNEL" content="**** Estimated Fmax: 114.11 MHz"/>
 	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;pixel_proc_mul_21ns_27s_48_7_1_MulnS_0&apos;"/>
@@ -177,7 +177,7 @@ Please consider 1) removing the &apos;rewind&apos; option from the pipeline, or 
 	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;pixel_proc_mul_19s_27s_46_7_1_MulnS_2&apos;"/>
 	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1791" tag="" content="Implementing memory &apos;pixel_proc_copy1_histogram_V_ram (RAM)&apos; using block RAMs with reset."/>
 	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1791" tag="" content="Implementing memory &apos;pixel_proc_copy1_empty_data_V_ram (RAM)&apos; using block RAMs with reset."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6040 ; free virtual = 26912"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1506.367 ; gain = 1097.754 ; free physical = 6507 ; free virtual = 27229"/>
 	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for pixel_proc."/>
 	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for pixel_proc."/>
 </Messages>
